@@ -1,0 +1,722 @@
+<!DOCTYPE html>
+<html lang="fr" data-lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Coach Tidjani Academy — Le Déménagement Mental</title>
+<meta name="description" content="Coach Tidjani Academy — Coaching en développement personnel et transformation mentale pour l'Afrique, la diaspora et le monde. Le Déménagement Mental.">
+<meta property="og:title" content="Coach Tidjani Academy">
+<meta property="og:description" content="Je t'aide à changer ton mental pour changer ta vie.">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%230A1B2E%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22%2325C9B7%22 text-anchor=%22middle%22 font-family=%22Georgia%22>T</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy-deep:#0A1B2E;
+    --navy:#122A45;
+    --navy-soft:#1B3A5C;
+    --off-white:#F5F4EF;
+    --white:#FFFFFF;
+    --turquoise:#25C9B7;
+    --turquoise-soft:#8FE3D8;
+    --ink:#0A1B2E;
+    --line: rgba(10,27,46,0.12);
+    --line-light: rgba(255,255,255,0.14);
+    --max: 1180px;
+  }
+  *{box-sizing:border-box; margin:0; padding:0;}
+  html{scroll-behavior:smooth;}
+  body{
+    font-family:'Inter', sans-serif;
+    color:var(--ink);
+    background:var(--off-white);
+    -webkit-font-smoothing:antialiased;
+    overflow-x:hidden;
+  }
+  h1,h2,h3,.serif{ font-family:'Fraunces', serif; letter-spacing:-0.01em;}
+  a{color:inherit; text-decoration:none;}
+  img{max-width:100%; display:block;}
+  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
+  @media(max-width:640px){.wrap{padding:0 20px;}}
+
+  /* reduced motion */
+  @media (prefers-reduced-motion: reduce){
+    *{animation:none !important; transition:none !important;}
+  }
+
+  /* ===== NAV ===== */
+  header{
+    position:fixed; top:0; left:0; right:0; z-index:1000;
+    background:rgba(10,27,46,0.92);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid rgba(255,255,255,0.06);
+    transition:transform .4s ease;
+  }
+  .navbar{ display:flex; align-items:center; justify-content:space-between; height:76px;}
+  .brand{ color:var(--white); font-family:'Fraunces',serif; font-size:1.15rem; font-weight:500; letter-spacing:0.01em; display:flex; flex-direction:column; line-height:1.05;}
+  .brand span{font-size:0.62rem; color:var(--turquoise-soft); font-weight:400; letter-spacing:0.12em; margin-top:3px;}
+  nav.links{ display:flex; gap:34px; align-items:center;}
+  nav.links a{ color:rgba(255,255,255,0.78); font-size:0.92rem; font-weight:400; transition:color .25s ease; position:relative;}
+  nav.links a:hover{color:var(--white);}
+  nav.links a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--turquoise);transition:width .3s ease;}
+  nav.links a:hover::after{width:100%;}
+  .nav-actions{display:flex; align-items:center; gap:18px;}
+  .lang-switch{ display:flex; gap:2px; border:1px solid rgba(255,255,255,0.25); border-radius:20px; padding:3px; font-size:0.75rem;}
+  .lang-switch button{ padding:5px 12px; border-radius:16px; color:rgba(255,255,255,0.65); background:transparent; border:none; cursor:pointer; font-family:'Inter'; font-size:0.75rem; letter-spacing:0.03em;}
+  .lang-switch button.active{ background:var(--turquoise); color:var(--navy-deep); font-weight:600;}
+  .btn-nav{ background:var(--turquoise); color:var(--navy-deep); padding:10px 22px; border-radius:3px; font-size:0.82rem; font-weight:600; letter-spacing:0.03em; white-space:nowrap;}
+  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px;}
+  .burger span{width:22px; height:1.5px; background:var(--white);}
+  @media(max-width:960px){
+    nav.links{display:none;}
+    .btn-nav{display:none;}
+    .burger{display:flex;}
+  }
+  .mobile-menu{ display:none; position:fixed; inset:76px 0 0 0; background:var(--navy-deep); z-index:999; padding:30px 28px; flex-direction:column; gap:26px;}
+  .mobile-menu.open{display:flex;}
+  .mobile-menu a{color:var(--white); font-size:1.2rem; font-family:'Fraunces',serif;}
+  .mobile-menu .btn-nav{align-self:flex-start; margin-top:10px;}
+
+  /* ===== HERO ===== */
+  .hero{
+    position:relative;
+    min-height:100vh;
+    background:linear-gradient(155deg, var(--navy-deep) 0%, #0D2138 55%, var(--navy-soft) 100%);
+    display:flex; align-items:center;
+    padding:150px 0 90px;
+    overflow:hidden;
+  }
+  .hero::before{
+    content:'';
+    position:absolute; top:-20%; right:-10%;
+    width:640px; height:640px; border-radius:50%;
+    background:radial-gradient(circle, rgba(37,201,183,0.16) 0%, rgba(37,201,183,0) 68%);
+  }
+  .hero-grid{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center; position:relative; z-index:2;}
+  @media(max-width:960px){ .hero-grid{grid-template-columns:1fr; gap:50px;} }
+  .kicker{ display:inline-flex; align-items:center; gap:10px; color:var(--turquoise-soft); font-size:0.78rem; letter-spacing:0.16em; font-weight:500; margin-bottom:26px;}
+  .kicker::before{content:''; width:26px; height:1px; background:var(--turquoise);}
+  .hero h1{ color:var(--white); font-size:clamp(2.4rem, 5vw, 3.6rem); font-weight:400; line-height:1.06; margin-bottom:20px;}
+  .hero h1 em{ font-style:italic; color:var(--turquoise-soft); font-weight:300;}
+  .hero .concept{ color:var(--turquoise); font-family:'Fraunces',serif; font-size:clamp(1.3rem,2.4vw,1.7rem); font-weight:500; margin-bottom:22px; font-style:italic;}
+  .hero p.signature{ color:rgba(255,255,255,0.68); font-size:1.05rem; font-family:'Fraunces',serif; font-style:italic; margin-bottom:26px;}
+  .hero p.desc{ color:rgba(255,255,255,0.6); font-size:1rem; line-height:1.7; max-width:480px; margin-bottom:40px;}
+  .cta-row{ display:flex; gap:18px; flex-wrap:wrap;}
+  .btn-primary{ background:var(--turquoise); color:var(--navy-deep); padding:16px 30px; font-weight:600; font-size:0.88rem; letter-spacing:0.03em; border-radius:3px; box-shadow:0 14px 30px -10px rgba(37,201,183,0.45); transition:transform .25s ease;}
+  .btn-primary:hover{transform:translateY(-2px);}
+  .btn-ghost{ border:1px solid rgba(255,255,255,0.32); color:var(--white); padding:16px 30px; font-weight:500; font-size:0.88rem; letter-spacing:0.02em; border-radius:3px; transition:border-color .25s ease, background .25s ease;}
+  .btn-ghost:hover{ border-color:var(--turquoise); background:rgba(37,201,183,0.08);}
+
+  .hero-photo{ position:relative;}
+  .photo-frame{ position:relative; border-radius:4px; overflow:hidden; aspect-ratio:3/4; }
+  .photo-frame img{ width:100%; height:100%; object-fit:cover; object-position:top center;}
+  .photo-frame::after{ content:''; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.12);}
+  .photo-tag{ position:absolute; bottom:-22px; left:-22px; background:var(--white); padding:18px 22px; border-radius:3px; box-shadow:0 20px 40px -14px rgba(0,0,0,0.35); max-width:230px;}
+  @media(max-width:640px){ .photo-tag{left:0; bottom:-18px; padding:14px 18px;} }
+  .photo-tag .name{font-family:'Fraunces',serif; font-size:1rem; color:var(--navy-deep); font-weight:500;}
+  .photo-tag .role{font-size:0.76rem; color:#5a6a78; margin-top:3px;}
+  .global-strip{ position:absolute; top:24px; left:0; right:0; text-align:center; z-index:5;}
+  @media(max-width:960px){.global-strip{position:static; margin-bottom:20px; text-align:left;}}
+  .global-strip span{ color:rgba(255,255,255,0.42); font-size:0.72rem; letter-spacing:0.24em; font-weight:500;}
+  .global-strip .dot{color:var(--turquoise); margin:0 8px;}
+
+  /* ===== SECTION GENERIC ===== */
+  section{ padding:120px 0;}
+  @media(max-width:640px){ section{padding:80px 0;} }
+  .section-head{ max-width:680px; margin-bottom:64px;}
+  .eyebrow{ color:var(--turquoise-soft); font-size:0.78rem; letter-spacing:0.14em; font-weight:600; margin-bottom:16px; display:block;}
+  .light .eyebrow{ color:#0d9488;}
+  .section-head h2{ font-size:clamp(1.7rem, 3.4vw, 2.5rem); font-weight:400; line-height:1.18; color:var(--navy-deep);}
+  .light-on-dark h2{color:var(--white);}
+  .section-head p.lead{ margin-top:20px; color:#4c5a68; font-size:1.05rem; line-height:1.7;}
+  .light-on-dark p.lead{color:rgba(255,255,255,0.62);}
+
+  .dark-section{ background:var(--navy-deep); color:var(--white);}
+  .dark-section .eyebrow{ color:var(--turquoise-soft);}
+
+  /* PROBLEM / TRANSFORMATION */
+  .transform-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--line-light);}
+  .t-row{ display:grid; grid-template-columns:1fr 60px 1fr; align-items:center; padding:22px 0; border-bottom:1px solid var(--line-light); gap:18px;}
+  @media(max-width:640px){ .t-row{grid-template-columns:1fr 40px 1fr; padding:16px 0;} }
+  .t-row .from{ color:rgba(255,255,255,0.4); font-family:'Fraunces',serif; font-size:1.05rem; text-align:right;}
+  .t-row .to{ color:var(--white); font-family:'Fraunces',serif; font-size:1.15rem; font-weight:500;}
+  .t-row .arrow{ text-align:center; color:var(--turquoise); font-size:1.1rem;}
+  @media(max-width:640px){ .t-row .from, .t-row .to{font-size:0.92rem;} }
+
+  /* DEMENAGEMENT MENTAL */
+  .concept-block{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:center;}
+  @media(max-width:900px){ .concept-block{grid-template-columns:1fr;} }
+  .concept-visual{ position:relative; aspect-ratio:1/1; background:linear-gradient(155deg,#0D2138,#173A5E); border-radius:4px; display:flex; align-items:center; justify-content:center; overflow:hidden;}
+  .concept-visual .word{ position:absolute; color:rgba(255,255,255,0.05); font-family:'Fraunces',serif; font-size:8rem; font-style:italic; white-space:nowrap;}
+  .concept-visual .core{ width:64%; aspect-ratio:1/1; border:1px solid var(--turquoise); border-radius:50%; display:flex; align-items:center; justify-content:center; position:relative;}
+  .concept-visual .core::before{content:'';position:absolute; inset:22px; border:1px solid rgba(37,201,183,0.35); border-radius:50%;}
+  .concept-visual .core span{ color:var(--turquoise-soft); font-family:'Fraunces',serif; font-style:italic; font-size:1rem; text-align:center; padding:0 30px;}
+  .concept-copy h3{ font-size:1.9rem; color:var(--navy-deep); font-weight:400; margin-bottom:24px;}
+  .concept-copy p{ color:#455361; font-size:1.05rem; line-height:1.8; margin-bottom:18px;}
+  .concept-copy p.emph{ font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; color:var(--navy-deep); border-left:2px solid var(--turquoise); padding-left:20px; margin-top:28px;}
+
+  /* ABOUT */
+  .about-grid{ display:grid; grid-template-columns:0.8fr 1.2fr; gap:70px; align-items:start;}
+  @media(max-width:900px){ .about-grid{grid-template-columns:1fr;} }
+  .about-photo{ border-radius:4px; overflow:hidden; aspect-ratio:3/4;}
+  .about-photo img{width:100%; height:100%; object-fit:cover; object-position:top;}
+  .about-copy h3{ font-size:1rem; letter-spacing:0.02em; color:#8a97a3; font-weight:500; margin-bottom:8px;}
+  .about-copy h2{ font-size:2rem; font-weight:400; color:var(--navy-deep); margin-bottom:26px;}
+  .fact-list{ list-style:none; display:flex; flex-direction:column; gap:14px; margin:26px 0 30px;}
+  .fact-list li{ display:flex; gap:14px; font-size:0.98rem; color:#3d4a56; line-height:1.6; padding-bottom:14px; border-bottom:1px solid var(--line);}
+  .fact-list li:last-child{border-bottom:none;}
+  .fact-list li::before{content:'';min-width:6px; height:6px; margin-top:8px; border-radius:50%; background:var(--turquoise);}
+  .about-copy blockquote{ font-family:'Fraunces',serif; font-style:italic; font-size:1.25rem; color:var(--navy-deep); line-height:1.6; margin-top:10px;}
+
+  /* SERVICES */
+  .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line);}
+  @media(max-width:900px){ .services-grid{grid-template-columns:1fr;} }
+  .service-card{ background:var(--white); padding:44px 38px;}
+  .service-card .num{ color:var(--turquoise); font-family:'Fraunces',serif; font-style:italic; font-size:0.9rem; margin-bottom:20px; display:block;}
+  .service-card h3{ font-size:1.3rem; font-weight:500; color:var(--navy-deep); margin-bottom:16px;}
+  .service-card p{ color:#556270; font-size:0.95rem; line-height:1.7; margin-bottom:18px;}
+  .service-card .benefit{ font-size:0.86rem; color:#0d9488; font-weight:500;}
+
+  /* PROGRAMS */
+  .programs-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
+  @media(max-width:900px){ .programs-grid{grid-template-columns:1fr; max-width:440px; margin:0 auto;} }
+  .program-card{ background:var(--navy); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:42px 32px; position:relative; display:flex; flex-direction:column;}
+  .program-card.featured{ background:linear-gradient(160deg,#123B4A,#0F2E45); border-color:var(--turquoise);}
+  .program-card .tag{ position:absolute; top:-13px; left:32px; background:var(--turquoise); color:var(--navy-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.06em; padding:5px 14px; border-radius:20px;}
+  .program-card h3{ color:var(--white); font-size:1.25rem; font-weight:500; margin-bottom:6px;}
+  .program-card .duration{ color:rgba(255,255,255,0.45); font-size:0.85rem; margin-bottom:22px;}
+  .program-card .price{ color:var(--turquoise-soft); font-family:'Fraunces',serif; font-size:2.4rem; margin-bottom:22px;}
+  .program-card .price sup{font-size:1rem; margin-right:2px;}
+  .program-card .goal{ color:rgba(255,255,255,0.68); font-size:0.95rem; line-height:1.6; margin-bottom:30px; flex-grow:1;}
+  .program-card .btn-program{ display:block; text-align:center; border:1px solid rgba(255,255,255,0.3); color:var(--white); padding:14px; border-radius:3px; font-size:0.82rem; font-weight:600; letter-spacing:0.02em;}
+  .program-card.featured .btn-program{ background:var(--turquoise); color:var(--navy-deep); border-color:var(--turquoise);}
+
+  /* BOOK */
+  .book-section{ background:var(--off-white); }
+  .book-grid{ display:grid; grid-template-columns:0.6fr 1.4fr; gap:70px; align-items:center;}
+  @media(max-width:900px){ .book-grid{grid-template-columns:1fr;} }
+  .book-cover{ box-shadow:0 30px 60px -20px rgba(10,27,46,0.35); border-radius:2px;}
+  .book-copy h3{color:#8a97a3; font-size:0.95rem; margin-bottom:10px;}
+  .book-copy h2{ font-size:1.7rem; font-weight:400; color:var(--navy-deep); margin-bottom:22px; line-height:1.35;}
+  .book-copy p{ color:#455361; font-size:1rem; line-height:1.8; margin-bottom:16px;}
+  .book-meta{ display:flex; gap:30px; margin:26px 0; flex-wrap:wrap;}
+  .book-meta div{ font-size:0.85rem; color:#63707c;}
+  .book-meta strong{ display:block; color:var(--navy-deep); font-size:0.95rem; margin-bottom:3px;}
+  .book-cta-row{display:flex; gap:16px; margin-top:26px; flex-wrap:wrap;}
+  .btn-dark{ background:var(--navy-deep); color:var(--white); padding:15px 28px; border-radius:3px; font-size:0.85rem; font-weight:600;}
+
+  /* TESTIMONIALS */
+  .testi-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line);}
+  @media(max-width:820px){ .testi-grid{grid-template-columns:1fr;} }
+  .testi-card{ background:var(--white); padding:46px 40px;}
+  .testi-card .who{ font-family:'Fraunces',serif; font-size:1.2rem; color:var(--navy-deep); margin-bottom:22px;}
+  .testi-card .field{ margin-bottom:18px;}
+  .testi-card .field .lab{ font-size:0.72rem; letter-spacing:0.08em; color:var(--turquoise); font-weight:600; margin-bottom:6px; text-transform:uppercase;}
+  .testi-card .field p{ color:#455361; font-size:0.95rem; line-height:1.65;}
+
+  /* IMPACT */
+  .impact-strip{ background:var(--navy-deep); padding:70px 0;}
+  .impact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:40px; text-align:center;}
+  @media(max-width:640px){ .impact-grid{grid-template-columns:1fr; gap:34px;} }
+  .impact-num{ font-family:'Fraunces',serif; font-size:3rem; color:var(--turquoise-soft); font-weight:400;}
+  .impact-label{ color:rgba(255,255,255,0.55); font-size:0.9rem; margin-top:8px; letter-spacing:0.02em;}
+
+  /* AUDIENCE */
+  .audience-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  @media(max-width:860px){ .audience-grid{grid-template-columns:1fr;} }
+  .chip-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px;}
+  .chip{ border:1px solid var(--line); padding:9px 16px; border-radius:20px; font-size:0.85rem; color:#3d4a56;}
+
+  /* AI ASSISTANT */
+  .ai-section{ background:linear-gradient(160deg,#0D2138,#122A45);}
+  .ai-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
+  @media(max-width:900px){ .ai-grid{grid-template-columns:1fr;} }
+  .ai-window{ background:var(--white); border-radius:8px; overflow:hidden; box-shadow:0 30px 70px -20px rgba(0,0,0,0.4);}
+  .ai-header{ background:var(--navy-deep); padding:16px 20px; display:flex; align-items:center; gap:10px;}
+  .ai-dot{width:8px; height:8px; border-radius:50%; background:var(--turquoise);}
+  .ai-header span{color:var(--white); font-size:0.85rem; font-weight:500;}
+  .ai-body{ padding:24px; display:flex; flex-direction:column; gap:16px; min-height:260px;}
+  .msg{ max-width:82%; padding:12px 16px; border-radius:12px; font-size:0.9rem; line-height:1.5;}
+  .msg.user{ align-self:flex-end; background:var(--off-white); color:var(--navy-deep); border-bottom-right-radius:2px;}
+  .msg.ai{ align-self:flex-start; background:#EAFBF8; color:#0d5c53; border-bottom-left-radius:2px;}
+  .ai-input{ display:flex; border-top:1px solid var(--line); padding:14px 18px; gap:10px;}
+  .ai-input input{ flex:1; border:none; outline:none; font-family:'Inter'; font-size:0.9rem; background:transparent;}
+  .ai-input button{ background:var(--turquoise); color:var(--navy-deep); border:none; padding:9px 16px; border-radius:20px; font-size:0.8rem; font-weight:600; cursor:pointer;}
+
+  /* BOOKING */
+  .book-session{ background:var(--off-white);}
+  .booking-panel{ display:grid; grid-template-columns:0.9fr 1.1fr; background:var(--white); border-radius:6px; overflow:hidden; box-shadow:0 30px 70px -30px rgba(10,27,46,0.25);}
+  @media(max-width:900px){ .booking-panel{grid-template-columns:1fr;} }
+  .booking-side{ background:var(--navy-deep); padding:50px 44px; color:var(--white);}
+  .booking-side h3{ font-size:1.5rem; font-weight:400; margin-bottom:18px;}
+  .booking-side p{ color:rgba(255,255,255,0.6); font-size:0.95rem; line-height:1.7; margin-bottom:26px;}
+  .booking-side ul{ list-style:none; display:flex; flex-direction:column; gap:14px;}
+  .booking-side li{ font-size:0.9rem; color:rgba(255,255,255,0.75); display:flex; gap:10px; align-items:baseline;}
+  .booking-side li::before{content:'—'; color:var(--turquoise);}
+  .booking-form{ padding:50px 44px; display:flex; flex-direction:column; gap:18px;}
+  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  @media(max-width:520px){.form-row{grid-template-columns:1fr;}}
+  .field-group{ display:flex; flex-direction:column; gap:8px;}
+  .field-group label{ font-size:0.78rem; color:#63707c; font-weight:500;}
+  .field-group input, .field-group select, .field-group textarea{
+    border:1px solid var(--line); border-radius:3px; padding:12px 14px; font-family:'Inter'; font-size:0.92rem; color:var(--navy-deep); background:var(--off-white);
+  }
+  .field-group textarea{resize:vertical; min-height:90px;}
+  .booking-form .btn-primary{ align-self:flex-start; margin-top:6px; border:none; cursor:pointer;}
+  .form-note{font-size:0.78rem; color:#8a97a3; margin-top:-6px;}
+
+  /* FOOTER */
+  footer{ background:var(--navy-deep); color:rgba(255,255,255,0.6); padding:80px 0 30px;}
+  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:50px; padding-bottom:50px; border-bottom:1px solid rgba(255,255,255,0.08);}
+  @media(max-width:760px){.footer-grid{grid-template-columns:1fr; gap:36px;}}
+  .footer-brand{ color:var(--white); font-family:'Fraunces',serif; font-size:1.3rem; margin-bottom:10px;}
+  .footer-brand + p{ font-family:'Fraunces',serif; font-style:italic; color:var(--turquoise-soft); margin-bottom:18px;}
+  .footer-col h4{ color:var(--white); font-size:0.85rem; letter-spacing:0.05em; margin-bottom:18px; font-weight:500;}
+  .footer-col a, .footer-col p{ display:block; font-size:0.88rem; color:rgba(255,255,255,0.55); margin-bottom:12px;}
+  .footer-col a:hover{color:var(--turquoise-soft);}
+  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:30px; font-size:0.78rem; color:rgba(255,255,255,0.35); flex-wrap:wrap; gap:12px;}
+  .footer-bottom a{color:rgba(255,255,255,0.5);}
+
+  /* utility */
+  .center{text-align:center;}
+  .mx-auto{margin-left:auto; margin-right:auto;}
+  [data-en]{display:none;}
+  html[data-lang="en"] [data-fr]{display:none;}
+  html[data-lang="en"] [data-en]{display:inline;}
+  html[data-lang="en"] [data-en].block-el{display:block;}
+  html[data-lang="en"] [data-en].flex-el{display:flex;}
+</style>
+</head>
+<body>
+
+<header id="siteHeader">
+  <div class="wrap navbar">
+    <a href="#hero" class="brand">COACH TIDJANI<br>ACADEMY <span data-fr>LE DÉMÉNAGEMENT MENTAL</span><span data-en>THE MENTAL RELOCATION</span></a>
+    <nav class="links">
+      <a href="#about"><span data-fr>À propos</span><span data-en>About</span></a>
+      <a href="#services"><span data-fr>Coaching</span><span data-en>Coaching</span></a>
+      <a href="#programs"><span data-fr>Programmes</span><span data-en>Programs</span></a>
+      <a href="#book"><span data-fr>Livre</span><span data-en>Book</span></a>
+      <a href="#testimonials"><span data-fr>Témoignages</span><span data-en>Testimonials</span></a>
+      <a href="#contact"><span data-fr>Contact</span><span data-en>Contact</span></a>
+    </nav>
+    <div class="nav-actions">
+      <div class="lang-switch">
+        <button class="active" id="btnFr" onclick="setLang('fr')">FR</button>
+        <button id="btnEn" onclick="setLang('en')">EN</button>
+      </div>
+      <a href="#booking" class="btn-nav"><span data-fr>Réserver</span><span data-en>Book</span></a>
+      <button class="burger" onclick="toggleMobile()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</header>
+
+<div class="mobile-menu" id="mobileMenu">
+  <a href="#about" onclick="toggleMobile()"><span data-fr>À propos</span><span data-en>About</span></a>
+  <a href="#services" onclick="toggleMobile()"><span data-fr>Coaching</span><span data-en>Coaching</span></a>
+  <a href="#programs" onclick="toggleMobile()"><span data-fr>Programmes</span><span data-en>Programs</span></a>
+  <a href="#book" onclick="toggleMobile()"><span data-fr>Livre</span><span data-en>Book</span></a>
+  <a href="#testimonials" onclick="toggleMobile()"><span data-fr>Témoignages</span><span data-en>Testimonials</span></a>
+  <a href="#contact" onclick="toggleMobile()"><span data-fr>Contact</span><span data-en>Contact</span></a>
+  <a href="#booking" class="btn-nav" onclick="toggleMobile()"><span data-fr>Réserver une séance</span><span data-en>Book a session</span></a>
+</div>
+
+<!-- HERO -->
+<section class="hero" id="hero">
+  <div class="wrap">
+    <div class="global-strip"><span>AFRICA <span class="dot">•</span> DIASPORA <span class="dot">•</span> GLOBAL</span></div>
+    <div class="hero-grid">
+      <div>
+        <div class="kicker"><span data-fr>COACHING & TRANSFORMATION MENTALE</span><span data-en>COACHING & MENTAL TRANSFORMATION</span></div>
+        <h1><span data-fr>Coach Tidjani<br><em>Academy</em></span><span data-en>Coach Tidjani<br><em>Academy</em></span></h1>
+        <div class="concept"><span data-fr>Le Déménagement Mental</span><span data-en>The Mental Relocation</span></div>
+        <p class="signature"><span data-fr>« Je t'aide à changer ton mental pour changer ta vie. »</span><span data-en>"I help you change your mindset to change your life."</span></p>
+        <p class="desc">
+          <span data-fr>Une approche de transformation personnelle conçue pour aider les personnes ambitieuses à dépasser leurs blocages, renforcer leur discipline, développer leur potentiel et construire une vie alignée avec leurs aspirations.</span>
+          <span data-en>A personal transformation approach designed to help ambitious people move past their blocks, strengthen their discipline, develop their potential, and build a life aligned with their aspirations.</span>
+        </p>
+        <div class="cta-row">
+          <a href="#booking" class="btn-primary"><span data-fr>RÉSERVER UNE SÉANCE</span><span data-en>BOOK A COACHING SESSION</span></a>
+          <a href="#concept" class="btn-ghost"><span data-fr>DÉCOUVRIR LE CONCEPT</span><span data-en>DISCOVER THE MENTAL RELOCATION</span></a>
+        </div>
+      </div>
+      <div class="hero-photo">
+        <div class="photo-frame"><img src="assets/coach.jpg" alt="Coach Tidjani — Labaéka Tidjani-Dourodjaye"></div>
+        <div class="photo-tag">
+          <div class="name">Labaéka Tidjani-Dourodjaye</div>
+          <div class="role"><span data-fr>Fondateur, Coach Tidjani Academy</span><span data-en>Founder, Coach Tidjani Academy</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROBLEM -->
+<section class="dark-section" id="problem">
+  <div class="wrap">
+    <div class="section-head light-on-dark">
+      <span class="eyebrow"><span data-fr>LE VRAI BLOCAGE</span><span data-en>THE REAL BLOCK</span></span>
+      <h2><span data-fr>Et si le plus grand obstacle à votre évolution était votre propre système de pensée ?</span><span data-en>What if the biggest obstacle to your growth was your own way of thinking?</span></h2>
+      <p class="lead"><span data-fr>Peur, procrastination, victimisation, indiscipline, manque de confiance : ces schémas ne définissent pas qui vous êtes — ils définissent seulement où vous en êtes.</span><span data-en>Fear, procrastination, self-victimization, lack of discipline, low confidence — these patterns don't define who you are. They only define where you currently stand.</span></p>
+    </div>
+    <div class="transform-list">
+      <div class="t-row"><div class="from" data-fr>La plainte</div><div class="from" data-en>Complaining</div><div class="arrow">→</div><div class="to" data-fr>La responsabilité</div><div class="to" data-en>Responsibility</div></div>
+      <div class="t-row"><div class="from" data-fr>La peur</div><div class="from" data-en>Fear</div><div class="arrow">→</div><div class="to" data-fr>Le courage</div><div class="to" data-en>Courage</div></div>
+      <div class="t-row"><div class="from" data-fr>La procrastination</div><div class="from" data-en>Procrastination</div><div class="arrow">→</div><div class="to" data-fr>L'action</div><div class="to" data-en>Action</div></div>
+      <div class="t-row"><div class="from" data-fr>La victimisation</div><div class="from" data-en>Victim mindset</div><div class="arrow">→</div><div class="to" data-fr>La construction</div><div class="to" data-en>Building</div></div>
+      <div class="t-row"><div class="from" data-fr>La limitation</div><div class="from" data-en>Limitation</div><div class="arrow">→</div><div class="to" data-fr>L'expansion</div><div class="to" data-en>Expansion</div></div>
+      <div class="t-row"><div class="from" data-fr>La survie</div><div class="from" data-en>Survival</div><div class="arrow">→</div><div class="to" data-fr>La prospérité</div><div class="to" data-en>Prosperity</div></div>
+      <div class="t-row"><div class="from" data-fr>L'indiscipline</div><div class="from" data-en>Lack of discipline</div><div class="arrow">→</div><div class="to" data-fr>La discipline</div><div class="to" data-en>Discipline</div></div>
+      <div class="t-row"><div class="from" data-fr>L'ancien soi</div><div class="from" data-en>The old self</div><div class="arrow">→</div><div class="to" data-fr>La meilleure version de soi</div><div class="to" data-en>The best version of yourself</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CONCEPT: DEMENAGEMENT MENTAL -->
+<section id="concept">
+  <div class="wrap">
+    <div class="concept-block">
+      <div class="concept-visual">
+        <div class="word" style="top:8%; left:-10%;">mental</div>
+        <div class="word" style="bottom:6%; right:-14%;">relocation</div>
+        <div class="core">
+          <span><span data-fr>Le Déménagement Mental</span><span data-en>The Mental Relocation</span></span>
+        </div>
+      </div>
+      <div class="concept-copy">
+        <span class="eyebrow light"><span data-fr>LA MÉTHODE</span><span data-en>THE METHOD</span></span>
+        <h3><span data-fr>Le Déménagement Mental</span><span data-en>The Mental Relocation</span></h3>
+        <p><span data-fr>Le déménagement mental consiste à identifier les anciens schémas de pensée, croyances, habitudes et programmations qui limitent l'individu, afin de les remplacer consciemment par de nouvelles façons de penser, de décider et d'agir.</span>
+        <span data-en>The Mental Relocation means identifying the old thought patterns, beliefs, habits and programming that limit a person, in order to consciously replace them with new ways of thinking, deciding and acting.</span></p>
+        <p class="emph"><span data-fr>L'objectif n'est pas simplement de motiver. L'objectif est de permettre à chaque personne de devenir progressivement la meilleure version d'elle-même.</span><span data-en>The goal is not simply to motivate. The goal is to help each person progressively become the best version of themselves.</span></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about" style="background:var(--white);">
+  <div class="wrap">
+    <div class="about-grid">
+      <div class="about-photo"><img src="assets/coach.jpg" alt="Labaéka Tidjani-Dourodjaye"></div>
+      <div class="about-copy">
+        <h3><span data-fr>À PROPOS DU COACH</span><span data-en>ABOUT THE COACH</span></h3>
+        <h2>Labaéka Tidjani-Dourodjaye</h2>
+        <ul class="fact-list">
+          <li><span data-fr>Coach certifié, formateur et auteur togolais</span><span data-en>Certified coach, trainer and author from Togo</span></li>
+          <li><span data-fr>Spécialisé en développement personnel et coaching intégral</span><span data-en>Specialized in personal development and integral coaching</span></li>
+          <li><span data-fr>Formation initiale en commerce international</span><span data-en>Initial training in international business</span></li>
+          <li><span data-fr>Licence et master professionnel en coaching intégral</span><span data-en>Bachelor's and professional master's degree in integral coaching</span></li>
+          <li><span data-fr>Transition du commerce et du marketing vers la transformation humaine</span><span data-en>Transitioned from business and marketing to human transformation</span></li>
+        </ul>
+        <blockquote><span data-fr>« La transformation durable commence par la manière de penser, de se percevoir et d'agir. »</span><span data-en>"Lasting transformation begins with how we think, perceive ourselves, and act."</span></blockquote>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<section id="services">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" style="color:#0d9488;"><span data-fr>NOS SERVICES</span><span data-en>OUR SERVICES</span></span>
+      <h2><span data-fr>Un accompagnement adapté à chaque étape</span><span data-en>Support tailored to every stage</span></h2>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="services-grid">
+      <div class="service-card">
+        <span class="num">01</span>
+        <h3><span data-fr>Coaching 1-1</span><span data-en>1-1 Coaching</span></h3>
+        <p><span data-fr>Accompagnement personnalisé adapté aux objectifs, défis et besoins spécifiques de chaque personne.</span><span data-en>Personalized support adapted to each person's goals, challenges and specific needs.</span></p>
+        <div class="benefit"><span data-fr>→ Clarifier ses objectifs, lever les blocages et mettre en place un plan d'action concret.</span><span data-en>→ Clarify your goals, remove blocks and build a concrete action plan.</span></div>
+      </div>
+      <div class="service-card">
+        <span class="num">02</span>
+        <h3><span data-fr>Coaching de Groupe</span><span data-en>Group Coaching</span></h3>
+        <p><span data-fr>Accompagnement collectif autour d'objectifs ou problématiques communes.</span><span data-en>Collective support built around shared goals or challenges.</span></p>
+        <div class="benefit"><span data-fr>→ Bénéficier de la dynamique du groupe, partager les expériences et progresser ensemble.</span><span data-en>→ Benefit from group dynamics, share experiences and progress together.</span></div>
+      </div>
+      <div class="service-card">
+        <span class="num">03</span>
+        <h3><span data-fr>Coaching d'Entreprise</span><span data-en>Corporate Coaching</span></h3>
+        <p><span data-fr>Accompagnement des dirigeants, managers et équipes pour renforcer les performances humaines et organisationnelles.</span><span data-en>Support for executives, managers and teams to strengthen human and organizational performance.</span></p>
+        <div class="benefit"><span data-fr>→ Améliorer le leadership, la collaboration, l'engagement des équipes et la performance globale.</span><span data-en>→ Improve leadership, collaboration, team engagement and overall performance.</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PROGRAMS -->
+<section id="programs" class="dark-section">
+  <div class="wrap">
+    <div class="section-head light-on-dark">
+      <span class="eyebrow"><span data-fr>LES PROGRAMMES</span><span data-en>THE PROGRAMS</span></span>
+      <h2><span data-fr>Trois étapes vers votre transformation</span><span data-en>Three stages toward your transformation</span></h2>
+      <p class="lead"><span data-fr>Chaque formule correspond à un niveau de profondeur et d'engagement dans le processus du Déménagement Mental.</span><span data-en>Each formula matches a level of depth and commitment within the Mental Relocation process.</span></p>
+    </div>
+    <div class="programs-grid">
+      <div class="program-card">
+        <h3><span data-fr>Formule Éveil</span><span data-en>Awakening</span></h3>
+        <div class="duration"><span data-fr>8 semaines</span><span data-en>8 weeks</span></div>
+        <div class="price"><sup>$</sup>200</div>
+        <div class="goal"><span data-fr>Identifier vos blocages et poser les bases.</span><span data-en>Identify your blocks and lay the foundations.</span></div>
+        <a href="#booking" class="btn-program"><span data-fr>COMMENCER</span><span data-en>START YOUR JOURNEY</span></a>
+      </div>
+      <div class="program-card featured">
+        <span class="tag"><span data-fr>LE PLUS CHOISI</span><span data-en>MOST CHOSEN</span></span>
+        <h3><span data-fr>Formule Alignement</span><span data-en>Alignment</span></h3>
+        <div class="duration"><span data-fr>3 mois</span><span data-en>3 months</span></div>
+        <div class="price"><sup>$</sup>400</div>
+        <div class="goal"><span data-fr>Reprogrammer votre subconscient et maîtriser votre mental.</span><span data-en>Reprogram your subconscious and master your mindset.</span></div>
+        <a href="#booking" class="btn-program"><span data-fr>CHOISIR ALIGNEMENT</span><span data-en>CHOOSE ALIGNMENT</span></a>
+      </div>
+      <div class="program-card">
+        <h3><span data-fr>Formule Transmutation</span><span data-en>Transmutation</span></h3>
+        <div class="duration"><span data-fr>6 mois</span><span data-en>6 months</span></div>
+        <div class="price"><sup>$</sup>800</div>
+        <div class="goal"><span data-fr>Consolider vos acquis et propulser votre leadership.</span><span data-en>Consolidate your progress and elevate your leadership.</span></div>
+        <a href="#booking" class="btn-program"><span data-fr>CHOISIR TRANSMUTATION</span><span data-en>CHOOSE TRANSMUTATION</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK -->
+<section id="book" class="book-section">
+  <div class="wrap">
+    <div class="book-grid">
+      <img class="book-cover" src="assets/book_front.jpg" alt="Le changement de paradigme en Afrique s'impose">
+      <div class="book-copy">
+        <h3><span data-fr>LE LIVRE</span><span data-en>THE BOOK</span></h3>
+        <h2 class="serif"><span data-fr>Le changement de paradigme en Afrique s'impose</span><span data-en>The Paradigm Shift in Africa Is Imperative</span></h2>
+        <p><span data-fr>Un livre sur le potentiel africain, les croyances limitantes, les paradigmes sociaux, le changement de mentalité, la maîtrise des ressources, la transformation personnelle et le développement de l'Afrique.</span>
+        <span data-en>A book on African potential, limiting beliefs, social paradigms, mindset change, resource mastery, personal transformation and Africa's development.</span></p>
+        <div class="book-meta">
+          <div><strong data-fr>Auteur</strong><strong data-en>Author</strong>Labaéka Tidjani-Dourodjaye</div>
+          <div><strong>ISBN</strong>978-2-38396-020-1</div>
+          <div><strong data-fr>Éditions</strong><strong data-en>Publisher</strong>Germinale</div>
+        </div>
+        <div class="book-cta-row">
+          <a href="#contact" class="btn-dark"><span data-fr>COMMANDER LE LIVRE</span><span data-en>BUY THE BOOK</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section id="testimonials" style="background:var(--white);">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" style="color:#0d9488;"><span data-fr>TÉMOIGNAGES</span><span data-en>TESTIMONIALS</span></span>
+      <h2><span data-fr>Des transformations réelles</span><span data-en>Real transformations</span></h2>
+    </div>
+  </div>
+  <div class="wrap" style="padding:0;">
+    <div class="testi-grid">
+      <div class="testi-card">
+        <div class="who">Clarisse B.</div>
+        <div class="field"><div class="lab"><span data-fr>Problème</span><span data-en>Challenge</span></div>
+          <p><span data-fr>Volonté et ambition présentes, mais manque de direction claire, de stratégie et de confiance dans son potentiel.</span><span data-en>Willpower and ambition were present, but clear direction, strategy and confidence in her own potential were missing.</span></p></div>
+        <div class="field"><div class="lab"><span data-fr>Solution</span><span data-en>Approach</span></div>
+          <p><span data-fr>Coaching exigeant et bienveillant axé sur la discipline, la prise de décision, la confiance et le passage à l'action.</span><span data-en>Demanding, supportive coaching focused on discipline, decision-making, confidence and taking action.</span></p></div>
+        <div class="field"><div class="lab"><span data-fr>Résultat</span><span data-en>Outcome</span></div>
+          <p><span data-fr>Une nouvelle manière de penser et d'agir, plus de discipline, plus de confiance, plus de conscience et une meilleure capacité à atteindre ses objectifs.</span><span data-en>A new way of thinking and acting, more discipline, more confidence, more awareness and a stronger ability to reach her goals.</span></p></div>
+      </div>
+      <div class="testi-card">
+        <div class="who">Charles A.</div>
+        <div class="field"><div class="lab"><span data-fr>Problème</span><span data-en>Challenge</span></div>
+          <p><span data-fr>Manque de confiance en soi, difficulté à prendre la parole et image personnelle dégradée malgré un fort potentiel.</span><span data-en>Low self-confidence, difficulty speaking up, and a diminished self-image despite strong potential.</span></p></div>
+        <div class="field"><div class="lab"><span data-fr>Solution</span><span data-en>Approach</span></div>
+          <p><span data-fr>Formation intensive de près de trois mois avec Coach Tidjani Academy, combinant enseignements, exercices pratiques et travail profond sur la perception de soi.</span><span data-en>Nearly three months of intensive training with Coach Tidjani Academy, combining teaching, practical exercises, and deep work on self-perception.</span></p></div>
+        <div class="field"><div class="lab"><span data-fr>Résultat</span><span data-en>Outcome</span></div>
+          <p><span data-fr>Transformation visible dans la manière de penser, de s'exprimer et de se percevoir, avec davantage de confiance, de clarté et une meilleure compréhension de son potentiel.</span><span data-en>Visible transformation in how he thinks, expresses himself, and sees himself, with greater confidence, clarity, and understanding of his potential.</span></p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- IMPACT -->
+<div class="impact-strip">
+  <div class="wrap">
+    <div class="impact-grid">
+      <div><div class="impact-num">5</div><div class="impact-label"><span data-fr>Partenaires</span><span data-en>Partners</span></div></div>
+      <div><div class="impact-num">130</div><div class="impact-label"><span data-fr>Clients accompagnés</span><span data-en>Clients coached</span></div></div>
+      <div><div class="impact-num">2</div><div class="impact-label"><span data-fr>Employés</span><span data-en>Employees</span></div></div>
+    </div>
+  </div>
+</div>
+
+<!-- AUDIENCE -->
+<section id="audience" style="background:var(--white);">
+  <div class="wrap">
+    <div class="audience-grid">
+      <div>
+        <span class="eyebrow" style="color:#0d9488;"><span data-fr>POUR QUI</span><span data-en>WHO IT'S FOR</span></span>
+        <h2 class="serif" style="font-size:1.9rem; font-weight:400; color:var(--navy-deep); line-height:1.3;">
+          <span data-fr>Des hommes et des femmes ambitieux, prêts à changer de niveau</span>
+          <span data-en>Ambitious men and women, ready to move to the next level</span>
+        </h2>
+        <p style="color:#455361; margin-top:20px; line-height:1.75; font-size:1rem;">
+          <span data-fr>Entrepreneurs, salariés, indépendants, jeunes cadres et porteurs de projets africains — en Afrique comme dans la diaspora — qui se sentent bloqués par leur système de pensée et leurs habitudes, et qui veulent enfin avancer.</span>
+          <span data-en>Entrepreneurs, employees, freelancers, young executives and African project leaders — across Africa and the diaspora — who feel held back by their own thinking and habits, and are ready to finally move forward.</span>
+        </p>
+        <div class="chip-row">
+          <span class="chip">25–50 <span data-fr>ans</span><span data-en>years old</span></span>
+          <span class="chip" data-fr>Entrepreneurs</span><span class="chip" data-en>Entrepreneurs</span>
+          <span class="chip" data-fr>Jeunes cadres</span><span class="chip" data-en>Young executives</span>
+          <span class="chip" data-fr>Indépendants</span><span class="chip" data-en>Freelancers</span>
+          <span class="chip" data-fr>Diaspora africaine</span><span class="chip" data-en>African diaspora</span>
+        </div>
+      </div>
+      <div class="chip-row" style="justify-content:flex-end;">
+        <span class="chip">Togo</span><span class="chip">Niger</span><span class="chip">Côte d'Ivoire</span><span class="chip">Sénégal</span><span class="chip">Bénin</span><span class="chip">Cameroun</span><span class="chip">France</span><span class="chip">USA</span><span class="chip">Canada</span><span class="chip">UK</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- AI ASSISTANT -->
+<section class="ai-section" id="ai">
+  <div class="wrap">
+    <div class="ai-grid">
+      <div>
+        <span class="eyebrow"><span data-fr>ASSISTANT IA</span><span data-en>AI ASSISTANT</span></span>
+        <h2 style="color:var(--white); font-size:2rem; font-weight:400; line-height:1.25;">Coach Tidjani Academy <span style="color:var(--turquoise-soft); font-style:italic;">AI Assistant</span></h2>
+        <p style="color:rgba(255,255,255,0.6); margin-top:20px; line-height:1.75; font-size:1rem;">
+          <span data-fr>Posez vos questions sur les programmes, les tarifs, le livre, le concept du Déménagement Mental ou la réservation d'une séance. L'assistant vous oriente vers la bonne offre, 24h/24.</span>
+          <span data-en>Ask about the programs, pricing, the book, the Mental Relocation concept, or booking a session. The assistant guides you to the right offer, 24/7.</span>
+        </p>
+      </div>
+      <div class="ai-window">
+        <div class="ai-header"><div class="ai-dot"></div><span>Coach Tidjani Academy AI Assistant</span></div>
+        <div class="ai-body">
+          <div class="msg user"><span data-fr>Je manque de confiance en moi. Quel programme me conseillez-vous ?</span><span data-en>I lack self-confidence. Which program would you recommend?</span></div>
+          <div class="msg ai"><span data-fr>La Formule Alignement (3 mois) est conçue pour reprogrammer votre subconscient et renforcer votre confiance en profondeur. Souhaitez-vous réserver un premier échange avec Coach Tidjani ?</span><span data-en>The Alignment program (3 months) is designed to reprogram your subconscious and build lasting confidence. Would you like to book an initial session with Coach Tidjani?</span></div>
+        </div>
+        <div class="ai-input">
+          <input type="text" placeholder="Écrivez votre question..." data-fr-placeholder="Écrivez votre question..." data-en-placeholder="Type your question...">
+          <button type="button"><span data-fr>Envoyer</span><span data-en>Send</span></button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section id="booking" class="book-session">
+  <div class="wrap">
+    <div class="section-head">
+      <span class="eyebrow" style="color:#0d9488;"><span data-fr>RÉSERVATION</span><span data-en>BOOKING</span></span>
+      <h2><span data-fr>Réservez votre séance de coaching</span><span data-en>Book your coaching session</span></h2>
+    </div>
+    <div class="booking-panel">
+      <div class="booking-side">
+        <h3><span data-fr>Parlons de votre transformation</span><span data-en>Let's talk about your transformation</span></h3>
+        <p><span data-fr>Choisissez votre programme, une date et une heure. Coach Tidjani vous recontacte pour confirmer votre séance.</span><span data-en>Choose your program, a date and a time. Coach Tidjani will contact you to confirm your session.</span></p>
+        <ul>
+          <li><span data-fr>Réponse sous 24 à 48h</span><span data-en>Response within 24–48h</span></li>
+          <li><span data-fr>Séances en ligne ou en présentiel</span><span data-en>Online or in-person sessions</span></li>
+          <li><span data-fr>Accompagnement disponible partout dans le monde</span><span data-en>Available worldwide</span></li>
+        </ul>
+      </div>
+      <form class="booking-form" onsubmit="return handleBooking(event)">
+        <div class="form-row">
+          <div class="field-group"><label data-fr>Nom complet</label><label data-en>Full name</label><input type="text" required></div>
+          <div class="field-group"><label>Email</label><input type="email" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field-group"><label data-fr>Téléphone</label><label data-en>Phone</label><input type="tel" required></div>
+          <div class="field-group"><label data-fr>Pays</label><label data-en>Country</label><input type="text" required></div>
+        </div>
+        <div class="form-row">
+          <div class="field-group">
+            <label data-fr>Programme</label><label data-en>Program</label>
+            <select>
+              <option data-fr>Formule Éveil — 200 $</option><option data-en>Awakening — $200</option>
+              <option data-fr>Formule Alignement — 400 $</option><option data-en>Alignment — $400</option>
+              <option data-fr>Formule Transmutation — 800 $</option><option data-en>Transmutation — $800</option>
+              <option data-fr>Je ne suis pas encore sûr(e)</option><option data-en>Not sure yet</option>
+            </select>
+          </div>
+          <div class="field-group"><label data-fr>Date souhaitée</label><label data-en>Preferred date</label><input type="date"></div>
+        </div>
+        <div class="field-group">
+          <label data-fr>Objectif de la séance</label><label data-en>Session goal</label>
+          <textarea placeholder="..."></textarea>
+        </div>
+        <p class="form-note"><span data-fr>* Ce formulaire prépare votre demande — l'intégration Calendly / système de réservation sera connectée prochainement.</span><span data-en>* This form prepares your request — Calendly / booking system integration is coming soon.</span></p>
+        <button type="submit" class="btn-primary"><span data-fr>ENVOYER MA DEMANDE</span><span data-en>SEND MY REQUEST</span></button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT / FOOTER -->
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-grid">
+      <div>
+        <div class="footer-brand">COACH TIDJANI ACADEMY</div>
+        <p><span data-fr>Le Déménagement Mental</span><span data-en>The Mental Relocation</span></p>
+        <p style="max-width:320px; line-height:1.7;"><span data-fr>Une plateforme africaine de référence dans la transformation mentale, le développement intégral et la prospérité.</span><span data-en>A leading African platform for mental transformation, integral development and prosperity.</span></p>
+      </div>
+      <div class="footer-col">
+        <h4><span data-fr>NAVIGATION</span><span data-en>NAVIGATION</span></h4>
+        <a href="#about">About</a>
+        <a href="#services"><span data-fr>Coaching</span><span data-en>Coaching</span></a>
+        <a href="#programs"><span data-fr>Programmes</span><span data-en>Programs</span></a>
+        <a href="#book"><span data-fr>Livre</span><span data-en>Book</span></a>
+        <a href="#testimonials"><span data-fr>Témoignages</span><span data-en>Testimonials</span></a>
+        <a href="#booking"><span data-fr>Réserver une séance</span><span data-en>Book a session</span></a>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <a href="mailto:coachtidjani@gmail.com">coachtidjani@gmail.com</a>
+        <a href="tel:+22890045290">+228 90 04 52 90</a>
+        <a href="https://linkedin.com/in/coachtidjani" target="_blank">linkedin.com/in/coachtidjani</a>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Coach Tidjani Academy. <span data-fr>Tous droits réservés.</span><span data-en>All rights reserved.</span></span>
+      <span style="display:flex; gap:18px;">
+        <a href="#"><span data-fr>Confidentialité</span><span data-en>Privacy Policy</span></a>
+        <a href="#"><span data-fr>Conditions</span><span data-en>Terms & Conditions</span></a>
+      </span>
+      <span style="opacity:0.7;">Digital platform by RougaTech</span>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function setLang(lang){
+    document.documentElement.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    document.getElementById('btnFr').classList.toggle('active', lang==='fr');
+    document.getElementById('btnEn').classList.toggle('active', lang==='en');
+    document.querySelectorAll('input[data-fr-placeholder]').forEach(el=>{
+      el.placeholder = lang==='fr' ? el.getAttribute('data-fr-placeholder') : el.getAttribute('data-en-placeholder');
+    });
+  }
+  function toggleMobile(){
+    document.getElementById('mobileMenu').classList.toggle('open');
+  }
+  function handleBooking(e){
+    e.preventDefault();
+    const lang = document.documentElement.getAttribute('data-lang');
+    alert(lang==='fr' ? 'Merci ! Votre demande a été enregistrée. Coach Tidjani Academy vous recontactera sous peu.' : 'Thank you! Your request has been recorded. Coach Tidjani Academy will contact you shortly.');
+    e.target.reset();
+    return false;
+  }
+  let lastScroll = 0;
+  window.addEventListener('scroll', ()=>{
+    const header = document.getElementById('siteHeader');
+    const cur = window.scrollY;
+    if(cur > lastScroll && cur > 140){ header.style.transform='translateY(-100%)'; }
+    else { header.style.transform='translateY(0)'; }
+    lastScroll = cur;
+  });
+</script>
+</body>
+</html>
