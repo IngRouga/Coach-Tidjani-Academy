@@ -115,6 +115,47 @@
   @media(max-width:640px){ .photo-tag{left:0; bottom:-18px; padding:14px 18px;} }
   .photo-tag .name{font-family:'Fraunces',serif; font-size:1rem; color:var(--navy-deep); font-weight:500;}
   .photo-tag .role{font-size:0.76rem; color:#5a6a78; margin-top:3px;}
+
+  /* FLOATING MENTAL ORB */
+  .mental-orb{
+    position:absolute; top:-46px; right:-34px; z-index:4;
+    width:132px; height:132px;
+    animation:orb-float 6.5s ease-in-out infinite;
+  }
+  @media(max-width:640px){ .mental-orb{ width:96px; height:96px; top:-24px; right:-14px;} }
+  .mental-orb .ring{
+    position:absolute; inset:0; border-radius:50%;
+    border:1px solid rgba(37,201,183,0.5);
+  }
+  .mental-orb .ring.r2{ inset:14px; border-color:rgba(37,201,183,0.28); }
+  .mental-orb .core{
+    position:absolute; inset:30px; border-radius:50%;
+    background:radial-gradient(circle at 34% 30%, rgba(143,227,216,0.95), rgba(37,201,183,0.55) 55%, rgba(18,42,69,0.3) 100%);
+    box-shadow:0 0 40px 6px rgba(37,201,183,0.35);
+  }
+  .mental-orb .label{
+    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
+    font-family:'Fraunces',serif; font-style:italic; color:var(--navy-deep); font-size:0.66rem;
+    text-align:center; line-height:1.2; padding:0 14px;
+  }
+  .mental-orb .dot{
+    position:absolute; width:7px; height:7px; border-radius:50%; background:var(--turquoise-soft);
+    top:6px; left:50%; box-shadow:0 0 10px 2px rgba(143,227,216,0.7);
+    animation:orb-orbit 6.5s linear infinite;
+    transform-origin:66px 66px;
+  }
+  @media(max-width:640px){ .mental-orb .dot{transform-origin:48px 48px;} }
+  @keyframes orb-float{
+    0%, 100%{ transform:translateY(0);}
+    50%{ transform:translateY(-14px);}
+  }
+  @keyframes orb-orbit{
+    from{ transform:rotate(0deg);}
+    to{ transform:rotate(360deg);}
+  }
+  @media (prefers-reduced-motion: reduce){
+    .mental-orb, .mental-orb .dot{ animation:none; }
+  }
   .global-strip{ position:absolute; top:24px; left:0; right:0; text-align:center; z-index:5;}
   @media(max-width:960px){.global-strip{position:static; margin-bottom:20px; text-align:left;}}
   .global-strip span{ color:rgba(255,255,255,0.42); font-size:0.72rem; letter-spacing:0.24em; font-weight:500;}
@@ -288,7 +329,44 @@
   .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:30px; font-size:0.78rem; color:rgba(255,255,255,0.35); flex-wrap:wrap; gap:12px;}
   .footer-bottom a{color:rgba(255,255,255,0.5);}
 
-  /* utility */
+  /* FLOATING AI ASSISTANT (WhatsApp-style) */
+  .ai-fab{
+    position:fixed; bottom:26px; right:26px; z-index:1200;
+    width:60px; height:60px; border-radius:50%;
+    background:var(--turquoise); color:var(--navy-deep);
+    display:flex; align-items:center; justify-content:center;
+    box-shadow:0 14px 30px -8px rgba(10,27,46,0.5);
+    border:none; cursor:pointer;
+    transition:transform .25s ease;
+  }
+  .ai-fab:hover{ transform:scale(1.06); }
+  .ai-fab svg{width:26px; height:26px;}
+  .ai-fab .close-icon{display:none;}
+  .ai-fab.open .chat-icon{display:none;}
+  .ai-fab.open .close-icon{display:block;}
+  .ai-fab-pulse{ position:absolute; inset:0; border-radius:50%; background:var(--turquoise); opacity:0.55; animation:fab-pulse 2.6s ease-out infinite;}
+  @media (prefers-reduced-motion: reduce){ .ai-fab-pulse{animation:none; display:none;} }
+  @keyframes fab-pulse{ 0%{transform:scale(1); opacity:0.5;} 100%{transform:scale(1.9); opacity:0;} }
+
+  .ai-panel{
+    position:fixed; bottom:100px; right:26px; z-index:1200;
+    width:340px; max-width:calc(100vw - 40px);
+    background:var(--white); border-radius:12px; overflow:hidden;
+    box-shadow:0 30px 70px -20px rgba(0,0,0,0.45);
+    transform:translateY(16px) scale(0.97); opacity:0; pointer-events:none;
+    transition:transform .25s ease, opacity .25s ease;
+  }
+  .ai-panel.open{ transform:translateY(0) scale(1); opacity:1; pointer-events:auto;}
+  .ai-panel .ai-header{ background:var(--navy-deep); padding:16px 18px; display:flex; align-items:center; gap:10px;}
+  .ai-panel .ai-header span{color:var(--white); font-size:0.86rem; font-weight:500;}
+  .ai-panel .ai-body{ padding:18px; display:flex; flex-direction:column; gap:14px; max-height:320px; overflow-y:auto;}
+  .ai-panel .msg{ max-width:88%; padding:11px 14px; border-radius:12px; font-size:0.87rem; line-height:1.5;}
+  .ai-panel .msg.user{ align-self:flex-end; background:var(--off-white); color:var(--navy-deep); border-bottom-right-radius:2px;}
+  .ai-panel .msg.ai{ align-self:flex-start; background:#EAFBF8; color:#0d5c53; border-bottom-left-radius:2px;}
+  .ai-panel .ai-input{ display:flex; border-top:1px solid var(--line); padding:12px 14px; gap:8px;}
+  .ai-panel .ai-input input{ flex:1; border:none; outline:none; font-family:'Inter'; font-size:0.87rem; background:transparent;}
+  .ai-panel .ai-input button{ background:var(--turquoise); color:var(--navy-deep); border:none; padding:8px 14px; border-radius:20px; font-size:0.78rem; font-weight:600; cursor:pointer;}
+  @media(max-width:480px){ .ai-fab{bottom:18px; right:18px;} .ai-panel{right:14px; bottom:88px;} }
   .center{text-align:center;}
   .mx-auto{margin-left:auto; margin-right:auto;}
   [data-en]{display:none;}
@@ -352,6 +430,13 @@
         </div>
       </div>
       <div class="hero-photo">
+        <div class="mental-orb">
+          <div class="ring"></div>
+          <div class="ring r2"></div>
+          <div class="core"></div>
+          <div class="dot"></div>
+          <div class="label"><span data-fr>mental</span><span data-en>mindset</span></div>
+        </div>
         <div class="photo-frame"><img src="coach.jpg" alt="Coach Tidjani — Labaéka Tidjani-Dourodjaye"></div>
         <div class="photo-tag">
           <div class="name">Labaéka Tidjani-Dourodjaye</div>
@@ -657,33 +742,6 @@
   </div>
 </section>
 
-<!-- AI ASSISTANT -->
-<section class="ai-section" id="ai">
-  <div class="wrap">
-    <div class="ai-grid">
-      <div>
-        <span class="eyebrow"><span data-fr>ASSISTANT IA</span><span data-en>AI ASSISTANT</span></span>
-        <h2 style="color:var(--white); font-size:2rem; font-weight:400; line-height:1.25;">Coach Tidjani Academy <span style="color:var(--turquoise-soft); font-style:italic;">AI Assistant</span></h2>
-        <p style="color:rgba(255,255,255,0.6); margin-top:20px; line-height:1.75; font-size:1rem;">
-          <span data-fr>Posez vos questions sur les programmes, les tarifs, le livre, le concept du Déménagement Mental ou la réservation d'une séance. L'assistant vous oriente vers la bonne offre, 24h/24.</span>
-          <span data-en>Ask about the programs, pricing, the book, the Mental Relocation concept, or booking a session. The assistant guides you to the right offer, 24/7.</span>
-        </p>
-      </div>
-      <div class="ai-window">
-        <div class="ai-header"><div class="ai-dot"></div><span>Coach Tidjani Academy AI Assistant</span></div>
-        <div class="ai-body">
-          <div class="msg user"><span data-fr>Je manque de confiance en moi. Quel programme me conseillez-vous ?</span><span data-en>I lack self-confidence. Which program would you recommend?</span></div>
-          <div class="msg ai"><span data-fr>La Formule Alignement (3 mois) est conçue pour reprogrammer votre subconscient et renforcer votre confiance en profondeur. Souhaitez-vous réserver un premier échange avec Coach Tidjani ?</span><span data-en>The Alignment program (3 months) is designed to reprogram your subconscious and build lasting confidence. Would you like to book an initial session with Coach Tidjani?</span></div>
-        </div>
-        <div class="ai-input">
-          <input type="text" placeholder="Écrivez votre question..." data-fr-placeholder="Écrivez votre question..." data-en-placeholder="Type your question...">
-          <button type="button"><span data-fr>Envoyer</span><span data-en>Send</span></button>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <!-- CONTACT / FOOTER -->
 <footer id="contact">
   <div class="wrap">
@@ -748,6 +806,32 @@
     else { header.style.transform='translateY(0)'; }
     lastScroll = cur;
   });
+</script>
+<!-- FLOATING AI ASSISTANT -->
+<button class="ai-fab" id="aiFab" onclick="toggleAI()" aria-label="AI Assistant">
+  <div class="ai-fab-pulse"></div>
+  <svg class="chat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v12H7l-3 3V4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/></svg>
+  <svg class="close-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
+</button>
+
+<div class="ai-panel" id="aiPanel">
+  <div class="ai-header"><div class="ai-dot"></div><span>Coach Tidjani Academy AI Assistant</span></div>
+  <div class="ai-body">
+    <div class="msg ai"><span data-fr>Bonjour 👋 Je peux vous renseigner sur les programmes, les tarifs, le livre ou la réservation. Comment puis-je vous aider ?</span><span data-en>Hi 👋 I can help with programs, pricing, the book, or booking a session. How can I help you?</span></div>
+    <div class="msg user"><span data-fr>Je manque de confiance en moi. Quel programme me conseillez-vous ?</span><span data-en>I lack self-confidence. Which program would you recommend?</span></div>
+    <div class="msg ai"><span data-fr>La Formule Alignement (3 mois) est conçue pour reprogrammer votre subconscient et renforcer votre confiance en profondeur. Souhaitez-vous réserver un premier échange avec Coach Tidjani ?</span><span data-en>The Alignment program (3 months) is designed to reprogram your subconscious and build lasting confidence. Would you like to book an initial session with Coach Tidjani?</span></div>
+  </div>
+  <div class="ai-input">
+    <input type="text" placeholder="Écrivez votre question..." data-fr-placeholder="Écrivez votre question..." data-en-placeholder="Type your question...">
+    <button type="button" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'}); toggleAI();"><span data-fr>Envoyer</span><span data-en>Send</span></button>
+  </div>
+</div>
+
+<script>
+  function toggleAI(){
+    document.getElementById('aiFab').classList.toggle('open');
+    document.getElementById('aiPanel').classList.toggle('open');
+  }
 </script>
 </body>
 </html>
