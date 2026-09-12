@@ -53,8 +53,11 @@
     transition:transform .4s ease;
   }
   .navbar{ display:flex; align-items:center; justify-content:space-between; height:76px;}
-  .brand{ color:var(--white); font-family:'Fraunces',serif; font-size:1.15rem; font-weight:500; letter-spacing:0.01em; display:flex; flex-direction:column; line-height:1.05;}
-  .brand span{font-size:0.62rem; color:var(--turquoise-soft); font-weight:400; letter-spacing:0.12em; margin-top:3px;}
+  .brand{ color:var(--white); display:flex; align-items:center; gap:12px; line-height:1.05;}
+  .brand img{ height:44px; width:auto; display:block;}
+  .brand .wordmark{ font-family:'Fraunces', serif; font-size:1.05rem; font-weight:500; letter-spacing:0.01em; display:flex; flex-direction:column;}
+  .brand .wordmark span{font-size:0.6rem; color:var(--turquoise-soft); font-weight:400; letter-spacing:0.1em; margin-top:3px; font-family:'Inter';}
+  @media(max-width:640px){ .brand .wordmark{display:none;} .brand img{height:38px;} }
   nav.links{ display:flex; gap:34px; align-items:center;}
   nav.links a{ color:rgba(255,255,255,0.78); font-size:0.92rem; font-weight:400; transition:color .25s ease; position:relative;}
   nav.links a:hover{color:var(--white);}
@@ -96,9 +99,8 @@
   @media(max-width:960px){ .hero-grid{grid-template-columns:1fr; gap:50px;} }
   .kicker{ display:inline-flex; align-items:center; gap:10px; color:var(--turquoise-soft); font-size:0.78rem; letter-spacing:0.16em; font-weight:500; margin-bottom:26px;}
   .kicker::before{content:''; width:26px; height:1px; background:var(--turquoise);}
-  .hero h1{ color:var(--white); font-size:clamp(2.4rem, 5vw, 3.6rem); font-weight:400; line-height:1.06; margin-bottom:20px;}
-  .hero h1 em{ font-style:italic; color:var(--turquoise-soft); font-weight:300;}
-  .hero .concept{ color:var(--turquoise); font-family:'Fraunces',serif; font-size:clamp(1.3rem,2.4vw,1.7rem); font-weight:500; margin-bottom:22px; font-style:italic;}
+  .hero h1{ color:var(--white); font-family:'Inter',sans-serif; font-size:clamp(2.2rem, 4.6vw, 3.4rem); font-weight:700; line-height:1.14; letter-spacing:-0.01em; margin-bottom:22px;}
+  .concept-badge{ display:inline-block; border:1px solid rgba(37,201,183,0.5); color:var(--turquoise-soft); font-size:0.76rem; font-weight:600; letter-spacing:0.08em; padding:8px 16px; border-radius:20px; margin-bottom:24px;}
   .hero p.signature{ color:rgba(255,255,255,0.68); font-size:1.05rem; font-family:'Fraunces',serif; font-style:italic; margin-bottom:26px;}
   .hero p.desc{ color:rgba(255,255,255,0.6); font-size:1rem; line-height:1.7; max-width:480px; margin-bottom:40px;}
   .cta-row{ display:flex; gap:18px; flex-wrap:wrap;}
@@ -380,7 +382,10 @@
 
 <header id="siteHeader">
   <div class="wrap navbar">
-    <a href="#hero" class="brand">COACH TIDJANI<br>ACADEMY <span data-fr>LE DÉMÉNAGEMENT MENTAL</span><span data-en>THE MENTAL RELOCATION</span></a>
+    <a href="#hero" class="brand">
+      <img src="logo_transparent.png" alt="Coach Tidjani Academy">
+      <span class="wordmark">COACH TIDJANI ACADEMY<span data-fr>LE DÉMÉNAGEMENT MENTAL</span><span data-en>THE MENTAL RELOCATION</span></span>
+    </a>
     <nav class="links">
       <a href="#about"><span data-fr>À propos</span><span data-en>About</span></a>
       <a href="#services"><span data-fr>Coaching</span><span data-en>Coaching</span></a>
@@ -417,8 +422,8 @@
     <div class="hero-grid">
       <div>
         <div class="kicker"><span data-fr>COACHING & TRANSFORMATION MENTALE</span><span data-en>COACHING & MENTAL TRANSFORMATION</span></div>
-        <h1><span data-fr>Coach Tidjani<br><em>Academy</em></span><span data-en>Coach Tidjani<br><em>Academy</em></span></h1>
-        <div class="concept"><span data-fr>Le Déménagement Mental</span><span data-en>The Mental Relocation</span></div>
+        <h1><span data-fr>Ton mental est le seul obstacle entre toi et la vie que tu mérites.</span><span data-en>Your mindset is the only thing standing between you and the life you deserve.</span></h1>
+        <div class="concept-badge"><span data-fr>LE DÉMÉNAGEMENT MENTAL</span><span data-en>THE MENTAL RELOCATION</span></div>
         <p class="signature"><span data-fr>« Je t'aide à changer ton mental pour changer ta vie. »</span><span data-en>"I help you change your mindset to change your life."</span></p>
         <p class="desc">
           <span data-fr>Une approche de transformation personnelle conçue pour aider les personnes ambitieuses à dépasser leurs blocages, renforcer leur discipline, développer leur potentiel et construire une vie alignée avec leurs aspirations.</span>
