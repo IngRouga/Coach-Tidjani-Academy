@@ -67,7 +67,7 @@
   .lang-switch{ display:flex; gap:2px; border:1px solid rgba(255,255,255,0.25); border-radius:20px; padding:3px; font-size:0.75rem;}
   .lang-switch button{ padding:5px 12px; border-radius:16px; color:rgba(255,255,255,0.65); background:transparent; border:none; cursor:pointer; font-family:'Inter'; font-size:0.75rem; letter-spacing:0.03em;}
   .lang-switch button.active{ background:var(--turquoise); color:var(--navy-deep); font-weight:600;}
-  .btn-nav{ background:var(--turquoise); color:var(--navy-deep); padding:10px 22px; border-radius:3px; font-size:0.82rem; font-weight:600; letter-spacing:0.03em; white-space:nowrap;}
+  .btn-nav{ position:relative; overflow:hidden; background:var(--turquoise); color:var(--navy-deep); padding:10px 22px; border-radius:3px; font-size:0.82rem; font-weight:600; letter-spacing:0.03em; white-space:nowrap;}
   .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px;}
   .burger span{width:22px; height:1.5px; background:var(--white);}
   @media(max-width:960px){
@@ -104,10 +104,21 @@
   .hero p.signature{ color:rgba(255,255,255,0.68); font-size:1.05rem; font-family:'Fraunces',serif; font-style:italic; margin-bottom:26px;}
   .hero p.desc{ color:rgba(255,255,255,0.6); font-size:1rem; line-height:1.7; max-width:480px; margin-bottom:40px;}
   .cta-row{ display:flex; gap:18px; flex-wrap:wrap;}
-  .btn-primary{ background:var(--turquoise); color:var(--navy-deep); padding:16px 30px; font-weight:600; font-size:0.88rem; letter-spacing:0.03em; border-radius:3px; box-shadow:0 14px 30px -10px rgba(37,201,183,0.45); transition:transform .25s ease;}
-  .btn-primary:hover{transform:translateY(-2px);}
-  .btn-ghost{ border:1px solid rgba(255,255,255,0.32); color:var(--white); padding:16px 30px; font-weight:500; font-size:0.88rem; letter-spacing:0.02em; border-radius:3px; transition:border-color .25s ease, background .25s ease;}
+  .btn-primary{ position:relative; overflow:hidden; background:var(--turquoise); color:var(--navy-deep); padding:16px 30px; font-weight:600; font-size:0.88rem; letter-spacing:0.03em; border-radius:3px; box-shadow:0 14px 30px -10px rgba(37,201,183,0.45); transition:transform .25s ease, box-shadow .25s ease;}
+  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 18px 40px -8px rgba(37,201,183,0.65);}
+  .btn-ghost{ position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.32); color:var(--white); padding:16px 30px; font-weight:500; font-size:0.88rem; letter-spacing:0.02em; border-radius:3px; transition:border-color .25s ease, background .25s ease;}
   .btn-ghost:hover{ border-color:var(--turquoise); background:rgba(37,201,183,0.08);}
+  /* light sweep effect shared by CTA buttons */
+  .btn-primary::after, .btn-ghost::after, .btn-nav::after, .btn-dark::after, .btn-program::after{
+    content:''; position:absolute; top:0; left:-60%; width:40%; height:100%;
+    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.55), transparent);
+    transform:skewX(-20deg); transition:left .6s ease;
+    pointer-events:none;
+  }
+  .btn-primary:hover::after, .btn-ghost:hover::after, .btn-nav:hover::after, .btn-dark:hover::after, .btn-program:hover::after{ left:130%; }
+  @media (prefers-reduced-motion: reduce){
+    .btn-primary::after, .btn-ghost::after, .btn-nav::after, .btn-dark::after, .btn-program::after{ display:none; }
+  }
 
   .hero-photo{ position:relative;}
   .photo-frame{ position:relative; border-radius:4px; overflow:hidden; aspect-ratio:3/4; }
@@ -158,6 +169,17 @@
   @media (prefers-reduced-motion: reduce){
     .mental-orb, .mental-orb .dot{ animation:none; }
   }
+
+  /* AMBIENT ORBS scattered across the site */
+  .ambient-orb{
+    position:absolute; border-radius:50%; pointer-events:none; z-index:0;
+    background:radial-gradient(circle at 34% 30%, rgba(143,227,216,0.9), rgba(37,201,183,0.35) 55%, rgba(37,201,183,0) 78%);
+    animation:orb-float 7.5s ease-in-out infinite;
+  }
+  .ambient-orb.dark-bg{ opacity:0.5; }
+  .ambient-orb.light-bg{ opacity:0.35; }
+  @media (prefers-reduced-motion: reduce){ .ambient-orb{ animation:none; } }
+  section{ position:relative; }
   .global-strip{ position:absolute; top:24px; left:0; right:0; text-align:center; z-index:5;}
   @media(max-width:960px){.global-strip{position:static; margin-bottom:20px; text-align:left;}}
   .global-strip span{ color:rgba(255,255,255,0.42); font-size:0.72rem; letter-spacing:0.24em; font-weight:500;}
@@ -214,8 +236,20 @@
   /* SERVICES */
   .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line);}
   @media(max-width:900px){ .services-grid{grid-template-columns:1fr;} }
-  .service-card{ background:var(--white); padding:44px 38px;}
-  .service-card .num{ color:var(--turquoise); font-family:'Fraunces',serif; font-style:italic; font-size:0.9rem; margin-bottom:20px; display:block;}
+  .service-card{ background:var(--white); padding:44px 38px; position:relative; overflow:hidden; transition:transform .35s ease, box-shadow .35s ease;}
+  .service-card:hover{ transform:translateY(-6px); box-shadow:0 24px 50px -20px rgba(10,27,46,0.22); z-index:2;}
+  .service-card::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--turquoise), var(--turquoise-soft)); transform:scaleX(0); transform-origin:left; transition:transform .4s ease;}
+  .service-card:hover::before{ transform:scaleX(1); }
+  .service-icon{
+    width:56px; height:56px; border-radius:50%;
+    background:radial-gradient(circle at 32% 28%, rgba(143,227,216,0.5), rgba(37,201,183,0.14) 65%, transparent 100%);
+    border:1px solid rgba(37,201,183,0.4);
+    display:flex; align-items:center; justify-content:center;
+    margin-bottom:24px; transition:transform .35s ease, background .35s ease;
+  }
+  .service-card:hover .service-icon{ transform:scale(1.08) rotate(-4deg); background:radial-gradient(circle at 32% 28%, rgba(143,227,216,0.75), rgba(37,201,183,0.25) 65%, transparent 100%);}
+  .service-icon svg{ width:26px; height:26px; stroke:var(--navy-deep);}
+  .service-card .num{ position:absolute; top:40px; right:38px; color:var(--turquoise); font-family:'Fraunces',serif; font-style:italic; font-size:0.9rem; opacity:0.7;}
   .service-card h3{ font-size:1.3rem; font-weight:500; color:var(--navy-deep); margin-bottom:16px;}
   .service-card p{ color:#556270; font-size:0.95rem; line-height:1.7; margin-bottom:18px;}
   .service-card .benefit{ font-size:0.86rem; color:#0d9488; font-weight:500;}
@@ -231,7 +265,7 @@
   .program-card .price{ color:var(--turquoise-soft); font-family:'Fraunces',serif; font-size:2.4rem; margin-bottom:22px;}
   .program-card .price sup{font-size:1rem; margin-right:2px;}
   .program-card .goal{ color:rgba(255,255,255,0.68); font-size:0.95rem; line-height:1.6; margin-bottom:30px; flex-grow:1;}
-  .program-card .btn-program{ display:block; text-align:center; border:1px solid rgba(255,255,255,0.3); color:var(--white); padding:14px; border-radius:3px; font-size:0.82rem; font-weight:600; letter-spacing:0.02em;}
+  .program-card .btn-program{ position:relative; overflow:hidden; display:block; text-align:center; border:1px solid rgba(255,255,255,0.3); color:var(--white); padding:14px; border-radius:3px; font-size:0.82rem; font-weight:600; letter-spacing:0.02em;}
   .program-card.featured .btn-program{ background:var(--turquoise); color:var(--navy-deep); border-color:var(--turquoise);}
 
   /* BOOK */
@@ -246,7 +280,7 @@
   .book-meta div{ font-size:0.85rem; color:#63707c;}
   .book-meta strong{ display:block; color:var(--navy-deep); font-size:0.95rem; margin-bottom:3px;}
   .book-cta-row{display:flex; gap:16px; margin-top:26px; flex-wrap:wrap;}
-  .btn-dark{ background:var(--navy-deep); color:var(--white); padding:15px 28px; border-radius:3px; font-size:0.85rem; font-weight:600;}
+  .btn-dark{ position:relative; overflow:hidden; background:var(--navy-deep); color:var(--white); padding:15px 28px; border-radius:3px; font-size:0.85rem; font-weight:600;}
 
   /* TESTIMONIALS */
   .testi-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line);}
@@ -454,6 +488,8 @@
 
 <!-- PROBLEM -->
 <section class="dark-section" id="problem">
+  <div class="ambient-orb dark-bg" style="width:100px;height:100px;top:60px;left:-30px;animation-delay:0.4s;"></div>
+  <div class="ambient-orb dark-bg" style="width:70px;height:70px;bottom:40px;right:6%;animation-delay:1.6s;"></div>
   <div class="wrap">
     <div class="section-head light-on-dark">
       <span class="eyebrow"><span data-fr>LE VRAI BLOCAGE</span><span data-en>THE REAL BLOCK</span></span>
@@ -475,6 +511,7 @@
 
 <!-- CONCEPT: DEMENAGEMENT MENTAL -->
 <section id="concept">
+  <div class="ambient-orb light-bg" style="width:80px;height:80px;top:30px;right:4%;animation-delay:0.8s;"></div>
   <div class="wrap">
     <div class="concept-block">
       <div class="concept-visual">
@@ -518,6 +555,7 @@
 
 <!-- SERVICES -->
 <section id="services">
+  <div class="ambient-orb light-bg" style="width:90px;height:90px;bottom:-20px;left:2%;animation-delay:1.1s;"></div>
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow" style="color:#0d9488;"><span data-fr>NOS SERVICES</span><span data-en>OUR SERVICES</span></span>
@@ -528,18 +566,21 @@
     <div class="services-grid">
       <div class="service-card">
         <span class="num">01</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2"/></svg></div>
         <h3><span data-fr>Coaching 1-1</span><span data-en>1-1 Coaching</span></h3>
         <p><span data-fr>Accompagnement personnalisé adapté aux objectifs, défis et besoins spécifiques de chaque personne.</span><span data-en>Personalized support adapted to each person's goals, challenges and specific needs.</span></p>
         <div class="benefit"><span data-fr>→ Clarifier ses objectifs, lever les blocages et mettre en place un plan d'action concret.</span><span data-en>→ Clarify your goals, remove blocks and build a concrete action plan.</span></div>
       </div>
       <div class="service-card">
         <span class="num">02</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="2.8"/><circle cx="16" cy="9.5" r="2.3"/><path d="M3.5 20c0-3.2 2.3-5.6 5.5-5.6 2 0 3.6 0.9 4.5 2.3"/><path d="M13 20c0.3-2.6 2.1-4.4 4.6-4.4 2.3 0 4.4 1.8 4.4 4.4"/></svg></div>
         <h3><span data-fr>Coaching de Groupe</span><span data-en>Group Coaching</span></h3>
         <p><span data-fr>Accompagnement collectif autour d'objectifs ou problématiques communes.</span><span data-en>Collective support built around shared goals or challenges.</span></p>
         <div class="benefit"><span data-fr>→ Bénéficier de la dynamique du groupe, partager les expériences et progresser ensemble.</span><span data-en>→ Benefit from group dynamics, share experiences and progress together.</span></div>
       </div>
       <div class="service-card">
         <span class="num">03</span>
+        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l5-3.5V20"/><path d="M9 20V9.5l5-2v12.5"/><path d="M14 20V7.5l6 3V20"/><path d="M3 20h18"/></svg></div>
         <h3><span data-fr>Coaching d'Entreprise</span><span data-en>Corporate Coaching</span></h3>
         <p><span data-fr>Accompagnement des dirigeants, managers et équipes pour renforcer les performances humaines et organisationnelles.</span><span data-en>Support for executives, managers and teams to strengthen human and organizational performance.</span></p>
         <div class="benefit"><span data-fr>→ Améliorer le leadership, la collaboration, l'engagement des équipes et la performance globale.</span><span data-en>→ Improve leadership, collaboration, team engagement and overall performance.</span></div>
@@ -550,6 +591,8 @@
 
 <!-- PROGRAMS -->
 <section id="programs" class="dark-section">
+  <div class="ambient-orb dark-bg" style="width:110px;height:110px;top:-20px;right:8%;animation-delay:0.2s;"></div>
+  <div class="ambient-orb dark-bg" style="width:60px;height:60px;bottom:60px;left:4%;animation-delay:2s;"></div>
   <div class="wrap">
     <div class="section-head light-on-dark">
       <span class="eyebrow"><span data-fr>LES PROGRAMMES</span><span data-en>THE PROGRAMS</span></span>
@@ -585,6 +628,7 @@
 
 <!-- BOOK -->
 <section id="book" class="book-section">
+  <div class="ambient-orb light-bg" style="width:85px;height:85px;top:10%;left:-20px;animation-delay:1.3s;"></div>
   <div class="wrap">
     <div class="book-grid">
       <img class="book-cover" src="book_front.jpg" alt="Le changement de paradigme en Afrique s'impose">
@@ -608,6 +652,7 @@
 
 <!-- TESTIMONIALS -->
 <section id="testimonials" style="background:var(--white);">
+  <div class="ambient-orb light-bg" style="width:75px;height:75px;top:20px;right:2%;animation-delay:0.6s;"></div>
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow" style="color:#0d9488;"><span data-fr>TÉMOIGNAGES</span><span data-en>TESTIMONIALS</span></span>
@@ -700,6 +745,7 @@
 
 <!-- BOOKING -->
 <section id="booking" class="book-session">
+  <div class="ambient-orb light-bg" style="width:95px;height:95px;bottom:20px;right:3%;animation-delay:1.8s;"></div>
   <div class="wrap">
     <div class="section-head">
       <span class="eyebrow" style="color:#0d9488;"><span data-fr>RÉSERVATION</span><span data-en>BOOKING</span></span>
