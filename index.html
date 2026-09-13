@@ -1,888 +1,1117 @@
 <!DOCTYPE html>
-<html lang="fr" data-lang="fr">
+<html lang="fr">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Coach Tidjani Academy — Le Déménagement Mental</title>
-<meta name="description" content="Coach Tidjani Academy — Coaching en développement personnel et transformation mentale pour l'Afrique, la diaspora et le monde. Le Déménagement Mental.">
-<meta property="og:title" content="Coach Tidjani Academy">
-<meta property="og:description" content="Je t'aide à changer ton mental pour changer ta vie.">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><circle cx=%2250%22 cy=%2250%22 r=%2246%22 fill=%22%230A1B2E%22/><text x=%2250%22 y=%2266%22 font-size=%2255%22 fill=%22%2325C9B7%22 text-anchor=%22middle%22 font-family=%22Georgia%22>T</text></svg>">
+<title>ROUGATECH | Transform Your Business. Sell More.</title>
+<meta name="description" content="ROUGATECH builds websites, AI agents, SaaS platforms and digital solutions that help businesses attract customers, automate operations and grow.">
+<link rel="canonical" href="https://rougatech.com/">
+<meta name="robots" content="index, follow">
+<meta property="og:title" content="ROUGATECH | Transform Your Business. Sell More.">
+<meta property="og:description" content="ROUGATECH builds websites, AI agents, SaaS platforms and digital solutions that help businesses attract customers, automate operations and grow.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://rougatech.com/">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="ROUGATECH">
+<meta property="og:image" content="https://rougatech.com/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="ROUGATECH | Transform Your Business. Sell More.">
+<meta name="twitter:description" content="ROUGATECH builds websites, AI agents, SaaS platforms and digital solutions that help businesses attract customers, automate operations and grow.">
+<meta name="twitter:image" content="https://rougatech.com/og-image.png">
+<meta name="keywords" content="ROUGATECH, transform your business, digital transformation Africa, AI agents Africa, SaaS platforms Africa, business automation Africa, websites that sell, digital commerce Africa, technology company Niger, digital solutions Africa">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Organization",
+  "name": "ROUGATECH",
+  "url": "https://rougatech.com",
+  "logo": "https://rougatech.com/logo.png",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Niamey",
+    "addressCountry": "NE"
+  },
+  "email": "hello@rougatech.com"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "ROUGATECH",
+  "url": "https://rougatech.com"
+}
+</script>
+<link rel="icon" href="logo.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300;9..144,400;9..144,500;9..144,600&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
   :root{
-    --navy-deep:#0A1B2E;
-    --navy:#122A45;
-    --navy-soft:#1B3A5C;
-    --off-white:#F5F4EF;
-    --white:#FFFFFF;
-    --turquoise:#25C9B7;
-    --turquoise-soft:#8FE3D8;
-    --ink:#0A1B2E;
-    --line: rgba(10,27,46,0.12);
-    --line-light: rgba(255,255,255,0.14);
-    --max: 1180px;
+    --black:#08090A;
+    --black-soft:#101114;
+    --cream:#F7F7F4;
+    --gray:#E9EAEC;
+    --gray-mute:#9a9ca3;
+    --blue:#2F5CFF;
+    --blue-deep:#1436B0;
+    --cyan:#7FE3FF;
+    --gold:#F5A623;
+    --line: rgba(247,247,244,0.12);
+    --line-soft: rgba(8,9,10,0.10);
+    --ease: cubic-bezier(.16,.84,.32,1);
   }
-  *{box-sizing:border-box; margin:0; padding:0;}
+  *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
-  body{
-    font-family:'Inter', sans-serif;
-    color:var(--ink);
-    background:var(--off-white);
-    -webkit-font-smoothing:antialiased;
-    overflow-x:hidden;
-  }
-  h1,h2,h3,.serif{ font-family:'Fraunces', serif; letter-spacing:-0.01em;}
+  body{background:var(--black); color:var(--cream); font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; line-height:1.55; overflow-x:hidden; -webkit-font-smoothing:antialiased;}
+  ::selection{background:var(--blue); color:#fff;}
   a{color:inherit; text-decoration:none;}
   img{max-width:100%; display:block;}
-  .wrap{max-width:var(--max); margin:0 auto; padding:0 28px;}
-  @media(max-width:640px){.wrap{padding:0 20px;}}
+  button{font-family:inherit; cursor:pointer; border:none; background:none; color:inherit;}
 
-  /* reduced motion */
-  @media (prefers-reduced-motion: reduce){
-    *{animation:none !important; transition:none !important;}
+  /* bilingual toggle */
+  body[data-lang="fr"] .en{display:none;}
+  body[data-lang="en"] .fr{display:none;}
+
+  .eyebrow{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.18em; text-transform:uppercase; color:var(--cyan); display:flex; align-items:center; gap:10px;}
+  .eyebrow::before{content:''; width:22px; height:1px; background:linear-gradient(90deg,var(--cyan),transparent);}
+  h1,h2,h3{font-family:'Sora',sans-serif; font-weight:700; letter-spacing:-0.02em; line-height:1.05;}
+  .wrap{max-width:1240px; margin:0 auto; padding:0 40px;}
+  :focus-visible{outline:2px solid var(--cyan); outline-offset:3px;}
+
+  #signal-line{position:fixed; left:0; top:0; width:2px; height:100vh; z-index:60; pointer-events:none; background:var(--line);}
+  #signal-line .fill{position:absolute; left:0; top:0; width:100%; height:0%; background:linear-gradient(180deg,var(--cyan),var(--blue)); box-shadow:0 0 12px rgba(127,227,255,.6); transition:height .05s linear;}
+
+  header{position:fixed; top:0; left:0; width:100%; z-index:50; padding:20px 40px; display:flex; align-items:center; justify-content:space-between; transition:background .4s var(--ease), backdrop-filter .4s var(--ease), border-color .4s var(--ease); border-bottom:1px solid transparent;}
+  header.scrolled{background:rgba(8,9,10,0.75); backdrop-filter:blur(14px); -webkit-backdrop-filter:blur(14px); border-bottom:1px solid var(--line);}
+  .brand{display:flex; align-items:center; gap:10px;}
+  .brand .logo-plate{background:var(--cream); border-radius:8px; padding:6px 10px; display:flex; align-items:center; line-height:0;}
+  .brand img{height:16px; width:auto;}
+  nav.main-nav{display:flex; align-items:center; gap:34px;}
+  nav.main-nav a{font-size:14px; color:var(--gray-mute); position:relative; padding:4px 0; transition:color .25s var(--ease);}
+  nav.main-nav a:hover{color:var(--cream);}
+  nav.main-nav a::after{content:''; position:absolute; left:0; bottom:0; width:0; height:1px; background:var(--cyan); transition:width .3s var(--ease);}
+  nav.main-nav a:hover::after{width:100%;}
+  .header-right{display:flex; align-items:center; gap:18px;}
+  .lang-switch{display:flex; gap:6px; font-family:'JetBrains Mono',monospace; font-size:12px; color:var(--gray-mute);}
+  .lang-switch button{padding:2px 4px; opacity:.5; transition:opacity .2s, color .2s;}
+  .lang-switch button.active{opacity:1; color:var(--cyan);}
+
+  .btn{display:inline-flex; align-items:center; gap:10px; font-size:13px; font-weight:600; letter-spacing:.02em; text-transform:uppercase; padding:14px 24px; border-radius:100px; position:relative; overflow:hidden; isolation:isolate; transition:transform .3s var(--ease), box-shadow .3s var(--ease);}
+  .btn-primary{background:var(--cream); color:var(--black);}
+  .btn-primary:not([disabled]){animation:ctaPulse 3s ease-in-out infinite;}
+  .btn-primary span{position:relative; z-index:2;}
+  .btn-primary::before{content:''; position:absolute; inset:0; background:linear-gradient(120deg,var(--cyan),var(--blue)); transform:translateY(101%); transition:transform .35s var(--ease); z-index:0;}
+  .btn-primary:not([disabled])::after{content:''; position:absolute; top:0; left:-60%; width:35%; height:100%; background:linear-gradient(120deg, transparent, rgba(255,255,255,.65), transparent); transform:skewX(-20deg); z-index:1; pointer-events:none; animation:ctaShine 3.6s ease-in-out infinite;}
+  .btn-primary:hover::before{transform:translateY(0);}
+  .btn-primary:hover{color:#fff; transform:translateY(-2px); box-shadow:0 10px 28px -6px rgba(127,227,255,.5); animation-play-state:paused;}
+  .btn-outline{border:1px solid var(--line); color:var(--cream); background:transparent;}
+  .btn-outline:hover{border-color:var(--cyan); color:var(--cyan); transform:translateY(-2px);}
+  .btn-header{padding:11px 20px; font-size:12px;}
+  @keyframes ctaPulse{0%,100%{box-shadow:0 0 0 0 rgba(127,227,255,.4);} 50%{box-shadow:0 0 0 9px rgba(127,227,255,0);}}
+  @keyframes ctaShine{0%,45%{left:-60%;} 65%{left:120%;} 100%{left:120%;}}
+  .menu-toggle{display:none;}
+
+  section{position:relative;}
+  .hero{min-height:100vh; display:flex; flex-direction:column; justify-content:center; padding:130px 0 70px;}
+  .hero-grid{position:absolute; inset:0; background-image:linear-gradient(var(--line-soft) 1px, transparent 1px), linear-gradient(90deg, var(--line-soft) 1px, transparent 1px); background-size:80px 80px; mask-image:linear-gradient(180deg, rgba(0,0,0,.5), transparent 75%); opacity:.5;}
+  .hero-content{position:relative; z-index:2;}
+  .hero-layout{display:grid; grid-template-columns:1.05fr .95fr; gap:56px; align-items:center;}
+  .hero h1{font-size:clamp(38px,6.6vw,92px); margin:26px 0 30px; max-width:16ch;}
+  .hero h1 .accent{background:linear-gradient(100deg,var(--cyan),var(--blue) 60%); -webkit-background-clip:text; background-clip:text; color:transparent;}
+  .hero-sub{font-size:19px; color:var(--gray-mute); max-width:540px; margin-bottom:44px;}
+  .hero-ctas{display:flex; gap:16px; flex-wrap:wrap; justify-content:flex-start; margin-bottom:0;}
+
+  /* hero business dashboard */
+  .hero-visual{position:relative; height:420px;}
+  .dash-card{position:absolute; inset:4%; border:1px solid var(--line); border-radius:20px; background:linear-gradient(160deg, rgba(127,227,255,.09), rgba(47,92,255,.12)); overflow:hidden; padding:26px; display:flex; flex-direction:column; gap:16px;}
+  .dash-card::before{content:''; position:absolute; inset:0; background-image:linear-gradient(rgba(247,247,244,.05) 1px, transparent 1px), linear-gradient(90deg, rgba(247,247,244,.05) 1px, transparent 1px); background-size:40px 40px; pointer-events:none;}
+  .dash-head{position:relative; z-index:1; display:flex; align-items:center; justify-content:space-between; font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-mute);}
+  .dash-stats{position:relative; z-index:1; display:grid; grid-template-columns:1fr 1fr; gap:14px;}
+  .dash-stat .label{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.08em; text-transform:uppercase; color:var(--gray-mute);}
+  .dash-stat .value{font-family:'Sora',sans-serif; font-weight:700; font-size:clamp(18px,2.2vw,23px); color:var(--cream); margin-top:4px;}
+  .dash-stat .delta{font-family:'JetBrains Mono',monospace; font-size:11px; color:#4ADE80; margin-top:3px; display:flex; align-items:center; gap:4px;}
+  .dash-stat .delta svg{width:10px; height:10px;}
+  .dash-chart-wrap{position:relative; z-index:1; flex:1; min-height:70px;}
+  svg.dash-chart{width:100%; height:100%; display:block; overflow:visible;}
+  .dash-line-base{stroke-dasharray:340; stroke-dashoffset:340; animation:dashDrawIn 2.2s var(--ease) .3s forwards;}
+  .dash-line-flow{stroke-dasharray:6 16; stroke-dashoffset:0; opacity:.85; animation:dashFlow 3s linear infinite;}
+  .dash-endpoint circle{transform-origin:center; transform-box:fill-box;}
+  .dash-endpoint .ring{animation:dashPulse 2.6s ease-out infinite;}
+  .dash-note{position:relative; z-index:1; font-family:'JetBrains Mono',monospace; font-size:10px; color:var(--gray-mute); opacity:.65; text-align:right;}
+  @keyframes dashDrawIn{to{stroke-dashoffset:0;}}
+  @keyframes dashFlow{to{stroke-dashoffset:-176;}}
+  @keyframes dashPulse{0%{transform:scale(1); opacity:.6;} 100%{transform:scale(3.2); opacity:0;}}
+
+  /* dynamic aurora background */
+  .aurora-bg{position:fixed; inset:0; z-index:-1; overflow:hidden; pointer-events:none; background:var(--black);}
+  .aurora-bg span{position:absolute; border-radius:50%; filter:blur(110px); opacity:.32; will-change:transform;}
+  .aurora-bg span:nth-child(1){width:620px; height:620px; background:var(--blue); top:-15%; left:-12%; animation:auroraMove1 28s ease-in-out infinite;}
+  .aurora-bg span:nth-child(2){width:540px; height:540px; background:var(--cyan); top:25%; right:-16%; animation:auroraMove2 34s ease-in-out infinite;}
+  .aurora-bg span:nth-child(3){width:500px; height:500px; background:var(--blue-deep); bottom:-18%; left:22%; animation:auroraMove3 40s ease-in-out infinite;}
+  @keyframes auroraMove1{0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(90px,60px) scale(1.15);}}
+  @keyframes auroraMove2{0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(-80px,50px) scale(0.9);}}
+  @keyframes auroraMove3{0%,100%{transform:translate(0,0) scale(1);} 50%{transform:translate(60px,-70px) scale(1.1);}}
+  @media (prefers-reduced-motion: reduce){.aurora-bg span{animation:none;}}
+
+  .reveal{opacity:0; transform:translateY(28px); transition:opacity .5s var(--ease), transform .5s var(--ease);}
+  .reveal.in{opacity:1; transform:translateY(0);}
+
+  .section{padding:100px 0;}
+  .section-head{max-width:760px; margin-bottom:70px;}
+  .section-head h2{font-size:clamp(28px,4vw,50px); margin-top:22px;}
+  .section-alt{background:var(--cream); color:var(--black);}
+  .section-alt .eyebrow{color:var(--blue-deep);}
+  .section-alt .eyebrow::before{background:linear-gradient(90deg,var(--blue-deep),transparent);}
+
+  /* mission points */
+  .mission-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden;}
+  .mission-card{background:var(--black); padding:38px 30px; position:relative;}
+  .mission-card::before{content:'—'; color:#ff6b6b; font-family:'JetBrains Mono',monospace; display:block; margin-bottom:14px; opacity:.7;}
+  .mission-card h3{font-size:19px; margin-bottom:10px;}
+  .mission-card p{font-size:14px; color:var(--gray-mute);}
+  .problem-transition{margin-top:34px; text-align:center; font-family:'Sora',sans-serif; font-weight:600; font-size:clamp(18px,2.4vw,24px); color:var(--cream);}
+
+  /* pillars */
+  .pillars-grid{display:grid; grid-template-columns:1fr; gap:1px; background:var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden;}
+  .pillar-card{background:var(--black); padding:44px; transition:background .35s var(--ease); display:grid; grid-template-columns:1.1fr .9fr; gap:36px; align-items:start;}
+  .pillar-card:hover{background:var(--black-soft);}
+  .pillar-card .num{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--cyan); margin-bottom:16px; display:block;}
+  .pillar-card h3{font-size:26px; margin-bottom:14px;}
+  .pillar-card .desc{color:var(--gray-mute); font-size:15px; margin-bottom:20px; max-width:52ch;}
+  .pillar-card .message{font-family:'Sora',sans-serif; font-weight:600; font-size:16px; color:var(--cream); border-left:2px solid var(--cyan); padding-left:16px; margin-bottom:22px; max-width:44ch;}
+  .pillar-tags{display:flex; flex-wrap:wrap; gap:8px; align-content:flex-start; margin-bottom:22px;}
+  .pillar-tags span{font-size:12px; padding:6px 12px; border:1px solid var(--line); border-radius:100px; color:var(--gray-mute); font-family:'JetBrains Mono',monospace;}
+  .pillar-card .solution-cta{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.08em; text-transform:uppercase; color:var(--cyan); display:inline-flex; align-items:center; gap:8px; border-bottom:1px solid transparent; transition:border-color .25s var(--ease);}
+  .pillar-card .solution-cta:hover{border-color:var(--cyan);}
+  .pillar-card .solution-cta svg{width:14px; height:14px; transition:transform .25s var(--ease);}
+  .pillar-card .solution-cta:hover svg{transform:translate(3px,-3px);}
+
+  /* transformation timeline */
+  .timeline{display:grid; grid-template-columns:repeat(5,1fr); gap:24px; position:relative;}
+  .timeline::before{content:''; position:absolute; top:19px; left:5%; right:5%; height:1px; background:var(--line); z-index:0;}
+  .tl-step{position:relative; z-index:1;}
+  .tl-dot{width:38px; height:38px; border-radius:50%; border:1px solid var(--cyan); display:flex; align-items:center; justify-content:center; font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--cyan); background:var(--black); margin-bottom:22px;}
+  .tl-step h3{font-size:18px; margin-bottom:8px;}
+  .tl-step p{font-size:14px; color:var(--gray-mute);}
+
+  /* before / after */
+  .ba-grid{display:grid; grid-template-columns:1fr 60px 1fr; align-items:stretch;}
+  .ba-card{border:1px solid var(--line); border-radius:18px; padding:38px;}
+  .ba-before{background:var(--black);}
+  .ba-after{background:linear-gradient(160deg, rgba(127,227,255,.08), rgba(47,92,255,.10)); border-color:rgba(127,227,255,.28);}
+  .ba-label{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; margin-bottom:24px;}
+  .ba-before .ba-label{color:var(--gray-mute);}
+  .ba-after .ba-label{color:var(--cyan);}
+  .ba-card ul{list-style:none; display:grid; gap:16px;}
+  .ba-card li{display:flex; align-items:center; gap:12px; font-size:15px; color:var(--gray-mute);}
+  .ba-after li{color:var(--cream);}
+  .ba-card li svg{width:16px; height:16px; flex-shrink:0;}
+  .ba-before li svg{color:#ff6b6b;}
+  .ba-after li svg{color:#4ADE80;}
+  .ba-arrow{display:flex; align-items:center; justify-content:center; color:var(--gray-mute);}
+  .ba-arrow svg{width:26px; height:26px;}
+
+  /* industries */
+  .industry-marquee{overflow:hidden; width:100%; -webkit-mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent); mask-image:linear-gradient(90deg, transparent, #000 6%, #000 94%, transparent);}
+  .industry-track{display:flex; width:max-content; gap:12px; animation:industryScroll 32s linear infinite;}
+  .industry-track:hover{animation-play-state:paused;}
+  .industry-grid{display:flex; flex-wrap:nowrap; gap:12px; flex-shrink:0;}
+  @keyframes industryScroll{from{transform:translateX(-50%);} to{transform:translateX(0);}}
+  @media (prefers-reduced-motion: reduce){.industry-track{animation:none;}}
+  .industry-tag{font-size:14px; padding:14px 22px; border-radius:100px; color:#fff; font-weight:600; white-space:nowrap;}
+  .industry-tag:nth-child(10n+1){background:#2F5CFF;}
+  .industry-tag:nth-child(10n+2){background:#0EA5A5;}
+  .industry-tag:nth-child(10n+3){background:#E0663B;}
+  .industry-tag:nth-child(10n+4){background:#8B5CF6;}
+  .industry-tag:nth-child(10n+5){background:#D6455D;}
+  .industry-tag:nth-child(10n+6){background:#2E9E5B;}
+  .industry-tag:nth-child(10n+7){background:#C98A1E;}
+  .industry-tag:nth-child(10n+8){background:#1F7A8C;}
+  .industry-tag:nth-child(10n+9){background:#7B4B94;}
+  .industry-tag:nth-child(10n+10){background:#3A6B35;}
+  .industry-note{margin-top:34px; font-size:14px; color:#6b6c72; max-width:60ch;}
+
+  /* products */
+  .products-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); border-radius:18px; overflow:hidden;}
+  .product-card{background:var(--black); padding:42px 34px; display:flex; flex-direction:column; gap:14px;}
+  .product-status{font-family:'JetBrains Mono',monospace; font-size:10px; letter-spacing:.12em; text-transform:uppercase; color:var(--cyan); border:1px solid rgba(127,227,255,.35); border-radius:100px; padding:5px 12px; width:fit-content;}
+  .product-card h3{font-size:21px;}
+  .product-card p{font-size:14px; color:var(--gray-mute);}
+
+  /* section subtitle (shared) */
+  .section-sub{font-size:17px; color:var(--gray-mute); margin-top:18px; max-width:60ch;}
+
+  /* selected work */
+  .work-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:28px;}
+  .work-card{background:var(--black-soft); border:1px solid var(--line); border-radius:18px; overflow:hidden; display:flex; flex-direction:column; transition:transform .4s var(--ease), border-color .4s var(--ease);}
+  .work-card:hover{transform:translateY(-6px); border-color:rgba(127,227,255,.35);}
+  .work-media{position:relative; aspect-ratio:4/3; overflow:hidden; background:var(--black);}
+  .work-media img{width:100%; height:100%; object-fit:cover; object-position:top center; transition:transform .6s var(--ease);}
+  .work-card:hover .work-media img{transform:scale(1.045);}
+  .work-body{padding:28px 26px 30px; display:flex; flex-direction:column; gap:10px; flex:1;}
+  .work-category{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.12em; text-transform:uppercase; color:var(--cyan);}
+  .work-card h3{font-size:21px;}
+  .work-card p{font-size:14px; color:var(--gray-mute); flex:1;}
+  .work-link{display:inline-flex; align-items:center; gap:8px; font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:var(--cream); margin-top:10px; padding-top:16px; border-top:1px solid var(--line); transition:color .25s var(--ease);}
+  .work-link svg{width:13px; height:13px; transition:transform .25s var(--ease);}
+  .work-link:hover{color:var(--cyan);}
+  .work-card:hover .work-link svg{transform:translate(3px,-3px);}
+
+  /* trusted by */
+  .trusted-grid{display:grid; grid-template-columns:repeat(3,1fr); gap:16px;}
+  .trusted-chip{font-family:'Sora',sans-serif; font-weight:700; font-size:16px; letter-spacing:.02em; color:var(--gray-mute); border:1px solid var(--line); border-radius:12px; padding:26px 20px; display:flex; align-items:center; justify-content:center; text-align:center; transition:color .3s var(--ease), border-color .3s var(--ease);}
+  .trusted-chip:hover{color:var(--cream); border-color:rgba(127,227,255,.35);}
+  .section-alt .trusted-chip{border-color:var(--line-soft); color:#8a8b91;}
+  .section-alt .trusted-chip:hover{color:var(--black); border-color:var(--blue-deep);}
+
+  /* academy teaser */
+  .academy-card{border:1px solid var(--line); border-radius:24px; padding:56px; background:linear-gradient(135deg, rgba(245,166,35,.10), rgba(127,227,255,.05));}
+  .academy-card .tagline{font-family:'JetBrains Mono',monospace; font-size:13px; letter-spacing:.12em; text-transform:uppercase; color:var(--gold); margin-top:12px;}
+  .academy-card h2{margin-top:6px;}
+  .academy-card p{color:var(--gray-mute); font-size:16px; max-width:56ch; margin-top:18px;}
+  .academy-card .btn{margin-top:30px;}
+  @media (max-width:720px){.academy-card{padding:36px 26px;}}
+
+  /* founder */
+  .founder-wrap{display:grid; grid-template-columns:1fr 320px; gap:60px; align-items:center;}
+  .founder-photo{border-radius:20px; overflow:hidden; border:1px solid var(--line); aspect-ratio:5/6; order:2;}
+  .founder-text{order:1;}
+  .founder-photo img{width:100%; height:100%; object-fit:cover; display:block;}
+  .founder-role{font-family:'JetBrains Mono',monospace; font-size:12px; letter-spacing:.1em; text-transform:uppercase; color:var(--cyan); margin-top:8px;}
+  .founder-name{font-size:28px; margin-top:16px;}
+  .founder-wrap .founder-text p{color:var(--gray-mute); font-size:16px; max-width:58ch; margin-top:16px;}
+  @media (max-width:900px){.founder-wrap{grid-template-columns:1fr; gap:34px;} .founder-photo{max-width:300px; order:0;} .founder-text{order:0;}}
+
+  /* how we work */
+  .how-list{border-top:1px solid var(--line);}
+  .how-row{display:grid; grid-template-columns:70px 200px 1fr; gap:30px; padding:30px 0; border-bottom:1px solid var(--line); align-items:center;}
+  .how-row .num{font-family:'JetBrains Mono',monospace; font-size:15px; color:var(--gray-mute);}
+  .how-row h3{font-size:20px;}
+  .how-row p{color:var(--gray-mute); font-size:15px; max-width:52ch;}
+
+  /* why */
+  .why-grid{display:grid; grid-template-columns:repeat(4,1fr); gap:24px;}
+  .why-card{border-top:2px solid var(--blue); padding-top:20px;}
+  .why-card h3{font-size:16px; margin-bottom:8px;}
+  .why-card p{font-size:13px; color:#54555c;}
+
+  /* about */
+  .about-wrap{display:grid; grid-template-columns:1fr 1fr; gap:80px; align-items:start;}
+  .about-wrap p{font-size:18px; color:var(--gray-mute); margin-bottom:20px; max-width:52ch;}
+
+  /* insights */
+  .insights-note{border:1px solid var(--line-soft); border-radius:16px; padding:44px; text-align:center;}
+  .insights-note p{color:#6b6c72; font-size:15px; max-width:56ch; margin:12px auto 0;}
+
+  /* final cta */
+  .final-cta{background:var(--black); padding:170px 0; text-align:center; position:relative; overflow:hidden;}
+  .final-glow{position:absolute; left:50%; top:0; transform:translate(-50%,-40%); width:900px; height:600px; background:radial-gradient(circle, rgba(47,92,255,.28), transparent 65%); pointer-events:none;}
+  .final-cta h2{font-size:clamp(34px,5.6vw,68px); position:relative; z-index:1;}
+  .final-cta .sub{margin:26px auto 44px; max-width:520px; color:var(--gray-mute); font-size:18px; position:relative; z-index:1;}
+  .final-ctas{display:flex; gap:16px; justify-content:center; flex-wrap:wrap; position:relative; z-index:1;}
+
+  /* contact */
+  .contact-wrap{display:grid; grid-template-columns:.85fr 1.15fr; gap:80px;}
+  .contact-info h2{font-size:clamp(28px,3.6vw,42px); margin-bottom:22px;}
+  .contact-info p{color:var(--gray-mute); font-size:16px; max-width:40ch; margin-bottom:34px;}
+  .contact-detail{font-family:'JetBrains Mono',monospace; font-size:13px; color:var(--gray-mute); line-height:2;}
+  form{display:flex; flex-direction:column; gap:18px;}
+  .field-row{display:grid; grid-template-columns:1fr 1fr; gap:18px;}
+  .field{display:flex; flex-direction:column; gap:8px;}
+  .field label{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-mute);}
+  .field input, .field select, .field textarea{background:transparent; border:none; border-bottom:1px solid var(--line); color:var(--cream); font-family:'Plus Jakarta Sans',sans-serif; font-size:16px; padding:12px 2px; transition:border-color .3s var(--ease);}
+  .field select{appearance:none; -webkit-appearance:none;}
+  .field select option{background:var(--black-soft); color:var(--cream);}
+  .field input:focus, .field select:focus, .field textarea:focus{border-color:var(--cyan); outline:none;}
+  .field textarea{resize:vertical; min-height:90px;}
+  form .btn-primary{align-self:flex-start; margin-top:12px;}
+  .form-note{font-size:12px; color:var(--gray-mute); margin-top:-4px;}
+
+  footer{padding:70px 0 40px; border-top:1px solid var(--line);}
+  .footer-top{display:flex; justify-content:space-between; align-items:flex-start; flex-wrap:wrap; gap:40px; margin-bottom:60px;}
+  .footer-brand{max-width:340px;}
+  .footer-brand .brand{margin-bottom:14px;}
+  .footer-brand p{color:var(--gray-mute); font-size:14px;}
+  .footer-nav{display:flex; gap:50px; flex-wrap:wrap;}
+  .footer-col h5{font-family:'JetBrains Mono',monospace; font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--gray-mute); margin-bottom:16px;}
+  .footer-col a{display:block; font-size:14px; margin-bottom:10px; color:var(--gray);}
+  .footer-col a:hover{color:var(--cyan);}
+  .footer-bottom{display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:16px; padding-top:26px; border-top:1px solid var(--line); font-size:12px; color:var(--gray-mute); font-family:'JetBrains Mono',monospace;}
+
+  @media (max-width:980px){
+    .hero-layout{grid-template-columns:1fr;}
+    .hero-visual{height:340px; order:-1; margin-bottom:30px;}
+    .hero-ctas{justify-content:flex-start;}
+    .pillar-card{grid-template-columns:1fr; gap:20px;}
+    .ba-grid{grid-template-columns:1fr;}
+    .ba-arrow{transform:rotate(90deg); padding:16px 0;}
+    .mission-grid{grid-template-columns:repeat(2,1fr);}
+    .timeline{grid-template-columns:repeat(2,1fr); row-gap:40px;}
+    .timeline::before{display:none;}
+    .products-grid{grid-template-columns:1fr;}
+    .work-grid{grid-template-columns:1fr; max-width:520px; margin:0 auto;}
+    .trusted-grid{grid-template-columns:repeat(3,1fr);}
+    .why-grid{grid-template-columns:repeat(2,1fr); row-gap:30px;}
+    .how-row{grid-template-columns:50px 1fr; row-gap:6px;}
+    .how-row p{grid-column:1 / -1;}
+    .about-wrap{grid-template-columns:1fr; gap:30px;}
+    .contact-wrap{grid-template-columns:1fr; gap:50px;}
+    .field-row{grid-template-columns:1fr;}
   }
-
-  /* ===== NAV ===== */
-  header{
-    position:fixed; top:0; left:0; right:0; z-index:1000;
-    background:rgba(10,27,46,0.92);
-    backdrop-filter:blur(10px);
-    border-bottom:1px solid rgba(255,255,255,0.06);
-    transition:transform .4s ease;
+  @media (max-width:900px){
+    nav.main-nav{position:fixed; inset:0 0 0 auto; width:80%; height:100vh; background:var(--black-soft); flex-direction:column; align-items:flex-start; justify-content:center; padding:0 40px; gap:26px; transform:translateX(100%); transition:transform .4s var(--ease); border-left:1px solid var(--line);}
+    nav.main-nav.open{transform:translateX(0);}
+    nav.main-nav a{font-size:20px;}
+    .menu-toggle{display:flex; flex-direction:column; gap:5px; z-index:70; width:26px;}
+    .menu-toggle span{width:100%; height:1.5px; background:var(--cream); transition:transform .3s, opacity .3s;}
+    header .btn-header{display:none;}
   }
-  .navbar{ display:flex; align-items:center; justify-content:space-between; height:76px;}
-  .brand{ color:var(--white); display:flex; align-items:center; gap:12px; line-height:1.05;}
-  .brand img{ height:44px; width:auto; display:block;}
-  .brand .wordmark{ font-family:'Fraunces', serif; font-size:1.05rem; font-weight:500; letter-spacing:0.01em; display:flex; flex-direction:column;}
-  .brand .wordmark span{font-size:0.6rem; color:var(--turquoise-soft); font-weight:400; letter-spacing:0.1em; margin-top:3px; font-family:'Inter';}
-  @media(max-width:640px){ .brand .wordmark{display:none;} .brand img{height:38px;} }
-  nav.links{ display:flex; gap:34px; align-items:center;}
-  nav.links a{ color:rgba(255,255,255,0.78); font-size:0.92rem; font-weight:400; transition:color .25s ease; position:relative;}
-  nav.links a:hover{color:var(--white);}
-  nav.links a::after{content:'';position:absolute;left:0;bottom:-6px;width:0;height:1px;background:var(--turquoise);transition:width .3s ease;}
-  nav.links a:hover::after{width:100%;}
-  .nav-actions{display:flex; align-items:center; gap:18px;}
-  .lang-switch{ display:flex; gap:2px; border:1px solid rgba(255,255,255,0.25); border-radius:20px; padding:3px; font-size:0.75rem;}
-  .lang-switch button{ padding:5px 12px; border-radius:16px; color:rgba(255,255,255,0.65); background:transparent; border:none; cursor:pointer; font-family:'Inter'; font-size:0.75rem; letter-spacing:0.03em;}
-  .lang-switch button.active{ background:var(--turquoise); color:var(--navy-deep); font-weight:600;}
-  .btn-nav{ position:relative; overflow:hidden; background:var(--turquoise); color:var(--navy-deep); padding:10px 22px; border-radius:3px; font-size:0.82rem; font-weight:600; letter-spacing:0.03em; white-space:nowrap;}
-  .burger{display:none; flex-direction:column; gap:5px; cursor:pointer; background:none; border:none; padding:6px;}
-  .burger span{width:22px; height:1.5px; background:var(--white);}
-  @media(max-width:960px){
-    nav.links{display:none;}
-    .btn-nav{display:none;}
-    .burger{display:flex;}
+  @media (max-width:480px){
+    .dash-card{padding:18px; gap:12px;}
+    .dash-stat .value{font-size:17px;}
   }
-  .mobile-menu{ display:none; position:fixed; inset:76px 0 0 0; background:var(--navy-deep); z-index:999; padding:30px 28px; flex-direction:column; gap:26px;}
-  .mobile-menu.open{display:flex;}
-  .mobile-menu a{color:var(--white); font-size:1.2rem; font-family:'Fraunces',serif;}
-  .mobile-menu .btn-nav{align-self:flex-start; margin-top:10px;}
-
-  /* ===== HERO ===== */
-  .hero{
-    position:relative;
-    min-height:100vh;
-    background:linear-gradient(155deg, var(--navy-deep) 0%, #0D2138 55%, var(--navy-soft) 100%);
-    display:flex; align-items:center;
-    padding:150px 0 90px;
-    overflow:hidden;
+  @media (max-width:720px){
+    .wrap{padding:0 22px;}
+    .hero{padding:130px 0 70px;}
+    .section{padding:64px 0;}
+    .mission-grid{grid-template-columns:1fr;}
+    .timeline{grid-template-columns:1fr;}
+    .products-grid{grid-template-columns:1fr;}
+    .work-grid{grid-template-columns:1fr; max-width:none;}
+    .trusted-grid{grid-template-columns:1fr;}
+    .why-grid{grid-template-columns:1fr;}
+    .how-row{grid-template-columns:1fr; gap:8px; padding:24px 0;}
+    .how-row .num{order:-1;}
+    #signal-line{display:none;}
   }
-  .hero::before{
-    content:'';
-    position:absolute; top:-20%; right:-10%;
-    width:640px; height:640px; border-radius:50%;
-    background:radial-gradient(circle, rgba(37,201,183,0.16) 0%, rgba(37,201,183,0) 68%);
-  }
-  .hero-grid{ display:grid; grid-template-columns:1.15fr 0.85fr; gap:60px; align-items:center; position:relative; z-index:2;}
-  @media(max-width:960px){ .hero-grid{grid-template-columns:1fr; gap:50px;} }
-  .kicker{ display:inline-flex; align-items:center; gap:10px; color:var(--turquoise-soft); font-size:0.78rem; letter-spacing:0.16em; font-weight:500; margin-bottom:26px;}
-  .kicker::before{content:''; width:26px; height:1px; background:var(--turquoise);}
-  .hero h1{ color:var(--white); font-family:'Inter',sans-serif; font-size:clamp(2.2rem, 4.6vw, 3.4rem); font-weight:700; line-height:1.14; letter-spacing:-0.01em; margin-bottom:22px;}
-  .concept-badge{ display:inline-block; border:1px solid rgba(37,201,183,0.5); color:var(--turquoise-soft); font-size:0.76rem; font-weight:600; letter-spacing:0.08em; padding:8px 16px; border-radius:20px; margin-bottom:24px;}
-  .hero p.signature{ color:rgba(255,255,255,0.68); font-size:1.05rem; font-family:'Fraunces',serif; font-style:italic; margin-bottom:26px;}
-  .hero p.desc{ color:rgba(255,255,255,0.6); font-size:1rem; line-height:1.7; max-width:480px; margin-bottom:40px;}
-  .cta-row{ display:flex; gap:18px; flex-wrap:wrap;}
-  .btn-primary{ position:relative; overflow:hidden; background:var(--turquoise); color:var(--navy-deep); padding:16px 30px; font-weight:600; font-size:0.88rem; letter-spacing:0.03em; border-radius:3px; box-shadow:0 14px 30px -10px rgba(37,201,183,0.45); transition:transform .25s ease, box-shadow .25s ease;}
-  .btn-primary:hover{transform:translateY(-2px); box-shadow:0 18px 40px -8px rgba(37,201,183,0.65);}
-  .btn-ghost{ position:relative; overflow:hidden; border:1px solid rgba(255,255,255,0.32); color:var(--white); padding:16px 30px; font-weight:500; font-size:0.88rem; letter-spacing:0.02em; border-radius:3px; transition:border-color .25s ease, background .25s ease;}
-  .btn-ghost:hover{ border-color:var(--turquoise); background:rgba(37,201,183,0.08);}
-  /* light sweep effect shared by CTA buttons */
-  .btn-primary::after, .btn-ghost::after, .btn-nav::after, .btn-dark::after, .btn-program::after{
-    content:''; position:absolute; top:0; left:-60%; width:40%; height:100%;
-    background:linear-gradient(115deg, transparent, rgba(255,255,255,0.55), transparent);
-    transform:skewX(-20deg); transition:left .6s ease;
-    pointer-events:none;
-  }
-  .btn-primary:hover::after, .btn-ghost:hover::after, .btn-nav:hover::after, .btn-dark:hover::after, .btn-program:hover::after{ left:130%; }
-  @media (prefers-reduced-motion: reduce){
-    .btn-primary::after, .btn-ghost::after, .btn-nav::after, .btn-dark::after, .btn-program::after{ display:none; }
-  }
-
-  .hero-photo{ position:relative;}
-  .photo-frame{ position:relative; border-radius:4px; overflow:hidden; aspect-ratio:3/4; }
-  .photo-frame img{ width:100%; height:100%; object-fit:cover; object-position:top center;}
-  .photo-frame::after{ content:''; position:absolute; inset:0; box-shadow:inset 0 0 0 1px rgba(255,255,255,0.12);}
-  .photo-tag{ position:absolute; bottom:-22px; left:-22px; background:var(--white); padding:18px 22px; border-radius:3px; box-shadow:0 20px 40px -14px rgba(0,0,0,0.35); max-width:230px;}
-  @media(max-width:640px){ .photo-tag{left:0; bottom:-18px; padding:14px 18px;} }
-  .photo-tag .name{font-family:'Fraunces',serif; font-size:1rem; color:var(--navy-deep); font-weight:500;}
-  .photo-tag .role{font-size:0.76rem; color:#5a6a78; margin-top:3px;}
-
-  /* FLOATING MENTAL ORB */
-  .mental-orb{
-    position:absolute; top:-46px; right:-34px; z-index:4;
-    width:132px; height:132px;
-    animation:orb-float 6.5s ease-in-out infinite;
-  }
-  @media(max-width:640px){ .mental-orb{ width:96px; height:96px; top:-24px; right:-14px;} }
-  .mental-orb .ring{
-    position:absolute; inset:0; border-radius:50%;
-    border:1px solid rgba(37,201,183,0.5);
-  }
-  .mental-orb .ring.r2{ inset:14px; border-color:rgba(37,201,183,0.28); }
-  .mental-orb .core{
-    position:absolute; inset:30px; border-radius:50%;
-    background:radial-gradient(circle at 34% 30%, rgba(143,227,216,0.95), rgba(37,201,183,0.55) 55%, rgba(18,42,69,0.3) 100%);
-    box-shadow:0 0 40px 6px rgba(37,201,183,0.35);
-  }
-  .mental-orb .label{
-    position:absolute; inset:0; display:flex; align-items:center; justify-content:center;
-    font-family:'Fraunces',serif; font-style:italic; color:var(--navy-deep); font-size:0.66rem;
-    text-align:center; line-height:1.2; padding:0 14px;
-  }
-  .mental-orb .dot{
-    position:absolute; width:7px; height:7px; border-radius:50%; background:var(--turquoise-soft);
-    top:6px; left:50%; box-shadow:0 0 10px 2px rgba(143,227,216,0.7);
-    animation:orb-orbit 6.5s linear infinite;
-    transform-origin:66px 66px;
-  }
-  @media(max-width:640px){ .mental-orb .dot{transform-origin:48px 48px;} }
-  @keyframes orb-float{
-    0%, 100%{ transform:translateY(0);}
-    50%{ transform:translateY(-14px);}
-  }
-  @keyframes orb-orbit{
-    from{ transform:rotate(0deg);}
-    to{ transform:rotate(360deg);}
-  }
-  @media (prefers-reduced-motion: reduce){
-    .mental-orb, .mental-orb .dot{ animation:none; }
-  }
-
-  /* AMBIENT ORBS scattered across the site */
-  .ambient-orb{
-    position:absolute; border-radius:50%; pointer-events:none; z-index:0;
-    background:radial-gradient(circle at 34% 30%, rgba(143,227,216,0.9), rgba(37,201,183,0.35) 55%, rgba(37,201,183,0) 78%);
-    animation:orb-float 7.5s ease-in-out infinite;
-  }
-  .ambient-orb.dark-bg{ opacity:0.5; }
-  .ambient-orb.light-bg{ opacity:0.35; }
-  @media (prefers-reduced-motion: reduce){ .ambient-orb{ animation:none; } }
-  section{ position:relative; }
-  .global-strip{ position:absolute; top:24px; left:0; right:0; text-align:center; z-index:5;}
-  @media(max-width:960px){.global-strip{position:static; margin-bottom:20px; text-align:left;}}
-  .global-strip span{ color:rgba(255,255,255,0.42); font-size:0.72rem; letter-spacing:0.24em; font-weight:500;}
-  .global-strip .dot{color:var(--turquoise); margin:0 8px;}
-
-  /* ===== SECTION GENERIC ===== */
-  section{ padding:120px 0;}
-  @media(max-width:640px){ section{padding:80px 0;} }
-  .section-head{ max-width:680px; margin-bottom:64px;}
-  .eyebrow{ color:var(--turquoise-soft); font-size:0.78rem; letter-spacing:0.14em; font-weight:600; margin-bottom:16px; display:block;}
-  .light .eyebrow{ color:#0d9488;}
-  .section-head h2{ font-size:clamp(1.7rem, 3.4vw, 2.5rem); font-weight:400; line-height:1.18; color:var(--navy-deep);}
-  .light-on-dark h2{color:var(--white);}
-  .section-head p.lead{ margin-top:20px; color:#4c5a68; font-size:1.05rem; line-height:1.7;}
-  .light-on-dark p.lead{color:rgba(255,255,255,0.62);}
-
-  .dark-section{ background:var(--navy-deep); color:var(--white);}
-  .dark-section .eyebrow{ color:var(--turquoise-soft);}
-
-  /* PROBLEM / TRANSFORMATION */
-  .transform-list{ display:flex; flex-direction:column; gap:0; border-top:1px solid var(--line-light);}
-  .t-row{ display:grid; grid-template-columns:1fr 60px 1fr; align-items:center; padding:22px 0; border-bottom:1px solid var(--line-light); gap:18px;}
-  @media(max-width:640px){ .t-row{grid-template-columns:1fr 40px 1fr; padding:16px 0;} }
-  .t-row .from{ color:rgba(255,255,255,0.4); font-family:'Fraunces',serif; font-size:1.05rem; text-align:right;}
-  .t-row .to{ color:var(--white); font-family:'Fraunces',serif; font-size:1.15rem; font-weight:500;}
-  .t-row .arrow{ text-align:center; color:var(--turquoise); font-size:1.1rem;}
-  @media(max-width:640px){ .t-row .from, .t-row .to{font-size:0.92rem;} }
-
-  /* DEMENAGEMENT MENTAL */
-  .concept-block{ display:grid; grid-template-columns:0.9fr 1.1fr; gap:70px; align-items:center;}
-  @media(max-width:900px){ .concept-block{grid-template-columns:1fr;} }
-  .concept-visual{ position:relative; aspect-ratio:1/1; background:linear-gradient(155deg,#0D2138,#173A5E); border-radius:4px; display:flex; align-items:center; justify-content:center; overflow:hidden;}
-  .concept-visual .word{ position:absolute; color:rgba(255,255,255,0.05); font-family:'Fraunces',serif; font-size:8rem; font-style:italic; white-space:nowrap;}
-  .concept-visual .core{ width:64%; aspect-ratio:1/1; border:1px solid var(--turquoise); border-radius:50%; display:flex; align-items:center; justify-content:center; position:relative;}
-  .concept-visual .core::before{content:'';position:absolute; inset:22px; border:1px solid rgba(37,201,183,0.35); border-radius:50%;}
-  .concept-visual .core span{ color:var(--turquoise-soft); font-family:'Fraunces',serif; font-style:italic; font-size:1rem; text-align:center; padding:0 30px;}
-  .concept-copy h3{ font-size:1.9rem; color:var(--navy-deep); font-weight:400; margin-bottom:24px;}
-  .concept-copy p{ color:#455361; font-size:1.05rem; line-height:1.8; margin-bottom:18px;}
-  .concept-copy p.emph{ font-family:'Fraunces',serif; font-style:italic; font-size:1.2rem; color:var(--navy-deep); border-left:2px solid var(--turquoise); padding-left:20px; margin-top:28px;}
-
-  /* ABOUT */
-  .about-grid{ display:grid; grid-template-columns:0.8fr 1.2fr; gap:70px; align-items:start;}
-  @media(max-width:900px){ .about-grid{grid-template-columns:1fr;} }
-  .about-photo{ border-radius:4px; overflow:hidden; aspect-ratio:3/4;}
-  .about-photo img{width:100%; height:100%; object-fit:cover; object-position:top;}
-  .about-copy h3{ font-size:1rem; letter-spacing:0.02em; color:#8a97a3; font-weight:500; margin-bottom:8px;}
-  .about-copy h2{ font-size:2rem; font-weight:400; color:var(--navy-deep); margin-bottom:26px;}
-  .fact-list{ list-style:none; display:flex; flex-direction:column; gap:14px; margin:26px 0 30px;}
-  .fact-list li{ display:flex; gap:14px; font-size:0.98rem; color:#3d4a56; line-height:1.6; padding-bottom:14px; border-bottom:1px solid var(--line);}
-  .fact-list li:last-child{border-bottom:none;}
-  .fact-list li::before{content:'';min-width:6px; height:6px; margin-top:8px; border-radius:50%; background:var(--turquoise);}
-  .about-copy blockquote{ font-family:'Fraunces',serif; font-style:italic; font-size:1.25rem; color:var(--navy-deep); line-height:1.6; margin-top:10px;}
-
-  /* SERVICES */
-  .services-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:2px; background:var(--line);}
-  @media(max-width:900px){ .services-grid{grid-template-columns:1fr;} }
-  .service-card{ background:var(--white); padding:44px 38px; position:relative; overflow:hidden; transition:transform .35s ease, box-shadow .35s ease;}
-  .service-card:hover{ transform:translateY(-6px); box-shadow:0 24px 50px -20px rgba(10,27,46,0.22); z-index:2;}
-  .service-card::before{ content:''; position:absolute; top:0; left:0; right:0; height:3px; background:linear-gradient(90deg, var(--turquoise), var(--turquoise-soft)); transform:scaleX(0); transform-origin:left; transition:transform .4s ease;}
-  .service-card:hover::before{ transform:scaleX(1); }
-  .service-icon{
-    width:56px; height:56px; border-radius:50%;
-    background:radial-gradient(circle at 32% 28%, rgba(143,227,216,0.5), rgba(37,201,183,0.14) 65%, transparent 100%);
-    border:1px solid rgba(37,201,183,0.4);
-    display:flex; align-items:center; justify-content:center;
-    margin-bottom:24px; transition:transform .35s ease, background .35s ease;
-  }
-  .service-card:hover .service-icon{ transform:scale(1.08) rotate(-4deg); background:radial-gradient(circle at 32% 28%, rgba(143,227,216,0.75), rgba(37,201,183,0.25) 65%, transparent 100%);}
-  .service-icon svg{ width:26px; height:26px; stroke:var(--navy-deep);}
-  .service-card .num{ position:absolute; top:40px; right:38px; color:var(--turquoise); font-family:'Fraunces',serif; font-style:italic; font-size:0.9rem; opacity:0.7;}
-  .service-card h3{ font-size:1.3rem; font-weight:500; color:var(--navy-deep); margin-bottom:16px;}
-  .service-card p{ color:#556270; font-size:0.95rem; line-height:1.7; margin-bottom:18px;}
-  .service-card .benefit{ font-size:0.86rem; color:#0d9488; font-weight:500;}
-
-  /* PROGRAMS */
-  .programs-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:24px;}
-  @media(max-width:900px){ .programs-grid{grid-template-columns:1fr; max-width:440px; margin:0 auto;} }
-  .program-card{ background:var(--navy); border:1px solid rgba(255,255,255,0.08); border-radius:6px; padding:42px 32px; position:relative; display:flex; flex-direction:column;}
-  .program-card.featured{ background:linear-gradient(160deg,#123B4A,#0F2E45); border-color:var(--turquoise);}
-  .program-card .tag{ position:absolute; top:-13px; left:32px; background:var(--turquoise); color:var(--navy-deep); font-size:0.72rem; font-weight:700; letter-spacing:0.06em; padding:5px 14px; border-radius:20px;}
-  .program-card h3{ color:var(--white); font-size:1.25rem; font-weight:500; margin-bottom:6px;}
-  .program-card .duration{ color:rgba(255,255,255,0.45); font-size:0.85rem; margin-bottom:22px;}
-  .program-card .price{ color:var(--turquoise-soft); font-family:'Fraunces',serif; font-size:2.4rem; margin-bottom:22px;}
-  .program-card .price sup{font-size:1rem; margin-right:2px;}
-  .program-card .goal{ color:rgba(255,255,255,0.68); font-size:0.95rem; line-height:1.6; margin-bottom:30px; flex-grow:1;}
-  .program-card .btn-program{ position:relative; overflow:hidden; display:block; text-align:center; border:1px solid rgba(255,255,255,0.3); color:var(--white); padding:14px; border-radius:3px; font-size:0.82rem; font-weight:600; letter-spacing:0.02em;}
-  .program-card.featured .btn-program{ background:var(--turquoise); color:var(--navy-deep); border-color:var(--turquoise);}
-
-  /* BOOK */
-  .book-section{ background:var(--off-white); }
-  .book-grid{ display:grid; grid-template-columns:0.6fr 1.4fr; gap:70px; align-items:center;}
-  @media(max-width:900px){ .book-grid{grid-template-columns:1fr;} }
-  .book-cover{ box-shadow:0 30px 60px -20px rgba(10,27,46,0.35); border-radius:2px;}
-  .book-copy h3{color:#8a97a3; font-size:0.95rem; margin-bottom:10px;}
-  .book-copy h2{ font-size:1.7rem; font-weight:400; color:var(--navy-deep); margin-bottom:22px; line-height:1.35;}
-  .book-copy p{ color:#455361; font-size:1rem; line-height:1.8; margin-bottom:16px;}
-  .book-meta{ display:flex; gap:30px; margin:26px 0; flex-wrap:wrap;}
-  .book-meta div{ font-size:0.85rem; color:#63707c;}
-  .book-meta strong{ display:block; color:var(--navy-deep); font-size:0.95rem; margin-bottom:3px;}
-  .book-cta-row{display:flex; gap:16px; margin-top:26px; flex-wrap:wrap;}
-  .btn-dark{ position:relative; overflow:hidden; background:var(--navy-deep); color:var(--white); padding:15px 28px; border-radius:3px; font-size:0.85rem; font-weight:600;}
-
-  /* TESTIMONIALS */
-  .testi-grid{ display:grid; grid-template-columns:1fr 1fr; gap:2px; background:var(--line);}
-  @media(max-width:820px){ .testi-grid{grid-template-columns:1fr;} }
-  .testi-card{ background:var(--white); padding:46px 40px;}
-  .testi-card .who{ font-family:'Fraunces',serif; font-size:1.2rem; color:var(--navy-deep); margin-bottom:22px;}
-  .testi-card .field{ margin-bottom:18px;}
-  .testi-card .field .lab{ font-size:0.72rem; letter-spacing:0.08em; color:var(--turquoise); font-weight:600; margin-bottom:6px; text-transform:uppercase;}
-  .testi-card .field p{ color:#455361; font-size:0.95rem; line-height:1.65;}
-
-  /* IMPACT */
-  .impact-strip{ background:var(--navy-deep); padding:70px 0;}
-  .impact-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:40px; text-align:center;}
-  @media(max-width:640px){ .impact-grid{grid-template-columns:1fr; gap:34px;} }
-  .impact-num{ font-family:'Fraunces',serif; font-size:3rem; color:var(--turquoise-soft); font-weight:400;}
-  .impact-label{ color:rgba(255,255,255,0.55); font-size:0.9rem; margin-top:8px; letter-spacing:0.02em;}
-
-  /* AUDIENCE */
-  .audience-copy{ max-width:640px; margin:0 auto; text-align:center;}
-  .chip-row{ display:flex; flex-wrap:wrap; gap:10px; margin-top:26px; justify-content:center;}
-  .chip{ border:1px solid var(--line); padding:9px 16px; border-radius:20px; font-size:0.85rem; color:#3d4a56;}
-
-  /* COUNTRY MARQUEE */
-  .marquee-wrap{ margin-top:64px; border-top:1px solid var(--line); border-bottom:1px solid var(--line); overflow:hidden; position:relative; padding:26px 0;}
-  .marquee-wrap::before, .marquee-wrap::after{ content:''; position:absolute; top:0; bottom:0; width:90px; z-index:2; pointer-events:none;}
-  .marquee-wrap::before{ left:0; background:linear-gradient(90deg, var(--white) 10%, transparent);}
-  .marquee-wrap::after{ right:0; background:linear-gradient(270deg, var(--white) 10%, transparent);}
-  .marquee-track{ display:flex; gap:56px; width:max-content; animation:scroll-left 32s linear infinite;}
-  .marquee-wrap:hover .marquee-track{ animation-play-state:paused;}
-  .marquee-item{ display:flex; align-items:center; gap:10px; font-size:1rem; color:#3d4a56; white-space:nowrap; font-family:'Fraunces',serif;}
-  .marquee-item .flag{ font-size:1.35rem; line-height:1;}
-  @keyframes scroll-left{ from{ transform:translateX(0); } to{ transform:translateX(-50%); } }
-  @media (prefers-reduced-motion: reduce){ .marquee-track{animation:none;} }
-
-  /* AI ASSISTANT */
-  .ai-section{ background:linear-gradient(160deg,#0D2138,#122A45);}
-  .ai-grid{ display:grid; grid-template-columns:1fr 1fr; gap:60px; align-items:center;}
-  @media(max-width:900px){ .ai-grid{grid-template-columns:1fr;} }
-  .ai-window{ background:var(--white); border-radius:8px; overflow:hidden; box-shadow:0 30px 70px -20px rgba(0,0,0,0.4);}
-  .ai-header{ background:var(--navy-deep); padding:16px 20px; display:flex; align-items:center; gap:10px;}
-  .ai-dot{width:8px; height:8px; border-radius:50%; background:var(--turquoise);}
-  .ai-header span{color:var(--white); font-size:0.85rem; font-weight:500;}
-  .ai-body{ padding:24px; display:flex; flex-direction:column; gap:16px; min-height:260px;}
-  .msg{ max-width:82%; padding:12px 16px; border-radius:12px; font-size:0.9rem; line-height:1.5;}
-  .msg.user{ align-self:flex-end; background:var(--off-white); color:var(--navy-deep); border-bottom-right-radius:2px;}
-  .msg.ai{ align-self:flex-start; background:#EAFBF8; color:#0d5c53; border-bottom-left-radius:2px;}
-  .ai-input{ display:flex; border-top:1px solid var(--line); padding:14px 18px; gap:10px;}
-  .ai-input input{ flex:1; border:none; outline:none; font-family:'Inter'; font-size:0.9rem; background:transparent;}
-  .ai-input button{ background:var(--turquoise); color:var(--navy-deep); border:none; padding:9px 16px; border-radius:20px; font-size:0.8rem; font-weight:600; cursor:pointer;}
-
-  /* BOOKING */
-  .book-session{ background:var(--off-white);}
-  .booking-panel{ display:grid; grid-template-columns:0.9fr 1.1fr; background:var(--white); border-radius:6px; overflow:hidden; box-shadow:0 30px 70px -30px rgba(10,27,46,0.25);}
-  @media(max-width:900px){ .booking-panel{grid-template-columns:1fr;} }
-  .booking-side{ background:var(--navy-deep); padding:50px 44px; color:var(--white);}
-  .booking-side h3{ font-size:1.5rem; font-weight:400; margin-bottom:18px;}
-  .booking-side p{ color:rgba(255,255,255,0.6); font-size:0.95rem; line-height:1.7; margin-bottom:26px;}
-  .booking-side ul{ list-style:none; display:flex; flex-direction:column; gap:14px;}
-  .booking-side li{ font-size:0.9rem; color:rgba(255,255,255,0.75); display:flex; gap:10px; align-items:baseline;}
-  .booking-side li::before{content:'—'; color:var(--turquoise);}
-  .booking-form{ padding:50px 44px; display:flex; flex-direction:column; gap:18px;}
-  .form-row{ display:grid; grid-template-columns:1fr 1fr; gap:18px;}
-  @media(max-width:520px){.form-row{grid-template-columns:1fr;}}
-  .field-group{ display:flex; flex-direction:column; gap:8px;}
-  .field-group label{ font-size:0.78rem; color:#63707c; font-weight:500;}
-  .field-group input, .field-group select, .field-group textarea{
-    border:1px solid var(--line); border-radius:3px; padding:12px 14px; font-family:'Inter'; font-size:0.92rem; color:var(--navy-deep); background:var(--off-white);
-  }
-  .field-group textarea{resize:vertical; min-height:90px;}
-  .booking-form .btn-primary{ align-self:flex-start; margin-top:6px; border:none; cursor:pointer;}
-  .form-note{font-size:0.78rem; color:#8a97a3; margin-top:-6px;}
-
-  /* FOOTER */
-  footer{ background:var(--navy-deep); color:rgba(255,255,255,0.6); padding:80px 0 30px;}
-  .footer-grid{ display:grid; grid-template-columns:1.4fr 1fr 1fr; gap:50px; padding-bottom:50px; border-bottom:1px solid rgba(255,255,255,0.08);}
-  @media(max-width:760px){.footer-grid{grid-template-columns:1fr; gap:36px;}}
-  .footer-brand{ color:var(--white); font-family:'Fraunces',serif; font-size:1.3rem; margin-bottom:10px;}
-  .footer-brand + p{ font-family:'Fraunces',serif; font-style:italic; color:var(--turquoise-soft); margin-bottom:18px;}
-  .footer-col h4{ color:var(--white); font-size:0.85rem; letter-spacing:0.05em; margin-bottom:18px; font-weight:500;}
-  .footer-col a, .footer-col p{ display:block; font-size:0.88rem; color:rgba(255,255,255,0.55); margin-bottom:12px;}
-  .footer-col a:hover{color:var(--turquoise-soft);}
-  .footer-bottom{ display:flex; justify-content:space-between; align-items:center; padding-top:30px; font-size:0.78rem; color:rgba(255,255,255,0.35); flex-wrap:wrap; gap:12px;}
-  .footer-bottom a{color:rgba(255,255,255,0.5);}
-
-  /* FLOATING AI ASSISTANT (WhatsApp-style) */
-  .ai-fab{
-    position:fixed; bottom:26px; right:26px; z-index:1200;
-    width:60px; height:60px; border-radius:50%;
-    background:var(--turquoise); color:var(--navy-deep);
-    display:flex; align-items:center; justify-content:center;
-    box-shadow:0 14px 30px -8px rgba(10,27,46,0.5);
-    border:none; cursor:pointer;
-    transition:transform .25s ease;
-  }
-  .ai-fab:hover{ transform:scale(1.06); }
-  .ai-fab svg{width:26px; height:26px;}
-  .ai-fab .close-icon{display:none;}
-  .ai-fab.open .chat-icon{display:none;}
-  .ai-fab.open .close-icon{display:block;}
-  .ai-fab-pulse{ position:absolute; inset:0; border-radius:50%; background:var(--turquoise); opacity:0.55; animation:fab-pulse 2.6s ease-out infinite;}
-  @media (prefers-reduced-motion: reduce){ .ai-fab-pulse{animation:none; display:none;} }
-  @keyframes fab-pulse{ 0%{transform:scale(1); opacity:0.5;} 100%{transform:scale(1.9); opacity:0;} }
-
-  .ai-panel{
-    position:fixed; bottom:100px; right:26px; z-index:1200;
-    width:340px; max-width:calc(100vw - 40px);
-    background:var(--white); border-radius:12px; overflow:hidden;
-    box-shadow:0 30px 70px -20px rgba(0,0,0,0.45);
-    transform:translateY(16px) scale(0.97); opacity:0; pointer-events:none;
-    transition:transform .25s ease, opacity .25s ease;
-  }
-  .ai-panel.open{ transform:translateY(0) scale(1); opacity:1; pointer-events:auto;}
-  .ai-panel .ai-header{ background:var(--navy-deep); padding:16px 18px; display:flex; align-items:center; gap:10px;}
-  .ai-panel .ai-header span{color:var(--white); font-size:0.86rem; font-weight:500;}
-  .ai-panel .ai-body{ padding:18px; display:flex; flex-direction:column; gap:14px; max-height:320px; overflow-y:auto;}
-  .ai-panel .msg{ max-width:88%; padding:11px 14px; border-radius:12px; font-size:0.87rem; line-height:1.5;}
-  .ai-panel .msg.user{ align-self:flex-end; background:var(--off-white); color:var(--navy-deep); border-bottom-right-radius:2px;}
-  .ai-panel .msg.ai{ align-self:flex-start; background:#EAFBF8; color:#0d5c53; border-bottom-left-radius:2px;}
-  .ai-panel .ai-input{ display:flex; border-top:1px solid var(--line); padding:12px 14px; gap:8px;}
-  .ai-panel .ai-input input{ flex:1; border:none; outline:none; font-family:'Inter'; font-size:0.87rem; background:transparent;}
-  .ai-panel .ai-input button{ background:var(--turquoise); color:var(--navy-deep); border:none; padding:8px 14px; border-radius:20px; font-size:0.78rem; font-weight:600; cursor:pointer;}
-  @media(max-width:480px){ .ai-fab{bottom:18px; right:18px;} .ai-panel{right:14px; bottom:88px;} }
-  .center{text-align:center;}
-  .mx-auto{margin-left:auto; margin-right:auto;}
-  [data-en]{display:none;}
-  html[data-lang="en"] [data-fr]{display:none;}
-  html[data-lang="en"] [data-en]{display:inline;}
-  html[data-lang="en"] [data-en].block-el{display:block;}
-  html[data-lang="en"] [data-en].flex-el{display:flex;}
+  @media (prefers-reduced-motion: reduce){*{animation-duration:.001s !important; transition-duration:.001s !important;} html{scroll-behavior:auto;}}
 </style>
 </head>
-<body>
+<body data-lang="fr">
 
-<header id="siteHeader">
-  <div class="wrap navbar">
-    <a href="#hero" class="brand">
-      <img src="logo_transparent.png" alt="Coach Tidjani Academy">
-      <span class="wordmark">COACH TIDJANI ACADEMY<span data-fr>LE DÉMÉNAGEMENT MENTAL</span><span data-en>THE MENTAL RELOCATION</span></span>
-    </a>
-    <nav class="links">
-      <a href="#about"><span data-fr>À propos</span><span data-en>About</span></a>
-      <a href="#services"><span data-fr>Coaching</span><span data-en>Coaching</span></a>
-      <a href="#programs"><span data-fr>Programmes</span><span data-en>Programs</span></a>
-      <a href="#book"><span data-fr>Livre</span><span data-en>Book</span></a>
-      <a href="#testimonials"><span data-fr>Témoignages</span><span data-en>Testimonials</span></a>
-      <a href="#contact"><span data-fr>Contact</span><span data-en>Contact</span></a>
-    </nav>
-    <div class="nav-actions">
-      <div class="lang-switch">
-        <button class="active" id="btnFr" onclick="setLang('fr')">FR</button>
-        <button id="btnEn" onclick="setLang('en')">EN</button>
-      </div>
-      <a href="#booking" class="btn-nav"><span data-fr>Réserver</span><span data-en>Book</span></a>
-      <button class="burger" onclick="toggleMobile()"><span></span><span></span><span></span></button>
+<div class="aurora-bg" aria-hidden="true"><span></span><span></span><span></span></div>
+
+<div id="signal-line"><div class="fill"></div></div>
+
+<header id="site-header">
+  <div class="brand">
+    <a href="#hero" class="logo-plate"><img src="logo.png" alt="ROUGATECH"></a>
+  </div>
+  <nav class="main-nav" id="main-nav">
+    <a href="#solutions"><span class="fr">Solutions</span><span class="en">Solutions</span></a>
+    <a href="#industries"><span class="fr">Industries</span><span class="en">Industries</span></a>
+    <a href="#work"><span class="fr">Projets</span><span class="en">Projects</span></a>
+    <a href="#about"><span class="fr">À propos</span><span class="en">About</span></a>
+    <a href="academy/index.html">Academy</a>
+    <a href="#contact"><span class="fr">Contact</span><span class="en">Contact</span></a>
+  </nav>
+  <div class="header-right">
+    <div class="lang-switch">
+      <button data-lang-btn="fr" class="active">FR</button><span>|</span><button data-lang-btn="en">EN</button>
     </div>
+    <a href="#contact" class="btn btn-primary btn-header"><span class="fr">Démarrer un projet</span><span class="en">Start a project</span></a>
+    <button class="menu-toggle" id="menu-toggle" aria-label="Menu" aria-expanded="false"><span></span><span></span><span></span></button>
   </div>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#about" onclick="toggleMobile()"><span data-fr>À propos</span><span data-en>About</span></a>
-  <a href="#services" onclick="toggleMobile()"><span data-fr>Coaching</span><span data-en>Coaching</span></a>
-  <a href="#programs" onclick="toggleMobile()"><span data-fr>Programmes</span><span data-en>Programs</span></a>
-  <a href="#book" onclick="toggleMobile()"><span data-fr>Livre</span><span data-en>Book</span></a>
-  <a href="#testimonials" onclick="toggleMobile()"><span data-fr>Témoignages</span><span data-en>Testimonials</span></a>
-  <a href="#contact" onclick="toggleMobile()"><span data-fr>Contact</span><span data-en>Contact</span></a>
-  <a href="#booking" class="btn-nav" onclick="toggleMobile()"><span data-fr>Réserver une séance</span><span data-en>Book a session</span></a>
-</div>
+<main>
 
-<!-- HERO -->
-<section class="hero" id="hero">
-  <div class="wrap">
-    <div class="global-strip"><span>AFRICA <span class="dot">•</span> DIASPORA <span class="dot">•</span> GLOBAL</span></div>
-    <div class="hero-grid">
-      <div>
-        <div class="kicker"><span data-fr>COACHING & TRANSFORMATION MENTALE</span><span data-en>COACHING & MENTAL TRANSFORMATION</span></div>
-        <h1><span data-fr>Ton mental est le seul obstacle entre toi et la vie que tu mérites.</span><span data-en>Your mindset is the only thing standing between you and the life you deserve.</span></h1>
-        <div class="concept-badge"><span data-fr>LE DÉMÉNAGEMENT MENTAL</span><span data-en>THE MENTAL RELOCATION</span></div>
-        <p class="signature"><span data-fr>« Je t'aide à changer ton mental pour changer ta vie. »</span><span data-en>"I help you change your mindset to change your life."</span></p>
-        <p class="desc">
-          <span data-fr>Une approche de transformation personnelle conçue pour aider les personnes ambitieuses à dépasser leurs blocages, renforcer leur discipline, développer leur potentiel et construire une vie alignée avec leurs aspirations.</span>
-          <span data-en>A personal transformation approach designed to help ambitious people move past their blocks, strengthen their discipline, develop their potential, and build a life aligned with their aspirations.</span>
+  <!-- HERO -->
+  <section class="hero" id="hero">
+    <div class="hero-grid"></div>
+    <div class="wrap hero-content">
+      <div class="hero-layout">
+        <div class="hero-text">
+          <div class="eyebrow">ROUGATECH — DIGITAL TRANSFORMATION FOR AFRICA</div>
+          <h1>
+            <span class="fr">Transformez votre entreprise. <span class="accent">Vendez plus.</span></span>
+            <span class="en">Transform Your Business. <span class="accent">Sell More.</span></span>
+          </h1>
+          <p class="hero-sub">
+            <span class="fr">Nous créons des sites web, des agents IA, des plateformes SaaS et des systèmes digitaux qui aident les entreprises à attirer des clients, automatiser leurs opérations et se développer.</span>
+            <span class="en">We build websites, AI agents, SaaS platforms and digital systems that help businesses attract customers, automate operations and grow.</span>
+          </p>
+          <div class="hero-ctas">
+            <a href="#contact" class="btn btn-primary"><span class="fr">Transformer mon entreprise</span><span class="en">Transform My Business</span></a>
+            <a href="#solutions" class="btn btn-outline"><span class="fr">Explorer nos solutions</span><span class="en">Explore Our Solutions</span></a>
+          </div>
+        </div>
+        <div class="hero-visual" aria-hidden="true">
+          <div class="dash-card">
+            <div class="dash-head">
+              <span><span class="fr">Tableau de bord business</span><span class="en">Business Dashboard</span></span>
+            </div>
+            <div class="dash-stats">
+              <div class="dash-stat">
+                <div class="label">Sales</div>
+                <div class="value">$42K</div>
+                <div class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 17L10 11L14 15L20 7"/><path d="M14 7h6v6"/></svg> +24%</div>
+              </div>
+              <div class="dash-stat">
+                <div class="label">Leads</div>
+                <div class="value">1,248</div>
+                <div class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 17L10 11L14 15L20 7"/><path d="M14 7h6v6"/></svg> +18%</div>
+              </div>
+              <div class="dash-stat">
+                <div class="label"><span class="fr">Conversion</span><span class="en">Conversion</span></div>
+                <div class="value">4.8%</div>
+                <div class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 17L10 11L14 15L20 7"/><path d="M14 7h6v6"/></svg> +12%</div>
+              </div>
+              <div class="dash-stat">
+                <div class="label"><span class="fr">Croissance</span><span class="en">Growth</span></div>
+                <div class="value">+38%</div>
+                <div class="delta"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3" stroke-linecap="round"><path d="M4 17L10 11L14 15L20 7"/><path d="M14 7h6v6"/></svg> <span class="fr">stable</span><span class="en">steady</span></div>
+              </div>
+            </div>
+            <div class="dash-chart-wrap">
+              <svg class="dash-chart" viewBox="0 0 300 110" preserveAspectRatio="none">
+                <defs>
+                  <linearGradient id="dashLineGrad" x1="0" y1="0" x2="1" y2="0">
+                    <stop offset="0%" stop-color="var(--blue)"/>
+                    <stop offset="100%" stop-color="var(--cyan)"/>
+                  </linearGradient>
+                  <linearGradient id="dashAreaGrad" x1="0" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="var(--cyan)" stop-opacity=".28"/>
+                    <stop offset="100%" stop-color="var(--cyan)" stop-opacity="0"/>
+                  </linearGradient>
+                </defs>
+                <path d="M0,95 C30,90 50,100 70,85 C90,70 100,90 120,65 C140,40 160,55 180,35 C200,15 220,30 240,10 L300,4 L300,110 L0,110 Z" fill="url(#dashAreaGrad)" stroke="none"/>
+                <path class="dash-line-base" d="M0,95 C30,90 50,100 70,85 C90,70 100,90 120,65 C140,40 160,55 180,35 C200,15 220,30 240,10 L300,4" fill="none" stroke="url(#dashLineGrad)" stroke-width="2.5" stroke-linecap="round"/>
+                <path class="dash-line-flow" d="M0,95 C30,90 50,100 70,85 C90,70 100,90 120,65 C140,40 160,55 180,35 C200,15 220,30 240,10 L300,4" fill="none" stroke="#fff" stroke-width="2.5" stroke-linecap="round"/>
+                <g class="dash-endpoint" transform="translate(300,4)">
+                  <circle class="ring" r="4" fill="var(--cyan)"/>
+                  <circle r="4" fill="var(--cream)"/>
+                </g>
+              </svg>
+            </div>
+            <div class="dash-note"><span class="fr">Données illustratives</span><span class="en">Illustrative data</span></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- PROBLEM -->
+  <section class="section" id="mission">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">01 / THE SHIFT</div>
+        <h2><span class="fr">Votre entreprise est en train de changer.</span><span class="en">Your business is changing.</span></h2>
+        <p class="section-sub">
+          <span class="fr">Vos clients sont en ligne. Vos concurrents adoptent l'IA. Les processus manuels vous ralentissent. Une simple présence en ligne ne suffit plus.</span>
+          <span class="en">Your customers are online. Your competitors are adopting AI. Manual processes are slowing you down. A basic online presence is no longer enough.</span>
         </p>
-        <div class="cta-row">
-          <a href="#booking" class="btn-primary"><span data-fr>RÉSERVER UNE SÉANCE</span><span data-en>BOOK A COACHING SESSION</span></a>
-          <a href="#concept" class="btn-ghost"><span data-fr>DÉCOUVRIR LE CONCEPT</span><span data-en>DISCOVER THE MENTAL RELOCATION</span></a>
+      </div>
+      <div class="mission-grid reveal">
+        <div class="mission-card">
+          <h3><span class="fr">Pas assez de prospects</span><span class="en">Not enough leads</span></h3>
+        </div>
+        <div class="mission-card">
+          <h3><span class="fr">Processus manuels</span><span class="en">Manual processes</span></h3>
+        </div>
+        <div class="mission-card">
+          <h3><span class="fr">Réponse client lente</span><span class="en">Slow customer response</span></h3>
+        </div>
+        <div class="mission-card">
+          <h3><span class="fr">Faible conversion en ligne</span><span class="en">Low online conversion</span></h3>
         </div>
       </div>
-      <div class="hero-photo">
-        <div class="mental-orb">
-          <div class="ring"></div>
-          <div class="ring r2"></div>
-          <div class="core"></div>
-          <div class="dot"></div>
-          <div class="label"><span data-fr>mental</span><span data-en>mindset</span></div>
-        </div>
-        <div class="photo-frame"><img src="coach.jpg" alt="Coach Tidjani — Labaéka Tidjani-Dourodjaye"></div>
-        <div class="photo-tag">
-          <div class="name">Labaéka Tidjani-Dourodjaye</div>
-          <div class="role"><span data-fr>Fondateur, Coach Tidjani Academy</span><span data-en>Founder, Coach Tidjani Academy</span></div>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROBLEM -->
-<section class="dark-section" id="problem">
-  <div class="ambient-orb dark-bg" style="width:100px;height:100px;top:60px;left:-30px;animation-delay:0.4s;"></div>
-  <div class="ambient-orb dark-bg" style="width:70px;height:70px;bottom:40px;right:6%;animation-delay:1.6s;"></div>
-  <div class="wrap">
-    <div class="section-head light-on-dark">
-      <span class="eyebrow"><span data-fr>LE VRAI BLOCAGE</span><span data-en>THE REAL BLOCK</span></span>
-      <h2><span data-fr>Et si le plus grand obstacle à votre évolution était votre propre système de pensée ?</span><span data-en>What if the biggest obstacle to your growth was your own way of thinking?</span></h2>
-      <p class="lead"><span data-fr>Peur, procrastination, victimisation, indiscipline, manque de confiance : ces schémas ne définissent pas qui vous êtes — ils définissent seulement où vous en êtes.</span><span data-en>Fear, procrastination, self-victimization, lack of discipline, low confidence — these patterns don't define who you are. They only define where you currently stand.</span></p>
-    </div>
-    <div class="transform-list">
-      <div class="t-row"><div class="from" data-fr>La plainte</div><div class="from" data-en>Complaining</div><div class="arrow">→</div><div class="to" data-fr>La responsabilité</div><div class="to" data-en>Responsibility</div></div>
-      <div class="t-row"><div class="from" data-fr>La peur</div><div class="from" data-en>Fear</div><div class="arrow">→</div><div class="to" data-fr>Le courage</div><div class="to" data-en>Courage</div></div>
-      <div class="t-row"><div class="from" data-fr>La procrastination</div><div class="from" data-en>Procrastination</div><div class="arrow">→</div><div class="to" data-fr>L'action</div><div class="to" data-en>Action</div></div>
-      <div class="t-row"><div class="from" data-fr>La victimisation</div><div class="from" data-en>Victim mindset</div><div class="arrow">→</div><div class="to" data-fr>La construction</div><div class="to" data-en>Building</div></div>
-      <div class="t-row"><div class="from" data-fr>La limitation</div><div class="from" data-en>Limitation</div><div class="arrow">→</div><div class="to" data-fr>L'expansion</div><div class="to" data-en>Expansion</div></div>
-      <div class="t-row"><div class="from" data-fr>La survie</div><div class="from" data-en>Survival</div><div class="arrow">→</div><div class="to" data-fr>La prospérité</div><div class="to" data-en>Prosperity</div></div>
-      <div class="t-row"><div class="from" data-fr>L'indiscipline</div><div class="from" data-en>Lack of discipline</div><div class="arrow">→</div><div class="to" data-fr>La discipline</div><div class="to" data-en>Discipline</div></div>
-      <div class="t-row"><div class="from" data-fr>L'ancien soi</div><div class="from" data-en>The old self</div><div class="arrow">→</div><div class="to" data-fr>La meilleure version de soi</div><div class="to" data-en>The best version of yourself</div></div>
-    </div>
-  </div>
-</section>
-
-<!-- CONCEPT: DEMENAGEMENT MENTAL -->
-<section id="concept">
-  <div class="ambient-orb light-bg" style="width:80px;height:80px;top:30px;right:4%;animation-delay:0.8s;"></div>
-  <div class="wrap">
-    <div class="concept-block">
-      <div class="concept-visual">
-        <div class="word" style="top:8%; left:-10%;">mental</div>
-        <div class="word" style="bottom:6%; right:-14%;">relocation</div>
-        <div class="core">
-          <span><span data-fr>Le Déménagement Mental</span><span data-en>The Mental Relocation</span></span>
-        </div>
-      </div>
-      <div class="concept-copy">
-        <span class="eyebrow light"><span data-fr>LA MÉTHODE</span><span data-en>THE METHOD</span></span>
-        <h3><span data-fr>Le Déménagement Mental</span><span data-en>The Mental Relocation</span></h3>
-        <p><span data-fr>Le déménagement mental consiste à identifier les anciens schémas de pensée, croyances, habitudes et programmations qui limitent l'individu, afin de les remplacer consciemment par de nouvelles façons de penser, de décider et d'agir.</span>
-        <span data-en>The Mental Relocation means identifying the old thought patterns, beliefs, habits and programming that limit a person, in order to consciously replace them with new ways of thinking, deciding and acting.</span></p>
-        <p class="emph"><span data-fr>L'objectif n'est pas simplement de motiver. L'objectif est de permettre à chaque personne de devenir progressivement la meilleure version d'elle-même.</span><span data-en>The goal is not simply to motivate. The goal is to help each person progressively become the best version of themselves.</span></p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ABOUT -->
-<section id="about" style="background:var(--white);">
-  <div class="wrap">
-    <div class="about-grid">
-      <div class="about-photo"><img src="coach.jpg" alt="Labaéka Tidjani-Dourodjaye"></div>
-      <div class="about-copy">
-        <h3><span data-fr>À PROPOS DU COACH</span><span data-en>ABOUT THE COACH</span></h3>
-        <h2>Labaéka Tidjani-Dourodjaye</h2>
-        <ul class="fact-list">
-          <li><span data-fr>Coach certifié, formateur et auteur togolais</span><span data-en>Certified coach, trainer and author from Togo</span></li>
-          <li><span data-fr>Spécialisé en développement personnel et coaching intégral</span><span data-en>Specialized in personal development and integral coaching</span></li>
-          <li><span data-fr>Formation initiale en commerce international</span><span data-en>Initial training in international business</span></li>
-          <li><span data-fr>Licence et master professionnel en coaching intégral</span><span data-en>Bachelor's and professional master's degree in integral coaching</span></li>
-          <li><span data-fr>Transition du commerce et du marketing vers la transformation humaine</span><span data-en>Transitioned from business and marketing to human transformation</span></li>
-        </ul>
-        <blockquote><span data-fr>« La transformation durable commence par la manière de penser, de se percevoir et d'agir. »</span><span data-en>"Lasting transformation begins with how we think, perceive ourselves, and act."</span></blockquote>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- SERVICES -->
-<section id="services">
-  <div class="ambient-orb light-bg" style="width:90px;height:90px;bottom:-20px;left:2%;animation-delay:1.1s;"></div>
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow" style="color:#0d9488;"><span data-fr>NOS SERVICES</span><span data-en>OUR SERVICES</span></span>
-      <h2><span data-fr>Un accompagnement adapté à chaque étape</span><span data-en>Support tailored to every stage</span></h2>
-    </div>
-  </div>
-  <div class="wrap" style="padding:0;">
-    <div class="services-grid">
-      <div class="service-card">
-        <span class="num">01</span>
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="8" r="3.2"/><path d="M5 20c0-3.6 3.1-6.2 7-6.2s7 2.6 7 6.2"/></svg></div>
-        <h3><span data-fr>Coaching 1-1</span><span data-en>1-1 Coaching</span></h3>
-        <p><span data-fr>Accompagnement personnalisé adapté aux objectifs, défis et besoins spécifiques de chaque personne.</span><span data-en>Personalized support adapted to each person's goals, challenges and specific needs.</span></p>
-        <div class="benefit"><span data-fr>→ Clarifier ses objectifs, lever les blocages et mettre en place un plan d'action concret.</span><span data-en>→ Clarify your goals, remove blocks and build a concrete action plan.</span></div>
-      </div>
-      <div class="service-card">
-        <span class="num">02</span>
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><circle cx="8.5" cy="8" r="2.8"/><circle cx="16" cy="9.5" r="2.3"/><path d="M3.5 20c0-3.2 2.3-5.6 5.5-5.6 2 0 3.6 0.9 4.5 2.3"/><path d="M13 20c0.3-2.6 2.1-4.4 4.6-4.4 2.3 0 4.4 1.8 4.4 4.4"/></svg></div>
-        <h3><span data-fr>Coaching de Groupe</span><span data-en>Group Coaching</span></h3>
-        <p><span data-fr>Accompagnement collectif autour d'objectifs ou problématiques communes.</span><span data-en>Collective support built around shared goals or challenges.</span></p>
-        <div class="benefit"><span data-fr>→ Bénéficier de la dynamique du groupe, partager les expériences et progresser ensemble.</span><span data-en>→ Benefit from group dynamics, share experiences and progress together.</span></div>
-      </div>
-      <div class="service-card">
-        <span class="num">03</span>
-        <div class="service-icon"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M4 20V9l5-3.5V20"/><path d="M9 20V9.5l5-2v12.5"/><path d="M14 20V7.5l6 3V20"/><path d="M3 20h18"/></svg></div>
-        <h3><span data-fr>Coaching d'Entreprise</span><span data-en>Corporate Coaching</span></h3>
-        <p><span data-fr>Accompagnement des dirigeants, managers et équipes pour renforcer les performances humaines et organisationnelles.</span><span data-en>Support for executives, managers and teams to strengthen human and organizational performance.</span></p>
-        <div class="benefit"><span data-fr>→ Améliorer le leadership, la collaboration, l'engagement des équipes et la performance globale.</span><span data-en>→ Improve leadership, collaboration, team engagement and overall performance.</span></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- PROGRAMS -->
-<section id="programs" class="dark-section">
-  <div class="ambient-orb dark-bg" style="width:110px;height:110px;top:-20px;right:8%;animation-delay:0.2s;"></div>
-  <div class="ambient-orb dark-bg" style="width:60px;height:60px;bottom:60px;left:4%;animation-delay:2s;"></div>
-  <div class="wrap">
-    <div class="section-head light-on-dark">
-      <span class="eyebrow"><span data-fr>LES PROGRAMMES</span><span data-en>THE PROGRAMS</span></span>
-      <h2><span data-fr>Trois étapes vers votre transformation</span><span data-en>Three stages toward your transformation</span></h2>
-      <p class="lead"><span data-fr>Chaque formule correspond à un niveau de profondeur et d'engagement dans le processus du Déménagement Mental.</span><span data-en>Each formula matches a level of depth and commitment within the Mental Relocation process.</span></p>
-    </div>
-    <div class="programs-grid">
-      <div class="program-card">
-        <h3><span data-fr>Formule Éveil</span><span data-en>Awakening</span></h3>
-        <div class="duration"><span data-fr>8 semaines</span><span data-en>8 weeks</span></div>
-        <div class="price"><sup>$</sup>200</div>
-        <div class="goal"><span data-fr>Identifier vos blocages et poser les bases.</span><span data-en>Identify your blocks and lay the foundations.</span></div>
-        <a href="#booking" class="btn-program"><span data-fr>COMMENCER</span><span data-en>START YOUR JOURNEY</span></a>
-      </div>
-      <div class="program-card featured">
-        <span class="tag"><span data-fr>LE PLUS CHOISI</span><span data-en>MOST CHOSEN</span></span>
-        <h3><span data-fr>Formule Alignement</span><span data-en>Alignment</span></h3>
-        <div class="duration"><span data-fr>3 mois</span><span data-en>3 months</span></div>
-        <div class="price"><sup>$</sup>400</div>
-        <div class="goal"><span data-fr>Reprogrammer votre subconscient et maîtriser votre mental.</span><span data-en>Reprogram your subconscious and master your mindset.</span></div>
-        <a href="#booking" class="btn-program"><span data-fr>CHOISIR ALIGNEMENT</span><span data-en>CHOOSE ALIGNMENT</span></a>
-      </div>
-      <div class="program-card">
-        <h3><span data-fr>Formule Transmutation</span><span data-en>Transmutation</span></h3>
-        <div class="duration"><span data-fr>6 mois</span><span data-en>6 months</span></div>
-        <div class="price"><sup>$</sup>800</div>
-        <div class="goal"><span data-fr>Consolider vos acquis et propulser votre leadership.</span><span data-en>Consolidate your progress and elevate your leadership.</span></div>
-        <a href="#booking" class="btn-program"><span data-fr>CHOISIR TRANSMUTATION</span><span data-en>CHOOSE TRANSMUTATION</span></a>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- BOOK -->
-<section id="book" class="book-section">
-  <div class="ambient-orb light-bg" style="width:85px;height:85px;top:10%;left:-20px;animation-delay:1.3s;"></div>
-  <div class="wrap">
-    <div class="book-grid">
-      <img class="book-cover" src="book_front.jpg" alt="Le changement de paradigme en Afrique s'impose">
-      <div class="book-copy">
-        <h3><span data-fr>LE LIVRE</span><span data-en>THE BOOK</span></h3>
-        <h2 class="serif"><span data-fr>Le changement de paradigme en Afrique s'impose</span><span data-en>The Paradigm Shift in Africa Is Imperative</span></h2>
-        <p><span data-fr>Un livre sur le potentiel africain, les croyances limitantes, les paradigmes sociaux, le changement de mentalité, la maîtrise des ressources, la transformation personnelle et le développement de l'Afrique.</span>
-        <span data-en>A book on African potential, limiting beliefs, social paradigms, mindset change, resource mastery, personal transformation and Africa's development.</span></p>
-        <div class="book-meta">
-          <div><strong data-fr>Auteur</strong><strong data-en>Author</strong>Labaéka Tidjani-Dourodjaye</div>
-          <div><strong>ISBN</strong>978-2-38396-020-1</div>
-          <div><strong data-fr>Éditions</strong><strong data-en>Publisher</strong>Germinale</div>
-        </div>
-        <div class="book-cta-row">
-          <a href="#contact" class="btn-dark"><span data-fr>COMMANDER LE LIVRE</span><span data-en>BUY THE BOOK</span></a>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- TESTIMONIALS -->
-<section id="testimonials" style="background:var(--white);">
-  <div class="ambient-orb light-bg" style="width:75px;height:75px;top:20px;right:2%;animation-delay:0.6s;"></div>
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow" style="color:#0d9488;"><span data-fr>TÉMOIGNAGES</span><span data-en>TESTIMONIALS</span></span>
-      <h2><span data-fr>Des transformations réelles</span><span data-en>Real transformations</span></h2>
-    </div>
-  </div>
-  <div class="wrap" style="padding:0;">
-    <div class="testi-grid">
-      <div class="testi-card">
-        <div class="who">Clarisse B.</div>
-        <div class="field"><div class="lab"><span data-fr>Problème</span><span data-en>Challenge</span></div>
-          <p><span data-fr>Volonté et ambition présentes, mais manque de direction claire, de stratégie et de confiance dans son potentiel.</span><span data-en>Willpower and ambition were present, but clear direction, strategy and confidence in her own potential were missing.</span></p></div>
-        <div class="field"><div class="lab"><span data-fr>Solution</span><span data-en>Approach</span></div>
-          <p><span data-fr>Coaching exigeant et bienveillant axé sur la discipline, la prise de décision, la confiance et le passage à l'action.</span><span data-en>Demanding, supportive coaching focused on discipline, decision-making, confidence and taking action.</span></p></div>
-        <div class="field"><div class="lab"><span data-fr>Résultat</span><span data-en>Outcome</span></div>
-          <p><span data-fr>Une nouvelle manière de penser et d'agir, plus de discipline, plus de confiance, plus de conscience et une meilleure capacité à atteindre ses objectifs.</span><span data-en>A new way of thinking and acting, more discipline, more confidence, more awareness and a stronger ability to reach her goals.</span></p></div>
-      </div>
-      <div class="testi-card">
-        <div class="who">Charles A.</div>
-        <div class="field"><div class="lab"><span data-fr>Problème</span><span data-en>Challenge</span></div>
-          <p><span data-fr>Manque de confiance en soi, difficulté à prendre la parole et image personnelle dégradée malgré un fort potentiel.</span><span data-en>Low self-confidence, difficulty speaking up, and a diminished self-image despite strong potential.</span></p></div>
-        <div class="field"><div class="lab"><span data-fr>Solution</span><span data-en>Approach</span></div>
-          <p><span data-fr>Formation intensive de près de trois mois avec Coach Tidjani Academy, combinant enseignements, exercices pratiques et travail profond sur la perception de soi.</span><span data-en>Nearly three months of intensive training with Coach Tidjani Academy, combining teaching, practical exercises, and deep work on self-perception.</span></p></div>
-        <div class="field"><div class="lab"><span data-fr>Résultat</span><span data-en>Outcome</span></div>
-          <p><span data-fr>Transformation visible dans la manière de penser, de s'exprimer et de se percevoir, avec davantage de confiance, de clarté et une meilleure compréhension de son potentiel.</span><span data-en>Visible transformation in how he thinks, expresses himself, and sees himself, with greater confidence, clarity, and understanding of his potential.</span></p></div>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- IMPACT -->
-<div class="impact-strip">
-  <div class="wrap">
-    <div class="impact-grid">
-      <div><div class="impact-num">5</div><div class="impact-label"><span data-fr>Partenaires</span><span data-en>Partners</span></div></div>
-      <div><div class="impact-num">130</div><div class="impact-label"><span data-fr>Clients accompagnés</span><span data-en>Clients coached</span></div></div>
-      <div><div class="impact-num">2</div><div class="impact-label"><span data-fr>Employés</span><span data-en>Employees</span></div></div>
-    </div>
-  </div>
-</div>
-
-<!-- AUDIENCE -->
-<section id="audience" style="background:var(--white);">
-  <div class="wrap">
-    <div class="audience-copy">
-      <span class="eyebrow" style="color:#0d9488;"><span data-fr>POUR QUI</span><span data-en>WHO IT'S FOR</span></span>
-      <h2 class="serif" style="font-size:1.9rem; font-weight:400; color:var(--navy-deep); line-height:1.3;">
-        <span data-fr>Des hommes et des femmes ambitieux, prêts à changer de niveau</span>
-        <span data-en>Ambitious men and women, ready to move to the next level</span>
-      </h2>
-      <p style="color:#455361; margin-top:20px; line-height:1.75; font-size:1rem;">
-        <span data-fr>Entrepreneurs, salariés, indépendants, jeunes cadres et porteurs de projets africains — en Afrique comme dans la diaspora — qui se sentent bloqués par leur système de pensée et leurs habitudes, et qui veulent enfin avancer.</span>
-        <span data-en>Entrepreneurs, employees, freelancers, young executives and African project leaders — across Africa and the diaspora — who feel held back by their own thinking and habits, and are ready to finally move forward.</span>
+      <p class="problem-transition reveal">
+        <span class="fr">ROUGATECH transforme ces problèmes en systèmes digitaux.</span>
+        <span class="en">ROUGATECH turns these problems into digital systems.</span>
       </p>
-      <div class="chip-row">
-        <span class="chip">25–50 <span data-fr>ans</span><span data-en>years old</span></span>
-        <span class="chip" data-fr>Entrepreneurs</span><span class="chip" data-en>Entrepreneurs</span>
-        <span class="chip" data-fr>Jeunes cadres</span><span class="chip" data-en>Young executives</span>
-        <span class="chip" data-fr>Indépendants</span><span class="chip" data-en>Freelancers</span>
-        <span class="chip" data-fr>Diaspora africaine</span><span class="chip" data-en>African diaspora</span>
-      </div>
     </div>
-  </div>
-  <div class="marquee-wrap">
-    <div class="marquee-track">
-      <span class="marquee-item"><span class="flag">🇹🇬</span> Togo</span>
-      <span class="marquee-item"><span class="flag">🇳🇪</span> Niger</span>
-      <span class="marquee-item"><span class="flag">🇨🇮</span> Côte d'Ivoire</span>
-      <span class="marquee-item"><span class="flag">🇸🇳</span> Sénégal</span>
-      <span class="marquee-item"><span class="flag">🇧🇯</span> Bénin</span>
-      <span class="marquee-item"><span class="flag">🇨🇲</span> Cameroun</span>
-      <span class="marquee-item"><span class="flag">🇫🇷</span> France</span>
-      <span class="marquee-item"><span class="flag">🇺🇸</span> USA</span>
-      <span class="marquee-item"><span class="flag">🇨🇦</span> Canada</span>
-      <span class="marquee-item"><span class="flag">🇬🇧</span> UK</span>
-      <!-- duplicate for seamless loop -->
-      <span class="marquee-item"><span class="flag">🇹🇬</span> Togo</span>
-      <span class="marquee-item"><span class="flag">🇳🇪</span> Niger</span>
-      <span class="marquee-item"><span class="flag">🇨🇮</span> Côte d'Ivoire</span>
-      <span class="marquee-item"><span class="flag">🇸🇳</span> Sénégal</span>
-      <span class="marquee-item"><span class="flag">🇧🇯</span> Bénin</span>
-      <span class="marquee-item"><span class="flag">🇨🇲</span> Cameroun</span>
-      <span class="marquee-item"><span class="flag">🇫🇷</span> France</span>
-      <span class="marquee-item"><span class="flag">🇺🇸</span> USA</span>
-      <span class="marquee-item"><span class="flag">🇨🇦</span> Canada</span>
-      <span class="marquee-item"><span class="flag">🇬🇧</span> UK</span>
-    </div>
-  </div>
-</section>
+  </section>
 
-<!-- BOOKING -->
-<section id="booking" class="book-session">
-  <div class="ambient-orb light-bg" style="width:95px;height:95px;bottom:20px;right:3%;animation-delay:1.8s;"></div>
-  <div class="wrap">
-    <div class="section-head">
-      <span class="eyebrow" style="color:#0d9488;"><span data-fr>RÉSERVATION</span><span data-en>BOOKING</span></span>
-      <h2><span data-fr>Réservez votre séance de coaching</span><span data-en>Book your coaching session</span></h2>
-    </div>
-    <div class="booking-panel">
-      <div class="booking-side">
-        <h3><span data-fr>Parlons de votre transformation</span><span data-en>Let's talk about your transformation</span></h3>
-        <p><span data-fr>Choisissez votre programme, une date et une heure. Coach Tidjani vous recontacte pour confirmer votre séance.</span><span data-en>Choose your program, a date and a time. Coach Tidjani will contact you to confirm your session.</span></p>
-        <ul>
-          <li><span data-fr>Réponse sous 24 à 48h</span><span data-en>Response within 24–48h</span></li>
-          <li><span data-fr>Séances en ligne ou en présentiel</span><span data-en>Online or in-person sessions</span></li>
-          <li><span data-fr>Accompagnement disponible partout dans le monde</span><span data-en>Available worldwide</span></li>
-        </ul>
+  <!-- SOLUTIONS -->
+  <section class="section" id="solutions">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">02 / SOLUTIONS</div>
+        <h2><span class="fr">Tout ce dont votre entreprise a besoin pour grandir digitalement.</span><span class="en">Everything your business needs to grow digitally.</span></h2>
+        <p class="section-sub"><span class="fr">De votre première présence digitale aux systèmes avancés propulsés par l'IA, nous construisons la technologie autour de vos objectifs business.</span><span class="en">From your first digital presence to advanced AI-powered systems, we build technology around your business goals.</span></p>
       </div>
-      <form class="booking-form" onsubmit="return handleBooking(event)">
-        <div class="form-row">
-          <div class="field-group"><label data-fr>Nom complet</label><label data-en>Full name</label><input type="text" required></div>
-          <div class="field-group"><label>Email</label><input type="email" required></div>
+      <div class="pillars-grid reveal">
+        <div class="pillar-card">
+          <div>
+            <span class="num">01</span>
+            <h3><span class="fr">Des sites web qui vendent.</span><span class="en">Websites that sell.</span></h3>
+            <p class="desc"><span class="fr">Nous ne créons pas que de beaux sites. Nous construisons des expériences digitales conçues pour transformer les visiteurs en prospects et en clients.</span><span class="en">We don't just build beautiful websites. We build digital experiences designed to turn visitors into leads and customers.</span></p>
+            <p class="message"><span class="fr">Votre site ne doit pas seulement représenter votre entreprise. Il doit travailler pour elle.</span><span class="en">Your website should not just represent your business. It should work for your business.</span></p>
+            <a href="#contact" class="solution-cta"><span class="fr">Construire mon site</span><span class="en">Build My Website</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+          <div class="pillar-tags">
+            <span><span class="fr">Sites corporate</span><span class="en">Corporate websites</span></span>
+            <span>E-commerce</span>
+            <span><span class="fr">Pages d'atterrissage</span><span class="en">Landing pages</span></span>
+            <span><span class="fr">Pages de vente</span><span class="en">Sales pages</span></span>
+            <span><span class="fr">Sites institutionnels</span><span class="en">Institutional websites</span></span>
+            <span>WhatsApp commerce</span>
+            <span><span class="fr">Optimisation de la conversion</span><span class="en">Conversion optimization</span></span>
+            <span><span class="fr">Sites prêts pour le SEO</span><span class="en">SEO-ready websites</span></span>
+          </div>
         </div>
-        <div class="form-row">
-          <div class="field-group"><label data-fr>Téléphone</label><label data-en>Phone</label><input type="tel" required></div>
-          <div class="field-group"><label data-fr>Pays</label><label data-en>Country</label><input type="text" required></div>
+        <div class="pillar-card">
+          <div>
+            <span class="num">02</span>
+            <h3><span class="fr">Des agents IA qui travaillent 24/7.</span><span class="en">AI agents that work 24/7.</span></h3>
+            <p class="desc"><span class="fr">Offrez à votre entreprise un employé digital propulsé par l'IA, capable de répondre aux clients, qualifier les prospects, informer et automatiser les conversations répétitives.</span><span class="en">Give your business an AI-powered digital employee that can answer customers, qualify leads, provide information and automate repetitive conversations.</span></p>
+            <p class="message"><span class="fr">Vos clients n'ont plus besoin d'attendre demain pour une réponse.</span><span class="en">Your customers don't have to wait until tomorrow for an answer.</span></p>
+            <a href="#contact" class="solution-cta"><span class="fr">Créer un agent IA</span><span class="en">Build an AI Agent</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+          <div class="pillar-tags">
+            <span><span class="fr">Service client IA</span><span class="en">AI Customer Service</span></span>
+            <span><span class="fr">Agent commercial IA</span><span class="en">AI Sales Agent</span></span>
+            <span><span class="fr">Réceptionniste IA</span><span class="en">AI Receptionist</span></span>
+            <span><span class="fr">Assistant business IA</span><span class="en">AI Business Assistant</span></span>
+            <span><span class="fr">Qualification de prospects</span><span class="en">Lead Qualification</span></span>
+            <span><span class="fr">Assistant de rendez-vous</span><span class="en">Appointment Assistant</span></span>
+          </div>
         </div>
-        <div class="form-row">
-          <div class="field-group">
-            <label data-fr>Programme</label><label data-en>Program</label>
-            <select>
-              <option data-fr>Formule Éveil — 200 $</option><option data-en>Awakening — $200</option>
-              <option data-fr>Formule Alignement — 400 $</option><option data-en>Alignment — $400</option>
-              <option data-fr>Formule Transmutation — 800 $</option><option data-en>Transmutation — $800</option>
-              <option data-fr>Je ne suis pas encore sûr(e)</option><option data-en>Not sure yet</option>
+        <div class="pillar-card">
+          <div>
+            <span class="num">03</span>
+            <h3><span class="fr">Transformez vos processus en logiciel.</span><span class="en">Turn your business process into software.</span></h3>
+            <p class="desc"><span class="fr">Nous concevons et construisons des plateformes SaaS et des systèmes digitaux sur mesure qui remplacent les processus manuels par une technologie évolutive.</span><span class="en">We design and build SaaS platforms and custom digital systems that replace manual processes with scalable technology.</span></p>
+            <p class="message"><span class="fr">Si votre entreprise fonctionne avec des tableurs, WhatsApp et des tâches manuelles répétitives, nous pouvons transformer ce processus en logiciel.</span><span class="en">If your business runs on spreadsheets, WhatsApp and repetitive manual tasks, we can help turn the process into software.</span></p>
+            <a href="#contact" class="solution-cta"><span class="fr">Construire ma plateforme</span><span class="en">Build My Platform</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+          <div class="pillar-tags">
+            <span><span class="fr">Systèmes de gestion</span><span class="en">Management systems</span></span>
+            <span>CRM</span>
+            <span><span class="fr">Plateformes scolaires</span><span class="en">School platforms</span></span>
+            <span><span class="fr">Plateformes e-commerce</span><span class="en">E-commerce platforms</span></span>
+            <span><span class="fr">Systèmes de réservation</span><span class="en">Booking systems</span></span>
+            <span><span class="fr">Plateformes de transport</span><span class="en">Transport platforms</span></span>
+            <span>Dashboards</span>
+            <span><span class="fr">Gestion d'entreprise</span><span class="en">Business management systems</span></span>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <div>
+            <span class="num">04</span>
+            <h3><span class="fr">Automatisez ce qui vous ralentit.</span><span class="en">Automate what slows you down.</span></h3>
+            <p class="desc"><span class="fr">Connectez vos outils et automatisez les flux de travail répétitifs pour que votre équipe se concentre sur les tâches à plus forte valeur ajoutée.</span><span class="en">Connect your tools and automate repetitive workflows so your team can focus on higher-value work.</span></p>
+            <a href="#contact" class="solution-cta"><span class="fr">Automatiser mon entreprise</span><span class="en">Automate My Business</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+          <div class="pillar-tags">
+            <span><span class="fr">Automatisation des prospects</span><span class="en">Lead automation</span></span>
+            <span><span class="fr">Suivi client</span><span class="en">Customer follow-up</span></span>
+            <span><span class="fr">Traitement des commandes</span><span class="en">Order processing</span></span>
+            <span>Notifications</span>
+            <span><span class="fr">Collecte de données</span><span class="en">Data collection</span></span>
+            <span><span class="fr">Flux internes</span><span class="en">Internal workflows</span></span>
+          </div>
+        </div>
+        <div class="pillar-card">
+          <div>
+            <span class="num">05</span>
+            <h3><span class="fr">Construisez une entreprise capable de vendre en ligne.</span><span class="en">Build a business that can sell online.</span></h3>
+            <p class="desc"><span class="fr">Créez des systèmes de commerce digital qui facilitent la découverte de vos produits, la commande et l'achat pour vos clients.</span><span class="en">Create digital commerce systems that make it easier for customers to discover products, order and buy.</span></p>
+            <a href="#contact" class="solution-cta"><span class="fr">Vendre en ligne</span><span class="en">Start Selling Online</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg></a>
+          </div>
+          <div class="pillar-tags">
+            <span><span class="fr">Catalogue en ligne</span><span class="en">Online catalog</span></span>
+            <span>E-commerce</span>
+            <span><span class="fr">Commandes WhatsApp</span><span class="en">WhatsApp orders</span></span>
+            <span><span class="fr">Panier d'achat</span><span class="en">Shopping cart</span></span>
+            <span><span class="fr">Gestion produits</span><span class="en">Product management</span></span>
+            <span>Inventaire</span>
+            <span><span class="fr">Commandes clients</span><span class="en">Customer orders</span></span>
+            <span><span class="fr">Vitrine digitale</span><span class="en">Digital storefront</span></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- OUTCOME JOURNEY -->
+  <section class="section section-alt" id="transformation">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">03 / THE OUTCOME</div>
+        <h2><span class="fr">La technologie doit créer des résultats business.</span><span class="en">Technology should create business results.</span></h2>
+      </div>
+      <div class="timeline reveal">
+        <div class="tl-step"><div class="tl-dot">01</div><h3><span class="fr">Attirer</span><span class="en">Attract</span></h3><p><span class="fr">Être découvert en ligne.</span><span class="en">Get discovered online.</span></p></div>
+        <div class="tl-step"><div class="tl-dot">02</div><h3><span class="fr">Engager</span><span class="en">Engage</span></h3><p><span class="fr">Donner aux clients une information instantanée.</span><span class="en">Give customers instant information.</span></p></div>
+        <div class="tl-step"><div class="tl-dot">03</div><h3><span class="fr">Convertir</span><span class="en">Convert</span></h3><p><span class="fr">Transformer les visiteurs en prospects et en clients.</span><span class="en">Turn visitors into leads and buyers.</span></p></div>
+        <div class="tl-step"><div class="tl-dot">04</div><h3><span class="fr">Automatiser</span><span class="en">Automate</span></h3><p><span class="fr">Réduire le travail manuel répétitif.</span><span class="en">Reduce repetitive manual work.</span></p></div>
+        <div class="tl-step"><div class="tl-dot">05</div><h3><span class="fr">Grandir</span><span class="en">Grow</span></h3><p><span class="fr">Construire des systèmes qui évoluent avec votre entreprise.</span><span class="en">Build systems that scale with your business.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BEFORE / AFTER -->
+  <section class="section" id="before-after">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">04 / THE TRANSFORMATION</div>
+        <h2><span class="fr">Du manuel au digital.</span><span class="en">From manual to digital.</span></h2>
+      </div>
+      <div class="ba-grid reveal">
+        <div class="ba-card ba-before">
+          <div class="ba-label"><span class="fr">Avant</span><span class="en">Before</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><span><span class="fr">Facebook uniquement</span><span class="en">Facebook only</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><span><span class="fr">Conversations WhatsApp</span><span class="en">WhatsApp conversations</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><span><span class="fr">Suivi manuel</span><span class="en">Manual follow-up</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><span><span class="fr">Tableurs Excel</span><span class="en">Spreadsheets</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><span><span class="fr">Aucun catalogue en ligne</span><span class="en">No online catalog</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 6l12 12M18 6L6 18"/></svg><span><span class="fr">Réponses lentes</span><span class="en">Slow responses</span></span></li>
+          </ul>
+        </div>
+        <div class="ba-arrow" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        <div class="ba-card ba-after">
+          <div class="ba-label"><span class="fr">Après</span><span class="en">After</span></div>
+          <ul>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span><span class="fr">Site web professionnel</span><span class="en">Professional website</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span><span class="fr">Assistant IA</span><span class="en">AI assistant</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span><span class="fr">Suivi automatisé</span><span class="en">Automated follow-up</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span><span class="fr">Tableau de bord digital</span><span class="en">Digital dashboard</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span><span class="fr">Commerce en ligne</span><span class="en">Online commerce</span></span></li>
+            <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 13l4 4L19 7"/></svg><span><span class="fr">Support client 24/7</span><span class="en">24/7 customer support</span></span></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INDUSTRIES -->
+  <section class="section" id="industries">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">05 / WHO WE HELP</div>
+        <h2><span class="fr">Conçu pour les entreprises ambitieuses.</span><span class="en">Built for ambitious businesses.</span></h2>
+      </div>
+      <div class="industry-marquee reveal">
+        <div class="industry-track">
+          <div class="industry-grid">
+            <span class="industry-tag"><span class="fr">Entreprises &amp; Corporates</span><span class="en">Business &amp; Corporates</span></span>
+            <span class="industry-tag"><span class="fr">Éducation</span><span class="en">Education</span></span>
+            <span class="industry-tag"><span class="fr">Services financiers</span><span class="en">Financial Services</span></span>
+            <span class="industry-tag"><span class="fr">Commerce &amp; Distribution</span><span class="en">Retail &amp; Commerce</span></span>
+            <span class="industry-tag"><span class="fr">Transport &amp; Logistique</span><span class="en">Transport &amp; Logistics</span></span>
+            <span class="industry-tag"><span class="fr">Construction &amp; Ingénierie</span><span class="en">Construction &amp; Engineering</span></span>
+            <span class="industry-tag"><span class="fr">Hôtellerie</span><span class="en">Hospitality</span></span>
+            <span class="industry-tag"><span class="fr">Services professionnels</span><span class="en">Professional Services</span></span>
+            <span class="industry-tag"><span class="fr">ONG &amp; Organisations de développement</span><span class="en">NGOs &amp; Development Organizations</span></span>
+            <span class="industry-tag"><span class="fr">Institutions</span><span class="en">Institutions</span></span>
+          </div>
+          <div class="industry-grid" aria-hidden="true">
+            <span class="industry-tag"><span class="fr">Entreprises &amp; Corporates</span><span class="en">Business &amp; Corporates</span></span>
+            <span class="industry-tag"><span class="fr">Éducation</span><span class="en">Education</span></span>
+            <span class="industry-tag"><span class="fr">Services financiers</span><span class="en">Financial Services</span></span>
+            <span class="industry-tag"><span class="fr">Commerce &amp; Distribution</span><span class="en">Retail &amp; Commerce</span></span>
+            <span class="industry-tag"><span class="fr">Transport &amp; Logistique</span><span class="en">Transport &amp; Logistics</span></span>
+            <span class="industry-tag"><span class="fr">Construction &amp; Ingénierie</span><span class="en">Construction &amp; Engineering</span></span>
+            <span class="industry-tag"><span class="fr">Hôtellerie</span><span class="en">Hospitality</span></span>
+            <span class="industry-tag"><span class="fr">Services professionnels</span><span class="en">Professional Services</span></span>
+            <span class="industry-tag"><span class="fr">ONG &amp; Organisations de développement</span><span class="en">NGOs &amp; Development Organizations</span></span>
+            <span class="industry-tag"><span class="fr">Institutions</span><span class="en">Institutions</span></span>
+          </div>
+        </div>
+      </div>
+      <p class="industry-note reveal">
+        <span class="fr">Ces secteurs représentent les domaines que ROUGATECH est en mesure d'accompagner, en s'adaptant aux réalités et contraintes de chaque organisation.</span>
+        <span class="en">These sectors reflect the domains ROUGATECH is equipped to support, adapting to the realities and constraints of each organization.</span>
+      </p>
+    </div>
+  </section>
+
+  <!-- SELECTED WORK -->
+  <section class="section" id="work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">06 / SELECTED WORK</div>
+        <h2><span class="fr">Des projets que nous avons construits.</span><span class="en">Projects we've built.</span></h2>
+        <p class="section-sub"><span class="fr">Des expériences digitales conçues pour des entreprises, institutions et entrepreneurs à travers l'Afrique.</span><span class="en">Digital experiences built for businesses, institutions and entrepreneurs across Africa.</span></p>
+      </div>
+      <div class="work-grid reveal" id="work-grid"></div>
+    </div>
+  </section>
+
+  <!-- TRUSTED BY -->
+  <section class="section section-alt" id="trusted">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">07 / TRUSTED BY</div>
+        <h2><span class="fr">Ils nous ont fait confiance.</span><span class="en">They trusted us.</span></h2>
+        <p class="section-sub"><span class="fr">Des entreprises et institutions qui ont choisi ROUGATECH pour renforcer leur présence digitale.</span><span class="en">Businesses and institutions that chose ROUGATECH to strengthen their digital presence.</span></p>
+      </div>
+      <div class="trusted-grid reveal" id="trusted-grid"></div>
+    </div>
+  </section>
+
+  <!-- PROJECTS DATA — add a new project here and it renders automatically
+       in both the Selected Work grid and the Trusted By grid above. -->
+  <script>
+    var ROUGATECH_PROJECTS = [
+      {
+        name: "IPHEC Niger",
+        category: { fr: "Site institutionnel", en: "Institutional Website" },
+        desc: {
+          fr: "Une présence digitale institutionnelle moderne conçue pour présenter l'IPHEC Niger, ses programmes et sa mission éducative avec clarté et crédibilité.",
+          en: "Modern institutional digital presence designed to present IPHEC Niger, its programs and its educational mission with clarity and credibility."
+        },
+        url: "https://www.iphecniger.com",
+        image: "work-iphec.jpg"
+      },
+      {
+        name: "Coach Marina",
+        category: { fr: "Marque personnelle / Plateforme de coaching", en: "Personal Brand / Coaching Platform" },
+        desc: {
+          fr: "Une plateforme digitale premium conçue pour présenter les programmes de coaching, la communauté, les événements et les services de Coach Marina.",
+          en: "A premium digital platform designed to present Coach Marina's coaching programs, community, events and services."
+        },
+        url: "https://coachmarina.pages.dev/",
+        image: "work-marina.jpg"
+      },
+      {
+        name: "KPS Consulting",
+        category: { fr: "Site corporate", en: "Corporate Website" },
+        desc: {
+          fr: "Une plateforme digitale professionnelle conçue pour KPS Consulting afin de présenter ses services de fiscalité, de conseil et de formation professionnelle.",
+          en: "A professional digital platform designed for KPS Consulting to present its fiscal, consulting and professional training services."
+        },
+        url: "https://kps-consulting.pages.dev/",
+        image: "work-kps.jpg"
+      }
+    ];
+
+    (function renderProjects(){
+      var grid = document.getElementById('work-grid');
+      var trusted = document.getElementById('trusted-grid');
+      if(!grid || !trusted) return;
+
+      grid.innerHTML = ROUGATECH_PROJECTS.map(function(p){
+        return '' +
+          '<article class="work-card">' +
+            '<div class="work-media"><img src="' + p.image + '" alt="' + p.name + '" loading="lazy"></div>' +
+            '<div class="work-body">' +
+              '<span class="work-category"><span class="fr">' + p.category.fr + '</span><span class="en">' + p.category.en + '</span></span>' +
+              '<h3>' + p.name + '</h3>' +
+              '<p><span class="fr">' + p.desc.fr + '</span><span class="en">' + p.desc.en + '</span></p>' +
+              '<a class="work-link" href="' + p.url + '" target="_blank" rel="noopener">' +
+                '<span class="fr">Voir le projet</span><span class="en">View Project</span>' +
+                '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M7 17L17 7M9 7h8v8"/></svg>' +
+              '</a>' +
+            '</div>' +
+          '</article>';
+      }).join('');
+
+      trusted.innerHTML = ROUGATECH_PROJECTS.map(function(p){
+        return '<div class="trusted-chip">' + p.name.toUpperCase() + '</div>';
+      }).join('');
+    })();
+  </script>
+
+  <!-- DIGITAL PRODUCTS -->
+  <section class="section" id="products">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">08 / DIGITAL PRODUCTS</div>
+        <h2><span class="fr">Nous concevons aussi nos propres produits.</span><span class="en">We also build our own products.</span></h2>
+      </div>
+      <div class="products-grid reveal">
+        <div class="product-card">
+          <span class="product-status"><span class="fr">Produit en développement</span><span class="en">Product in development</span></span>
+          <h3>ScolPay</h3>
+          <p><span class="fr">Plateforme digitale de gestion scolaire — Éducation.</span><span class="en">Education / Digital school management platform.</span></p>
+        </div>
+        <div class="product-card">
+          <span class="product-status"><span class="fr">Produit en développement</span><span class="en">Product in development</span></span>
+          <h3>Rougatech Commerce</h3>
+          <p><span class="fr">Infrastructure e-commerce pour entreprises africaines.</span><span class="en">E-commerce infrastructure for African businesses.</span></p>
+        </div>
+        <div class="product-card">
+          <span class="product-status"><span class="fr">Produit en développement</span><span class="en">Product in development</span></span>
+          <h3>Rougatech AI</h3>
+          <p><span class="fr">IA &amp; automatisation pour les opérations métier.</span><span class="en">AI &amp; automation for business operations.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ACADEMY TEASER -->
+  <section class="section" id="academy">
+    <div class="wrap">
+      <div class="academy-card reveal">
+        <div class="eyebrow">09 / ACADEMY</div>
+        <h2>ROUGATECH Academy</h2>
+        <div class="tagline">Learn. Build. Transform.</div>
+        <p><span class="fr">Une éducation technologique et digitale pratique, pensée pour les entrepreneurs, créateurs et professionnels.</span><span class="en">Practical technology and digital business education for entrepreneurs, creators and professionals.</span></p>
+        <a href="academy/index.html" class="btn btn-primary"><span class="fr">Visiter l'Academy</span><span class="en">Visit Academy</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW WE WORK -->
+  <section class="section section-alt" id="how-we-work">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">10 / HOW WE WORK</div>
+        <h2><span class="fr">De l'idée au système business.</span><span class="en">From idea to business system.</span></h2>
+      </div>
+      <div class="how-list reveal">
+        <div class="how-row"><span class="num">01</span><h3><span class="fr">Comprendre</span><span class="en">Understand</span></h3><p><span class="fr">Comprendre l'organisation et ses objectifs.</span><span class="en">Understanding the organization and its goals.</span></p></div>
+        <div class="how-row"><span class="num">02</span><h3><span class="fr">Stratégie</span><span class="en">Strategy</span></h3><p><span class="fr">Nous identifions les opportunités digitales.</span><span class="en">We identify the digital opportunities.</span></p></div>
+        <div class="how-row"><span class="num">03</span><h3><span class="fr">Concevoir</span><span class="en">Design</span></h3><p><span class="fr">Créer une expérience claire et moderne.</span><span class="en">Creating a clear, modern experience.</span></p></div>
+        <div class="how-row"><span class="num">04</span><h3><span class="fr">Construire</span><span class="en">Build</span></h3><p><span class="fr">Développer la solution.</span><span class="en">Developing the solution.</span></p></div>
+        <div class="how-row"><span class="num">05</span><h3><span class="fr">Lancer</span><span class="en">Launch</span></h3><p><span class="fr">Déployer et accompagner.</span><span class="en">Deploying and supporting.</span></p></div>
+        <div class="how-row"><span class="num">06</span><h3><span class="fr">Faire évoluer</span><span class="en">Evolve</span></h3><p><span class="fr">Faire évoluer la solution dans le temps.</span><span class="en">Evolving the solution over time.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- WHY -->
+  <section class="section" id="why">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">11 / WHY ROUGATECH</div>
+        <h2><span class="fr">Pourquoi les entreprises choisissent ROUGATECH.</span><span class="en">Why businesses choose ROUGATECH.</span></h2>
+      </div>
+      <div class="why-grid reveal">
+        <div class="why-card"><h3><span class="fr">L'entreprise d'abord</span><span class="en">Business First</span></h3><p><span class="fr">Nous partons de votre problème business, pas de la technologie.</span><span class="en">We start with your business problem, not the technology.</span></p></div>
+        <div class="why-card"><h3><span class="fr">Conçu pour grandir</span><span class="en">Built for Growth</span></h3><p><span class="fr">Nous construisons des systèmes capables d'évoluer avec votre entreprise.</span><span class="en">We build systems that can evolve as your business grows.</span></p></div>
+        <div class="why-card"><h3><span class="fr">Propulsé par l'IA</span><span class="en">AI-Powered</span></h3><p><span class="fr">Nous utilisons l'IA moderne pour rendre les entreprises plus rapides et plus intelligentes.</span><span class="en">We use modern AI to make businesses faster and smarter.</span></p></div>
+        <div class="why-card"><h3><span class="fr">Technologie pratique</span><span class="en">Practical Technology</span></h3><p><span class="fr">Nous nous concentrons sur une technologie qui crée une vraie valeur business.</span><span class="en">We focus on technology that creates real business value.</span></p></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section section-alt" id="about">
+    <div class="wrap">
+      <div class="about-wrap">
+        <div class="reveal">
+          <div class="eyebrow">12 / ABOUT</div>
+          <h2 style="margin-top:20px; font-size:clamp(28px,3.6vw,44px);"><span class="fr">Une technologie pour une Afrique plus connectée.</span><span class="en">Technology for a more connected Africa.</span></h2>
+        </div>
+        <div class="reveal">
+          <p><span class="fr">ROUGATECH est une entreprise technologique africaine. Nous utilisons le logiciel, l'intelligence artificielle, les plateformes digitales et l'automatisation pour aider les organisations africaines à se transformer.</span>
+          <span class="en">ROUGATECH is an African technology company. We use software, AI, digital platforms and automation to help African organizations transform.</span></p>
+          <p><span class="fr">Basée à Niamey, Niger, nous concevons des solutions pensées pour les réalités locales et construites pour des standards internationaux.</span>
+          <span class="en">Based in Niamey, Niger, we design solutions built for local realities and international standards.</span></p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOUNDER -->
+  <section class="section" id="founder">
+    <div class="wrap">
+      <div class="founder-wrap">
+        <div class="founder-photo reveal">
+          <img src="founder.jpg" alt="Amadou Rouga Achirou" loading="lazy">
+        </div>
+        <div class="founder-text reveal">
+          <div class="eyebrow">13 / FOUNDER</div>
+          <h2 style="margin-top:14px; font-size:clamp(24px,3vw,34px);"><span class="fr">Construire la technologie avec une vision pour l'Afrique.</span><span class="en">Building technology with a vision for Africa.</span></h2>
+          <div class="founder-role" style="margin-top:18px;">Founder &amp; CEO — ROUGATECH</div>
+          <h3 class="founder-name" style="font-size:clamp(22px,2.6vw,30px);">Amadou Rouga Achirou</h3>
+          <p><span class="fr">Amadou Rouga Achirou est le fondateur de ROUGATECH, une entreprise technologique dédiée à la conception de produits digitaux, de solutions IA et de systèmes business pour les entreprises et institutions africaines.</span><span class="en">Amadou Rouga Achirou is the founder of ROUGATECH, a technology company focused on building digital products, AI solutions and business systems for African companies and organizations.</span></p>
+          <p style="color:var(--cream); font-size:17px; margin-top:16px; max-width:46ch;"><span class="fr">La technologie doit aider les entreprises africaines à mieux fonctionner, vendre davantage et construire l'avenir.</span><span class="en">Technology should help African businesses operate better, sell more and build for the future.</span></p>
+          <a href="#hero" class="btn btn-outline" style="margin-top:24px;"><span class="fr">Découvrir ROUGATECH</span><span class="en">Discover ROUGATECH</span></a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- INSIGHTS -->
+  <section class="section" id="insights">
+    <div class="wrap">
+      <div class="section-head reveal">
+        <div class="eyebrow">14 / INSIGHTS</div>
+        <h2><span class="fr">Perspectives sur la transformation digitale.</span><span class="en">Perspectives on digital transformation.</span></h2>
+      </div>
+      <div class="insights-note reveal">
+        <div class="eyebrow" style="justify-content:center;"><span class="fr">Bientôt disponible</span><span class="en">Coming soon</span></div>
+        <p><span class="fr">Nous préparons des articles et analyses sur la transformation digitale en Afrique, la technologie et l'automatisation.</span>
+        <span class="en">We are preparing articles and analysis on digital transformation in Africa, technology, and automation.</span></p>
+      </div>
+    </div>
+  </section>
+
+  <!-- FINAL CTA -->
+  <section class="final-cta">
+    <div class="final-glow"></div>
+    <div class="wrap reveal">
+      <h2><span class="fr">Votre entreprise est prête pour sa prochaine étape.</span><span class="en">Your business is ready for its next stage.</span></h2>
+      <p class="sub"><span class="fr">Construisons ensemble les systèmes digitaux qui vous aideront à attirer plus de clients, vendre plus et opérer plus intelligemment.</span><span class="en">Let's build the digital systems that help you attract more customers, sell more and operate smarter.</span></p>
+      <div class="final-ctas">
+        <a href="#contact" class="btn btn-primary"><span class="fr">Transformer mon entreprise</span><span class="en">Transform My Business</span></a>
+        <a href="#contact" class="btn btn-outline"><span class="fr">Parler à ROUGATECH</span><span class="en">Talk to ROUGATECH</span></a>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section" id="contact">
+    <div class="wrap">
+      <div class="contact-wrap">
+        <div class="contact-info reveal">
+          <div class="eyebrow">Contact</div>
+          <h2 style="margin-top:20px;"><span class="fr">Transformons votre entreprise.</span><span class="en">Let's transform your business.</span></h2>
+          <p><span class="fr">Dites-nous où en est votre entreprise aujourd'hui et où vous voulez qu'elle aille.</span><span class="en">Tell us where your business is today and where you want it to go.</span></p>
+          <div class="contact-detail">
+            ROUGATECH<br>NIAMEY, NIGER<br>HELLO@ROUGATECH.COM
+          </div>
+        </div>
+        <form class="reveal" id="contact-form">
+          <div class="field-row">
+            <div class="field">
+              <label for="f-name"><span class="fr">Nom</span><span class="en">Name</span></label>
+              <input id="f-name" type="text" required>
+            </div>
+            <div class="field">
+              <label for="f-company"><span class="fr">Entreprise</span><span class="en">Company</span></label>
+              <input id="f-company" type="text">
+            </div>
+          </div>
+          <div class="field-row">
+            <div class="field">
+              <label for="f-email">Email</label>
+              <input id="f-email" type="email" required>
+            </div>
+            <div class="field">
+              <label for="f-phone"><span class="fr">Téléphone</span><span class="en">Phone</span></label>
+              <input id="f-phone" type="tel">
+            </div>
+          </div>
+          <div class="field">
+            <label for="f-type"><span class="fr">Type d'entreprise</span><span class="en">Business type</span></label>
+            <select id="f-type">
+              <option value="website"><span class="fr">Site web</span></option>
+              <option value="ecommerce">E-commerce</option>
+              <option value="ai"><span class="fr">IA &amp; Automatisation</span></option>
+              <option value="platform"><span class="fr">Plateforme digitale</span></option>
+              <option value="transformation"><span class="fr">Transformation digitale</span></option>
+              <option value="other"><span class="fr">Autre</span></option>
             </select>
           </div>
-          <div class="field-group"><label data-fr>Date souhaitée</label><label data-en>Preferred date</label><input type="date"></div>
-        </div>
-        <div class="field-group">
-          <label data-fr>Objectif de la séance</label><label data-en>Session goal</label>
-          <textarea placeholder="..."></textarea>
-        </div>
-        <p class="form-note"><span data-fr>* Ce formulaire prépare votre demande — l'intégration Calendly / système de réservation sera connectée prochainement.</span><span data-en>* This form prepares your request — Calendly / booking system integration is coming soon.</span></p>
-        <button type="submit" class="btn-primary"><span data-fr>ENVOYER MA DEMANDE</span><span data-en>SEND MY REQUEST</span></button>
-      </form>
+          <div class="field">
+            <label for="f-improve"><span class="fr">Que voulez-vous améliorer&nbsp;?</span><span class="en">What do you want to improve?</span></label>
+            <input id="f-improve" type="text" placeholder="Leads, sales, automation, website...">
+          </div>
+          <div class="field">
+            <label for="f-msg"><span class="fr">Message</span><span class="en">Message</span></label>
+            <textarea id="f-msg" rows="3"></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary"><span class="fr">Démarrer ma transformation</span><span class="en">Start My Transformation</span></button>
+          <p class="form-note"><span class="fr">Ce formulaire ouvre votre messagerie email — une intégration backend pourra être connectée ultérieurement.</span><span class="en">This form opens your email client — a backend integration can be connected later.</span></p>
+        </form>
+      </div>
     </div>
-  </div>
-</section>
+  </section>
 
-<!-- CONTACT / FOOTER -->
-<footer id="contact">
+</main>
+
+<footer>
   <div class="wrap">
-    <div class="footer-grid">
-      <div>
-        <div class="footer-brand">COACH TIDJANI ACADEMY</div>
-        <p><span data-fr>Le Déménagement Mental</span><span data-en>The Mental Relocation</span></p>
-        <p style="max-width:320px; line-height:1.7;"><span data-fr>Une plateforme africaine de référence dans la transformation mentale, le développement intégral et la prospérité.</span><span data-en>A leading African platform for mental transformation, integral development and prosperity.</span></p>
+    <div class="footer-top">
+      <div class="footer-brand">
+        <div class="brand"><span class="logo-plate"><img src="logo.png" alt="ROUGATECH"></span></div>
+        <p><span class="fr">TRANSFORMEZ VOTRE ENTREPRISE. VENDEZ PLUS.</span><span class="en">TRANSFORM YOUR BUSINESS. SELL MORE.</span></p>
       </div>
-      <div class="footer-col">
-        <h4><span data-fr>NAVIGATION</span><span data-en>NAVIGATION</span></h4>
-        <a href="#about">About</a>
-        <a href="#services"><span data-fr>Coaching</span><span data-en>Coaching</span></a>
-        <a href="#programs"><span data-fr>Programmes</span><span data-en>Programs</span></a>
-        <a href="#book"><span data-fr>Livre</span><span data-en>Book</span></a>
-        <a href="#testimonials"><span data-fr>Témoignages</span><span data-en>Testimonials</span></a>
-        <a href="#booking"><span data-fr>Réserver une séance</span><span data-en>Book a session</span></a>
-      </div>
-      <div class="footer-col">
-        <h4>Contact</h4>
-        <a href="mailto:coachtidjani@gmail.com">coachtidjani@gmail.com</a>
-        <a href="tel:+22890045290">+228 90 04 52 90</a>
-        <a href="https://linkedin.com/in/coachtidjani" target="_blank">linkedin.com/in/coachtidjani</a>
+      <div class="footer-nav">
+        <div class="footer-col">
+          <h5>Menu</h5>
+          <a href="#solutions"><span class="fr">Solutions</span><span class="en">Solutions</span></a>
+          <a href="#industries">Industries</a>
+          <a href="#work"><span class="fr">Projets</span><span class="en">Projects</span></a>
+          <a href="academy/index.html">Academy</a>
+          <a href="#about"><span class="fr">À propos</span><span class="en">About</span></a>
+          <a href="#contact">Contact</a>
+        </div>
+        <div class="footer-col">
+          <h5><span class="fr">Contact</span><span class="en">Contact</span></h5>
+          <span style="display:block; font-size:14px; color:var(--gray); margin-bottom:10px;">Niamey, Niger</span>
+          <a href="mailto:hello@rougatech.com">hello@rougatech.com</a>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2026 Coach Tidjani Academy. <span data-fr>Tous droits réservés.</span><span data-en>All rights reserved.</span></span>
-      <span style="display:flex; gap:18px;">
-        <a href="#"><span data-fr>Confidentialité</span><span data-en>Privacy Policy</span></a>
-        <a href="#"><span data-fr>Conditions</span><span data-en>Terms & Conditions</span></a>
-      </span>
-      <span style="opacity:0.7;">Digital platform by RougaTech</span>
+      <span>© 2026 ROUGATECH. <span class="fr">Tous droits réservés.</span><span class="en">All rights reserved.</span></span>
+      <span><span class="fr">TRANSFORMEZ VOTRE ENTREPRISE. VENDEZ PLUS.</span><span class="en">TRANSFORM YOUR BUSINESS. SELL MORE.</span></span>
     </div>
   </div>
 </footer>
 
 <script>
-  function setLang(lang){
-    document.documentElement.setAttribute('data-lang', lang);
-    document.documentElement.setAttribute('lang', lang);
-    document.getElementById('btnFr').classList.toggle('active', lang==='fr');
-    document.getElementById('btnEn').classList.toggle('active', lang==='en');
-    document.querySelectorAll('input[data-fr-placeholder]').forEach(el=>{
-      el.placeholder = lang==='fr' ? el.getAttribute('data-fr-placeholder') : el.getAttribute('data-en-placeholder');
+  const header = document.getElementById('site-header');
+  const fill = document.querySelector('#signal-line .fill');
+  function onScroll(){
+    const y = window.scrollY;
+    header.classList.toggle('scrolled', y > 40);
+    const max = document.documentElement.scrollHeight - window.innerHeight;
+    const pct = max > 0 ? (y / max) * 100 : 0;
+    if(fill) fill.style.height = pct + '%';
+  }
+  window.addEventListener('scroll', onScroll, {passive:true});
+  onScroll();
+
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('main-nav');
+  toggle.addEventListener('click', () => {
+    const open = nav.classList.toggle('open');
+    toggle.setAttribute('aria-expanded', open);
+  });
+  nav.querySelectorAll('a').forEach(a => a.addEventListener('click', () => {
+    nav.classList.remove('open');
+    toggle.setAttribute('aria-expanded', false);
+  }));
+
+  const io = new IntersectionObserver((entries) => {
+    entries.forEach(e => { if(e.isIntersecting) e.target.classList.add('in'); });
+  }, {threshold:.05, rootMargin:"0px 0px -10% 0px"});
+  document.querySelectorAll('.reveal').forEach(el => io.observe(el));
+
+  document.querySelectorAll('.btn-primary').forEach(btn => {
+    btn.addEventListener('mousemove', (e) => {
+      const r = btn.getBoundingClientRect();
+      const x = e.clientX - r.left - r.width/2;
+      const y = e.clientY - r.top - r.height/2;
+      btn.style.transform = `translate(${x*0.12}px, ${y*0.28}px)`;
     });
+    btn.addEventListener('mouseleave', () => { btn.style.transform = 'translate(0,0)'; });
+  });
+
+  // language switch
+  const langButtons = document.querySelectorAll('[data-lang-btn]');
+  function setLang(lang){
+    document.body.setAttribute('data-lang', lang);
+    document.documentElement.setAttribute('lang', lang);
+    langButtons.forEach(b => b.classList.toggle('active', b.dataset.langBtn === lang));
+    try{ localStorage.setItem('rougatech-lang', lang); }catch(e){}
   }
-  function toggleMobile(){
-    document.getElementById('mobileMenu').classList.toggle('open');
-  }
-  function handleBooking(e){
+  langButtons.forEach(b => b.addEventListener('click', () => setLang(b.dataset.langBtn)));
+  try{
+    const saved = localStorage.getItem('rougatech-lang');
+    if(saved) setLang(saved);
+  }catch(e){}
+
+  // contact form -> mailto (no fake backend)
+  const form = document.getElementById('contact-form');
+  form.addEventListener('submit', (e) => {
     e.preventDefault();
-    const lang = document.documentElement.getAttribute('data-lang');
-    alert(lang==='fr' ? 'Merci ! Votre demande a été enregistrée. Coach Tidjani Academy vous recontactera sous peu.' : 'Thank you! Your request has been recorded. Coach Tidjani Academy will contact you shortly.');
-    e.target.reset();
-    return false;
-  }
-  let lastScroll = 0;
-  window.addEventListener('scroll', ()=>{
-    const header = document.getElementById('siteHeader');
-    const cur = window.scrollY;
-    if(cur > lastScroll && cur > 140){ header.style.transform='translateY(-100%)'; }
-    else { header.style.transform='translateY(0)'; }
-    lastScroll = cur;
+    const name = document.getElementById('f-name').value;
+    const company = document.getElementById('f-company').value;
+    const email = document.getElementById('f-email').value;
+    const phone = document.getElementById('f-phone').value;
+    const type = document.getElementById('f-type').value;
+    const improve = document.getElementById('f-improve').value;
+    const msg = document.getElementById('f-msg').value;
+    const subject = encodeURIComponent('Transformation digitale — ' + (company || name));
+    const body = encodeURIComponent(
+      `Nom: ${name}\nEntreprise: ${company}\nEmail: ${email}\nTéléphone: ${phone}\nType d'entreprise: ${type}\nÀ améliorer: ${improve}\n\nMessage:\n${msg}`
+    );
+    window.location.href = `mailto:hello@rougatech.com?subject=${subject}&body=${body}`;
   });
 </script>
-<!-- FLOATING AI ASSISTANT -->
-<button class="ai-fab" id="aiFab" onclick="toggleAI()" aria-label="AI Assistant">
-  <div class="ai-fab-pulse"></div>
-  <svg class="chat-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M4 4h16v12H7l-3 3V4z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" fill="none"/></svg>
-  <svg class="close-icon" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 6l12 12M18 6L6 18" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/></svg>
-</button>
 
-<div class="ai-panel" id="aiPanel">
-  <div class="ai-header"><div class="ai-dot"></div><span>Coach Tidjani Academy AI Assistant</span></div>
-  <div class="ai-body">
-    <div class="msg ai"><span data-fr>Bonjour 👋 Je peux vous renseigner sur les programmes, les tarifs, le livre ou la réservation. Comment puis-je vous aider ?</span><span data-en>Hi 👋 I can help with programs, pricing, the book, or booking a session. How can I help you?</span></div>
-    <div class="msg user"><span data-fr>Je manque de confiance en moi. Quel programme me conseillez-vous ?</span><span data-en>I lack self-confidence. Which program would you recommend?</span></div>
-    <div class="msg ai"><span data-fr>La Formule Alignement (3 mois) est conçue pour reprogrammer votre subconscient et renforcer votre confiance en profondeur. Souhaitez-vous réserver un premier échange avec Coach Tidjani ?</span><span data-en>The Alignment program (3 months) is designed to reprogram your subconscious and build lasting confidence. Would you like to book an initial session with Coach Tidjani?</span></div>
-  </div>
-  <div class="ai-input">
-    <input type="text" placeholder="Écrivez votre question..." data-fr-placeholder="Écrivez votre question..." data-en-placeholder="Type your question...">
-    <button type="button" onclick="document.getElementById('booking').scrollIntoView({behavior:'smooth'}); toggleAI();"><span data-fr>Envoyer</span><span data-en>Send</span></button>
-  </div>
-</div>
-
-<script>
-  function toggleAI(){
-    document.getElementById('aiFab').classList.toggle('open');
-    document.getElementById('aiPanel').classList.toggle('open');
-  }
-</script>
 </body>
 </html>
